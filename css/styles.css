@@ -1,5 +1,10 @@
 footer{
     display: flex;
-    background-color: gold;
-    
+    background-color: black;
+    max-width: 100%;
+    max-height: max-content;
+}
+
+.p{
+color: darkgoldenrod;
 }
