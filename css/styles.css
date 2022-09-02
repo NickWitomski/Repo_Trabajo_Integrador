@@ -1,0 +1,40 @@
+* {
+    box-sizing:border-box
+}
+
+header {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgba(244, 144, 50, 0.691);
+    padding: 15px;
+    height: 100px;
+    justify-content: space-between;
+}
+
+.logo {
+    border-radius: 28px;
+    height: 100%;
+}
+
+.navegador {
+    display: flex;
+    height: 50px;
+}
+
+
+fieldset {
+    display: flex;
+    align-self: flex-end;
+}
+
+
+@media (min-witdh:10324px) {
+
+    header {
+        height: 150%;
+    }
+}
+
+
+
