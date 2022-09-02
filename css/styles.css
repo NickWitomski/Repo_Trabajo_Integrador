@@ -3,11 +3,15 @@
     box-sizing:border-box
 }
 
+body {
+    background-color: black;
+}
+
 header {
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: rgba(244, 144, 50, 0.691);
+    background-color: rgba(247, 128, 16, 0.864);
     padding: 15px;
     height: 100px;
     justify-content: space-between;
@@ -29,14 +33,9 @@ fieldset {
     align-self: flex-end;
 }
 
-
-@media (min-witdh:10324px) {
-
-    header {
-        height: 150%;
-    }
+h2 {
+    color:rgba(247, 128, 16, 0.864)
 }
-
 
 footer{
     display: flex;
@@ -48,7 +47,13 @@ footer{
     align-self: flex-end;
 }
 
-.p{
+p{
 color: black;
 }
 
+@media (min-witdh:10324px) {
+
+    header {
+        height: 150%;
+    }
+}
