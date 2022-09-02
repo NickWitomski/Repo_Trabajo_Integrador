@@ -44,6 +44,8 @@ footer{
     max-width: 100%;
     max-height: max-content;
     background-color: rgba(244, 144, 50, 0.691);
+    height: 100px;
+    align-self: flex-end;
 }
 
 .p{
