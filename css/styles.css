@@ -49,6 +49,11 @@ h2 {
     padding: 15px;
     justify-content: space-between;
 }
+
+.titulocategorias {
+    display: block;
+}
+
 .tendencias {
     display: flex;
     display: block;
