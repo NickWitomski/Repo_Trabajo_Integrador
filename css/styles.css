@@ -10,6 +10,7 @@ body {
 header {
     display:flex;
     flex-direction: row;
+    width:652px;
     flex-wrap: wrap;
     background-color: rgba(247, 128, 16, 0.864);
     padding: 15px;
@@ -25,10 +26,14 @@ header {
 .navegador {
     display: flex;
     height: 50px;
+    width:400px;
+    align-content: center;
+    justify-content: flex-end;
+    font-size: 12px;
 }
 
 
-fieldset {
+form {
     display: flex;
     align-self: flex-end;
 }
@@ -36,6 +41,31 @@ fieldset {
 h2 {
     color:rgba(247, 128, 16, 0.864)
 }
+
+.categorias {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 15px;
+    justify-content: space-between;
+}
+.tendencias {
+    display: flex;
+    display: block;
+   align-items: center;
+   background-color: rgba(122, 230, 194, 0.787);
+   margin:15px;
+   padding:15px;
+   width: 150px;
+   flex-wrap: nowrap;
+}
+
+article {
+    display: flex;
+    flex-direction: row;
+}
+
+
 
 footer{
     display: flex;
@@ -47,11 +77,20 @@ footer{
     align-self: flex-end;
 }
 
+.imagen {
+    width: 200px;
+    height: 100px;
+    padding:15px;
+    margin:10px;
+    display:flex;
+    
+}
+
 p{
 color: black;
 }
 
-@media (min-witdh:10324px) {
+@media (min-witdh:1024px) {
 
     header {
         height: 150%;
