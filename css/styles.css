@@ -86,7 +86,7 @@ h2.titulocategorias {
 article {
     display: flex;
     flex-direction: row;
-    width: 95%;
+    width: 100%;
     height: 30% ;
     overflow: hidden;
 }
