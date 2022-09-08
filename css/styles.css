@@ -3,6 +3,14 @@
     box-sizing:border-box
 }
 
+.Nombre_de_Pelicula{
+color: aliceblue;
+}
+
+.Parrafo_de_detalles{
+color: aliceblue;
+}
+
 body {
     background-color: black;
 }
