@@ -13,7 +13,7 @@ header {
     flex-direction: row;
     width: 100%;
     flex-wrap: wrap;
-    background-color: rgba(247, 128, 16, 0.864);
+    background-color: lightsalmon;
     padding: 8px;
     height: 5%;
 }
@@ -76,7 +76,7 @@ form {
 
 h2.titulocategorias {
     display: block;
-    color:rgba(247, 128, 16, 0.864);
+    color:lightsalmon;
     width:100%;
     display: flex;
     margin:0%;
@@ -102,7 +102,7 @@ footer{
     flex-direction: row;
     width: 100%;
     flex-wrap: wrap;
-    background-color: rgba(247, 128, 16, 0.864);
+    background-color:lightsalmon;
     padding: 13px;
     height: 5%;
 }
