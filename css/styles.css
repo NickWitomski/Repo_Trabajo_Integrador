@@ -9,7 +9,6 @@ body {
 }
 
 header {
-    display:flex;
     flex-direction: row;
     width: 100%;
     flex-wrap: wrap;
@@ -18,11 +17,20 @@ header {
     height: 5%;
 }
 
+.caja1 {
+    display:flex;
+    width: 100%;
+}
+
+.formulario {
+    justify-content: flex-end;
+}
+
 
 .logo {
     border-radius: 28px;
     height: 70%;
-    width: 13%;
+    width: 15%;
     align-self: center;
 }
 
@@ -56,23 +64,18 @@ form {
 }
 
 
-.categorias {
-    display:flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+.categoria {
     padding: 10px;
-    justify-content: space-between;
-    width:95%;
-    height: 600px;
+    width:100%;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.imagen {
-    width: 50%;
-    height: 30%;
-    display:flex; 
-    display:block;
-    flex-wrap: nowrap;
+.subcategoria {
+    display: flex;
+    flex-wrap: wrap;
 }
+
 
 h2.titulocategorias {
     display: block;
@@ -84,21 +87,29 @@ h2.titulocategorias {
 }
 
 article {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 30% ;
+    width: 50%;
+    height: 30%;
+    max-width: 400px;
     overflow: hidden;
 }
 
-
-.texto_footer {
-    color: black;
-    margin:0%;
+.imagen {
+    width: 100%;
+    height:100%;
 }
 
+
+.texto1 {
+    color: black;
+    margin:0%;
+    font-size: 12px;
+    width:100%;
+}
+
+.texto2 {
+    font-size: 10px;
+}
 footer{
-    display:flex;
     flex-direction: row;
     width: 100%;
     flex-wrap: wrap;
