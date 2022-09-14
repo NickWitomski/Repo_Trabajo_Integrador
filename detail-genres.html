@@ -3,10 +3,32 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Genres detail</title>
+        <link rel="stylesheet" href="./css/styles_detallegenero.css">
+        <title>Detalle Generos</title>
     </head>
 <body>
+    <header> 
+        <section class="caja_header">
+            <img class="logo" src="./img/Logo prog.jpg"> 
+
+            <nav class="navegador" >
+                <ul> <a href="#"> HOME </a> </ul>
+                <ul> <a href="./detail-movie.html"> PELÍCULAS </a></ul>
+                <ul> <a href="./detail-serie.html"> SERIES </a></ul>
+                <ul> <a href="./favorite.html"> FAVORITOS </a></ul>
+                <ul> <a href="./genres.html"> GÉNEROS </a></ul> 
+            </nav> 
+
+            <form class= "formulario" action="search_results.html" method="GET">
+                <label> </label>
+                <input type = "text" value="" name="name" placeholder="Ingresa una película o serie">
+                <button type="submit"> <i class="fa-solid fa-magnifying-glass"></i></button> 
+            </form>
+        </section>
+    </header>
+
     <section class="categoria" >
+        <h2 class="titulocategorias"> PELÍCULAS</h2> 
         <h2 class="titulocategorias"> THRILLER</h2> 
         <div class="subcategoria">
         <article>
@@ -14,20 +36,12 @@
             <img class="imagen" src="./img/Peliculas/split.jpeg">
         </article> 
         <article>
-            <h3> Black Mirror </h3>
-            <img class="imagen" src="./img/tendencias/black mirror.jpeg">
-        </article>
-        <article>
             <h3> Shutter Island </h3>
             <img class="imagen" src="./img/tendencias/Shutter island.jpeg">
         </article>
-        <article>
-            <h3> Stranger Things </h3>
-            <img class="imagen" src="./img/Series/strangerthings.webp">
-        </article>
         </div> 
     </section>
-    
+
     <section class="categoria" >
         <h2 class="titulocategorias"> COMEDIA</h2> 
         <div class="subcategoria">
@@ -39,17 +53,9 @@
             <h3> Grown Ups </h3>
             <img class="imagen" src="./img/tendencias/soncomoniños.jpeg">
         </article>
-        <article>
-            <h3> Brooklyn 99 </h3>
-            <img class="imagen" src="./img/Series/b99.jpeg">
-        </article>
-        <article>
-            <h3> Rick y Morty </h3>
-            <img class="imagen" src="./img/Series/rickymorty.jpeg">
-        </article>
-        </div> 
+        </div>
     </section>
-    
+
     <section class="categoria" >
         <h2 class="titulocategorias"> ROMANCE</h2> 
         <div class="subcategoria">
@@ -61,17 +67,9 @@
             <h3> Cuando te encuentre </h3>
             <img class="imagen" src="./img/Peliculas/cuandoteencuentre.jpeg">
         </article>
-        <article>
-            <h3> Grey's Anatomy </h3>
-            <img class="imagen" src="./img/Series/greysanatomy.jpeg">
-        </article>
-        <article>
-            <h3> Cobra Kai </h3>
-            <img class="imagen" src="./img/Series/cobrakai.webp">
-        </article>
         </div> 
     </section>
-    
+
     <section class="categoria" >
         <h2 class="titulocategorias"> DRAMA </h2> 
         <div class="subcategoria">
@@ -89,6 +87,51 @@
         </article>
         </div> 
     </section>
+
+    <section>
+        <h2 class="titulocategorias"> SERIES</h2> 
+        <h2 class="titulocategorias"> THRILLER</h2> 
+        <div class="subcategoria">
+        <article>
+            <h3> Black Mirror </h3>
+            <img class="imagen" src="./img/tendencias/black mirror.jpeg">
+        </article>
+
+        <article>
+            <h3> Stranger Things </h3>
+            <img class="imagen" src="./img/Series/strangerthings.webp">
+        </article>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="titulocategorias"> COMEDIA</h2> 
+        <div class="subcategoria">
+        <article>
+            <h3> Brooklyn 99 </h3>
+            <img class="imagen" src="./img/Series/b99.jpeg">
+        </article>
+        <article>
+            <h3> Rick y Morty </h3>
+            <img class="imagen" src="./img/Series/rickymorty.jpeg">
+        </article>
+        <article>
+            <h3> Cobra Kai </h3>
+            <img class="imagen" src="./img/Series/cobrakai.webp">
+        </article>
+        </div> 
+    </section>
+    
+    <section class="categoria" >
+        <h2 class="titulocategorias"> ROMANCE</h2> 
+        <div class="subcategoria">
+        <article>
+            <h3> Grey's Anatomy </h3>
+            <img class="imagen" src="./img/Series/greysanatomy.jpeg">
+        </article>
+        </div> 
+    </section>
+    
 
     <footer>
         <p class='texto_footer'>Todos los derechos reservados</p>
