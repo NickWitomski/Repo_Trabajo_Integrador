@@ -3,6 +3,14 @@
     box-sizing:border-box
 }
 
+.Nombre_de_Pelicula{
+color: aliceblue;
+}
+
+.Parrafo_de_detalles{
+color: aliceblue;
+}
+
 body {
     background-color: black;
     margin:0px;
@@ -10,6 +18,7 @@ body {
 }
 
 header {
+    display:flex;
     flex-direction: row;
     width: 100%;
     flex-wrap: wrap;
@@ -18,20 +27,11 @@ header {
     height: 5%;
 }
 
-.caja1 {
-    display:flex;
-    width: 100%;
-}
-
-.formulario {
-    justify-content: flex-end;
-}
-
 
 .logo {
     border-radius: 28px;
     height: 70%;
-    width: 15%;
+    width: 13%;
     align-self: center;
 }
 
@@ -65,21 +65,23 @@ form {
 }
 
 
-.categoria {
+.categorias {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     padding: 10px;
-    width:100%;
-    flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    width:95%;
+    height: 600px;
 }
 
-
-
-.subcategoria {
-    display: flex;
-    flex-wrap: wrap;
+.imagen {
+    width: 50%;
+    height: 30%;
+    display:flex; 
+    display:block;
+    flex-wrap: nowrap;
 }
-
-
 
 h2.titulocategorias {
     display: block;
@@ -88,59 +90,41 @@ h2.titulocategorias {
     display: flex;
     margin:0%;
     height:5%;
-    font-size: 184%;
 }
 
 article {
-    width: 20%;
-    height: 30%;
-}
-
-h3 {
-    color: lightsalmon;
-    text-align: center;
-}
-
-h5{
-    color: lightsalmon;
-    text-align: center;
-}
-
-.imagen {
+    display: flex;
+    flex-direction: row;
     width: 100%;
-    height:100%;
-    padding: 10px;
+    height: 30% ;
+    overflow: hidden;
 }
 
 
-.texto1 {
+.texto_footer {
     color: black;
     margin:0%;
-    font-size: 20px;
-    width:100%;
-    margin-left: 11px;
-}
-
-.texto2 {
-    font-size: 15px;
-    margin-left: 11px;
 }
 
 footer{
+    display:flex;
     flex-direction: row;
     width: 100%;
     flex-wrap: wrap;
     background-color:lightsalmon;
+    padding: 13px;
+    height: 5%;
 }
 
-.contacto {
-    margin:1%;
-    display: block;
-    width: 100%;
-    margin: 2% 0%;
+.Img_de_peli{
+    align-items: center;
+    width: 90%;
 }
 
-.contacto i {
-    font-size: 18px;
-    text-align: center;
+
+article{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
