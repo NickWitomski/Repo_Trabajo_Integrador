@@ -4,40 +4,42 @@
 }
 
 body {
-    background: linear-gradient(to right, #1488cc, #2b32b2);
+    background: linear-gradient(to right, #000000, #434343);
     margin:0px;
     width: 100%;
 }
 
 
 header {
+    display: flex;
     flex-direction: row;
-    width: 100%;
-    flex-wrap: wrap;
+    justify-content: space-between;
     background-color: black;
     padding: 8px;
     height: 100px;
 }
 
-.caja_header {
+.caja1 {
     display:flex;
-    justify-content: space-between;
-    margin: 3px 9px;
-    height:100%;
 }
 
-
+.caja2 {
+    display: flex;
+}
 
 .logo {
     height:95%;
 }
 
+ul {
+    display: flex;
+    padding-inline-start: 0px;
+    list-style-type: none;
+}
 
 .navegador {
     display: flex;
     align-items: center;
-    margin-left: -250px;
-    font-family: 'Oswald', sans-serif;
 }
 
 a {
@@ -51,17 +53,6 @@ a {
     margin: 0px 10px;
     font-family: 'Oswald', sans-serif;
 }
-
-.genero a{
-    padding:0px;
-    background-color: initial;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(255, 225, 170);
-    font-size: 50px;
-}
-
 
 .formulario {
     display: flex;
@@ -78,6 +69,16 @@ button {
     height: 35px;
 }
 
+.genero a{
+    padding:0px;
+    background-color: initial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 225, 170);
+    font-size: 50px;
+}
+
 .section_generos{
     display: flex;
     flex-flow: row;
@@ -91,6 +92,7 @@ button {
     text-align: center;
     font-size: 40px;
     font-family: 'Oswald', sans-serif;
+    color: rgb(255, 225, 170);
 }
 
 h3{

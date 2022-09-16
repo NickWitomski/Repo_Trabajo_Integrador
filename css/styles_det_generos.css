@@ -4,7 +4,7 @@
 }
 
 body {
-    background: linear-gradient(to right, #1488cc, #2b32b2);
+    background: linear-gradient(to right, #000000, #434343);
     margin:0px;
     width: 100%;
 }
@@ -93,7 +93,7 @@ button {
 }
 
 .titulosubcategorias {
-    color:black;
+    color:rgb(255, 225, 170);
     width:100%;
     font-size: 30px;
     font-family: 'Oswald', sans-serif;

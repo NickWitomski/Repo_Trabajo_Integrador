@@ -4,39 +4,42 @@
 }
 
 body {
-    background: linear-gradient(to right, #1488cc, #2b32b2);
+    background: linear-gradient(to right, #000000, #434343);
     margin:0px;
     width: 100%;
     
 }
 
 header {
+    display: flex;
     flex-direction: row;
-    width: 100%;
-    flex-wrap: wrap;
+    justify-content: space-between;
     background-color: black;
     padding: 8px;
     height: 100px;
 }
 
-.caja_header {
+.caja1 {
     display:flex;
-    justify-content: space-between;
-    margin: 3px 9px;
-    height:100%;
 }
 
-
+.caja2 {
+    display: flex;
+}
 
 .logo {
     height:95%;
 }
 
+ul {
+    display: flex;
+    padding-inline-start: 0px;
+    list-style-type: none;
+}
 
 .navegador {
     display: flex;
     align-items: center;
-    margin-left: -250px;
 }
 
 a {
@@ -50,7 +53,6 @@ a {
     margin: 0px 10px;
     font-family: 'Oswald', sans-serif;
 }
-
 
 .formulario {
     display: flex;
@@ -97,7 +99,7 @@ button {
 
 .favoritos {
     display: block;
-    color:black;
+    color:rgb(255, 225, 170);
     width:100%;
     display: flex;
     height:5%;
@@ -111,31 +113,31 @@ button {
 article {
     width: 20%;
     height: 30%;
+    margin: 0px 10px;
 }
 
 .imagen {
     width: 100%;
-    height:400px;
-    padding: 10px;
-    flex-direction: row;
-    flex-wrap: wrap;
+    height: 400px;
+    border: solid rgb(255, 225, 170) 5px;
+    margin: 0px 10px;
 }
 
 h3 {
-        color:black;
-        text-align: center;
-        font-size: 25px;
-        font-family: 'Oswald', sans-serif;
+    color:rgb(255, 225, 170);
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
 }
 
 h5{
-    color: black;
+    color:rgb(255, 225, 170);
     text-align: center;
     font-size: 15px;
     font-family: 'Oswald', sans-serif;
 }
 
-section{
+.section{
     display: flex;
     width: 100%;
 
