@@ -138,6 +138,7 @@ h5{
 section{
     display: flex;
     width: 100%;
+
 }
 
 footer {
@@ -147,4 +148,15 @@ footer {
     background-color:black;
     height:150px;
     
+}
+
+@media (max-width:1024px){
+    section{
+        flex-wrap: wrap;
+    }
+}
+@media(max-width:650px){
+    article{
+        width: 200px;
+    }
 }
