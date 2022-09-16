@@ -7,6 +7,7 @@ body {
     background: linear-gradient(to right, #1488cc, #2b32b2);
     margin:0px;
     width: 100%;
+    
 }
 
 header {
@@ -92,4 +93,70 @@ button {
 .contacto i {
     font-size: 18px;
     color: white;
+}
+
+.favoritos {
+    display: block;
+    color:black;
+    width:100%;
+    display: flex;
+    height:5%;
+    font-size: 184%;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 12px;
+    margin-left: 11px;
+
+}
+
+article {
+    width: 20%;
+    height: 30%;
+}
+
+.imagen {
+    width: 100%;
+    height:400px;
+    padding: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+h3 {
+        color:black;
+        text-align: center;
+        font-size: 25px;
+        font-family: 'Oswald', sans-serif;
+}
+
+h5{
+    color: black;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Oswald', sans-serif;
+}
+
+section{
+    display: flex;
+    width: 100%;
+
+}
+
+footer {
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    background-color:black;
+    height:150px;
+    
+}
+
+@media (max-width:1024px){
+    section{
+        flex-wrap: wrap;
+    }
+}
+@media(max-width:650px){
+    article{
+        width: 200px;
+    }
 }
