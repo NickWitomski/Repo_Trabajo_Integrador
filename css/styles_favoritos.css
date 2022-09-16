@@ -123,6 +123,11 @@ article {
     margin: 0px 10px;
 }
 
+.titulofavoritos {
+    color:rgb(255, 225, 170);
+    font-family: 'Oswald', sans-serif;
+}
+
 h3 {
     color:rgb(255, 225, 170);
     text-align: center;
