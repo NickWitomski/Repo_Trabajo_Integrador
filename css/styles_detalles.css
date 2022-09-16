@@ -1,0 +1,130 @@
+
+* {
+    box-sizing:border-box
+}
+
+.Nombre_de_Pelicula{
+color: aliceblue;
+}
+
+.Parrafo_de_detalles{
+color: aliceblue;
+}
+
+body {
+    background-color: black;
+    margin:0px;
+    width: 100%;
+}
+
+header {
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    background-color: lightsalmon;
+    padding: 8px;
+    height: 5%;
+}
+
+
+.logo {
+    border-radius: 28px;
+    height: 70%;
+    width: 13%;
+    align-self: center;
+}
+
+.navegador {
+    display: flex;
+    height: 70%;
+    width: 30%;
+    justify-content: flex-start;
+}
+
+ul {
+    margin:5%;
+    padding: 0%;
+    width:40%;
+    font-size: 11.5px;
+    text-align: center;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+
+form {
+    display: flex;
+    align-self: flex-end;
+    height:30%;
+    align-items: center;
+    margin-left:34px;
+}
+
+
+.categorias {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: space-between;
+    width:95%;
+    height: 600px;
+}
+
+.imagen {
+    width: 50%;
+    height: 30%;
+    display:flex; 
+    display:block;
+    flex-wrap: nowrap;
+}
+
+h2.titulocategorias {
+    display: block;
+    color:lightsalmon;
+    width:100%;
+    display: flex;
+    margin:0%;
+    height:5%;
+}
+
+article {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 30% ;
+    overflow: hidden;
+}
+
+
+.texto_footer {
+    color: black;
+    margin:0%;
+}
+
+footer{
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    background-color:lightsalmon;
+    padding: 13px;
+    height: 5%;
+}
+
+.Img_de_peli{
+    align-items: center;
+    width: 90%;
+}
+
+
+article{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}

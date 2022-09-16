@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,63 +8,140 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet"> 
     <title>Home</title>
 </head>
-<body>
+<body >
     <header> 
-        <img class="logo" src="./img/Logo prog.jpg">
+        <section class="caja_header">
+            <img class="logo" src="./img/Logo prog.jpg"> 
 
-        <nav class="navegador" >
-            <ul> <a href="#"> Home </a> </ul>
-            <ul> <a href="./detail-movie.html"> Películas </a></ul>
-            <ul> <a href="./detail-serie.html"> Series </a></ul>
-            <ul> <a href="./favorite.html"> Favoritos </a></ul>
-            <ul> <a href="./genres.html"> Géneros </a></ul>
-            <ul> <a href="./detail-genres.html"> Detalle géneros </a></ul>
-            <ul> <a href="./search-results.html"> Resultados de búsqueda </a></ul>
-        </nav>
+            <nav class="navegador" >
+                <ul> <a href="#"> HOME </a> </ul>
+                <ul> <a href="./detail-movie.html"> PELÍCULAS </a></ul>
+                <ul> <a href="./detail-serie.html"> SERIES </a></ul>
+                <ul> <a href="./favorite.html"> FAVORITOS </a></ul>
+                <ul> <a href="./genres.html"> GÉNEROS </a></ul> 
+            </nav> 
 
-        <form action="index.html" method="GET"> 
-           <label> </label>
-           <input type = "text" value="" name="name" placeholder="ingresa una película o serie">
-           <button type="submit"> <i class="fa-solid fa-magnifying-glass"></i></button> 
-        </form>
-
+            <form class= "formulario" action="search_results.html" method="GET">
+                <label> </label>
+                <input type = "text" value="" name="name" placeholder="Ingresa una película o serie">
+                <button type="submit"> <i class="fa-solid fa-magnifying-glass"></i></button> 
+             </form>
+        </section>
     </header>
 
-    <section class="categorias" > 
-       
-        
-        <article class="Tendencias">
-            <h2 class="titulocategorias"> Tendencias</h2>
-            <img class="imagen" src="./img/Tendencias/Breaking Bad.png"> 
-            <img class="imagen" src="./img/Tendencias/La isla Siniestra.png">
-            <img class="imagen" src="./img/Tendencias/Soldado Ryan.png">
-            <img class="imagen" src="./img/Tendencias/Son como niños.png">
-            <img class="imagen" rc="./img/Tendencias/Black Mirror.png">
-        </article>
+    <main>
+        <section class="portada"> 
+            <article class="caja_portada">
+                <h5 class="subtitulo_portada"> Nº1 en películas hoy</h5> 
+                <h2 class="titulo_portada"> WHIPLSAH: MÚSICA Y OBSESIÓN</h2>
+            </article>
+            
+        </section>
 
-        <article class="peliculas populares">
-            <h2 class="titulocategorias"> Peliculas populares</h2>
-            <img class="imagen" src="./img/Peliculas/1917.png"> 
-            <img class="imagen" src="./img/Peliculas/De amor y otras adicciones.png"> 
-            <img class="imagen" src="./img/Peliculas/Fragmentado.png">
-            <img class="imagen" src="./img/Peliculas/Norbit.png"> 
-            <img class="imagen" src="./img/Peliculas/Top Gun.png"> 
-        </article>
+        <section class="categoria" >
+            <h2 class="titulocategorias"> TENDENCIAS</h2> 
+            <div class="subcategoria">
+            <article>
+                <h3> Black Mirror</h3>
+                <img class="imagen" src="./img/tendencias/black mirror.jpeg">
+                <h5>  4 de diciembre de 2011 </h5>
+            </article> 
+            <article>
+                <h3> La La Land</h3>
+                <img class="imagen" src="./img/tendencias/Lalaland.jpeg"> 
+                <h5>  22 de diciembre de 2016</h5> 
+            </article> 
+            <article>
+                <h3> Salvar al soldado Ryan </h3>
+                <img class="imagen" src="./img/tendencias/salvandoalsoldadoryan.jpeg"> 
+                <h5>  17 de septiembre de 1998</h5>
+            </article> 
+            <article> 
+                <h3> Shutter Island </h3>
+                <img class="imagen" src="./img/tendencias/Shutter island.jpeg">
+                <h5> 18 de febrero de 2010</h5> 
+            </article> 
+            <article> 
+                <h3> Grown Ups</h3>
+                <img class="imagen" src="./img/tendencias/soncomoniños.jpeg">
+                <h5> 22 de julio de 2010</h5> 
+            </article> 
+            </div> 
+        </section>
 
-        <article class="series populares">
-            <h2 class="titulocategorias"> Series populares</h2>
-            <img class="imagen" src="./img/Series/B99.png"> 
-            <img class="imagen" src="./img/Series/new amsterdam.png"> 
-            <img class="imagen" src="./img/Series/Skins.png"> 
-            <img class="imagen" src="./img/Series/Suits.png"> 
-            <img class="imagen" src="./img/Series/TWD.png"> 
-        </article>
-    </section>
+        <section class="categoria" >
+            <h2 class="titulocategorias"> PELÍCULAS POPULARES</h2> 
+            <div class="subcategoria">
+            <article>
+                <h3> 1917</h3>
+                <img class="imagen" src="./img/Peliculas/1917.jpeg"> 
+                <h5> 25 de diciembre de 2019</h5>
+            </article>
+            <article>
+                <h3> Cuando te encuentre</h3>
+                <img class="imagen" src="./img/Peliculas/cuandoteencuentre.jpeg">
+                <h5> 2 de mayo de 2012</h5>
+            </article>
+            <article>
+                <h3> Norbit</h3>
+                <img class="imagen" src="./img/Peliculas/norbit.jpeg">
+                <h5>  9 de febrero de 2007</h5>
+            </article>
+            <article>
+                <h3> Split</h3>
+                <img class="imagen" src="./img/Peliculas/split.jpeg">
+                <h5> 26 de septiembre de 2016</h5>
+            </article>
+            <article> 
+                <h3> Top Gun</h3>
+                <img class="imagen" src="./img/Peliculas/topgun.jpeg">
+                <h5> 16 de mayo de 1986</h5>
+            </article>
+            </div>
+        </section>
 
+        <section class="categoria">
+            <h2 class="titulocategorias"> SERIES POPULARES</h2>
+            <div class="subcategoria">
+            <article>
+                <h3> Cobra Kai</h3>
+                <img class="imagen" src="./img/Series/cobrakai.webp">
+                <h5> 2 de mayo de 2018</h5>
+            </article>  
+            <article> 
+                <h3> Brooklyn 99</h3>
+                <img class="imagen" src="./img/Series/b99.jpeg"> 
+                <h5> 17 de septiembre de 2013</h5>
+            </article>  
+            <article> 
+                <h3> Grey's Anatomy</h3>
+                <img class="imagen" src="./img/Series/greysanatomy.jpeg"> 
+                <h5> 27 de marzo de 2005 </h5>
+            </article>  
+            <article> 
+                <h3> Rick y Morty</h3>
+                <img class="imagen" src="./img/Series/rickymorty.jpeg"> 
+                <h5> 2 de diciembre de 2013 </h5>
+            </article>  
+            <article> 
+                <h3> Stranger Things</h3>
+                <img class="imagen" src="./img/Series/strangerthings.webp"> 
+                <h5> 15 de julio de 2016</h5>
+            </article>  
+            </div> 
+        </section>
+    </main> 
 
 <footer>
-    <p class='texto_footer'>Todos los derechos reservados</p>
-    <p class='texto_footer'> Marcos Pinto Escalier, Bautista Porcello y  Nicole Witomski</p> 
+    <br> 
+    <p class="texto2">Todos los derechos reservados</p>
+    <p class="texto2"> Copyright © 2003-2022 Fort Corporation</p>
+    <p class="texto1"> Marcos Pinto Escalier, Bautista Porcello y  Nicole Witomski</p> 
+     
+    <ul class="contacto">
+         <i class="fa-brands fa-whatsapp"></i> <i class="fa-regular fa-envelope"></i> <i class="fa-brands fa-instagram"> </i> <i class="fa-solid fa-link"></i> <i class="fa-solid fa-circle-info"></i> 
+    </ul> 
+    <br> 
 </footer>
 </body>
 </html>
