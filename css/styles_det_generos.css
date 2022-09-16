@@ -84,17 +84,21 @@ button {
 
 
 
-h2.titulocategorias {
-    display: block;
+.titulocategorias {
     color:black;
     width:100%;
-    display: flex;
-    margin:0%;
-    height:5%;
-    font-size: 184%;
+    font-size: 36px;
     font-family: 'Oswald', sans-serif;
+    text-align: center;
 }
 
+.titulosubcategorias {
+    color:black;
+    width:100%;
+    font-size: 30px;
+    font-family: 'Oswald', sans-serif;
+    margin: 5px 10px;
+}
 article {
     width: 20%;
     height: 30%;

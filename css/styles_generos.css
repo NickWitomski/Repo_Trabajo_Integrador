@@ -37,6 +37,7 @@ header {
     display: flex;
     align-items: center;
     margin-left: -250px;
+    font-family: 'Oswald', sans-serif;
 }
 
 a {
@@ -49,6 +50,16 @@ a {
     font-size: 18px;
     margin: 0px 10px;
     font-family: 'Oswald', sans-serif;
+}
+
+.genero a{
+    padding:0px;
+    background-color: initial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 225, 170);
+    font-size: 50px;
 }
 
 
@@ -77,9 +88,9 @@ button {
 
 .titulo_section{
     width:100%;
-    display: flex;
-    justify-content: center;
+    text-align: center;
     font-size: 40px;
+    font-family: 'Oswald', sans-serif;
 }
 
 h3{
