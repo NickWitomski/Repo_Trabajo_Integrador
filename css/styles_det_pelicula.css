@@ -176,7 +176,8 @@ Button {
     color: white;
 }
 
-a.Director{
-    font-size: medium;
-    background-color: #1488cc;
+.Director{
+    font-size: small;
+    color: antiquewhite;
+    
 }
