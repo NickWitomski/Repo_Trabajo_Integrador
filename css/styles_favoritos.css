@@ -5,6 +5,7 @@
 
 body {
     background: linear-gradient(to right, #000000, #434343);
+    background-repeat: no-repeat;
     margin:0px;
     width: 100%;
     
@@ -37,6 +38,7 @@ ul {
     list-style-type: none;
 }
 
+
 .navegador {
     display: flex;
     align-items: center;
@@ -64,7 +66,7 @@ input {
     height: 35px;
 }
 
-button {
+.botonheader {
     width: 40px;
     height: 35px;
 }
@@ -84,12 +86,15 @@ button {
     color:white;
     font-family: 'Oswald', sans-serif;
 }
+
 .contacto {
-    margin:1%;
-    display: block;
-    width: 100%;
-    margin: 0.5% 0%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 0px 5px 8px 8px;
+}
+
+.icono {
+    margin: 3px 8px;
 }
 
 .contacto i {
@@ -121,6 +126,11 @@ article {
     height: 400px;
     border: solid rgb(255, 225, 170) 5px;
     margin: 0px 10px;
+}
+
+.titulofavoritos {
+    color:rgb(255, 225, 170);
+    font-family: 'Oswald', sans-serif;
 }
 
 h3 {
