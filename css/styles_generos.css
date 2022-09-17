@@ -5,6 +5,7 @@
 
 body {
     background: linear-gradient(to right, #000000, #434343);
+    background-repeat: no-repeat;
     margin:0px;
     width: 100%;
 }
@@ -135,12 +136,15 @@ footer{
     color:white;
     font-family: 'Oswald', sans-serif;
 }
+
 .contacto {
-    margin:1%;
-    display: block;
-    width: 100%;
-    margin: 0.5% 0%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 0px 5px 8px 8px;
+}
+
+.icono {
+    margin: 3px 8px;
 }
 
 .contacto i {

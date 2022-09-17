@@ -5,8 +5,8 @@
 
 body {
     background: linear-gradient(to right, #000000, #434343);
+    background-repeat: no-repeat;
     margin:0px;
-    width: 100%;
 }
 
 
@@ -37,12 +37,13 @@ ul {
     list-style-type: none;
 }
 
+
 .navegador {
     display: flex;
     align-items: center;
 }
 
-a {
+.textonav {
     color: rgb(255, 225, 170);
     text-decoration: none;
     background-color: black;
@@ -75,16 +76,16 @@ button {
     background-image: url("../img/whiplash3.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
+    border: solid rgb(255, 225, 170) 3px;
     margin: 30px 0px;
 }
 
 .caja_portada {
     width:50%;
-    display: flex;
-    align-items: center;
     height:100%;
-    flex-wrap: wrap;
+    display: flex;
     align-content: center;
+    flex-wrap: wrap;
 }
 
 
@@ -120,9 +121,14 @@ button {
     border-radius: 6px;
 }
 
+.verahora {
+    background-color: rgb(255, 225, 170);
+    color: black;
+    text-decoration: none;
+}
+
 .categoria {
     padding: 10px;
-    width:100%;
     flex-direction: row;
     flex-wrap: wrap;
     margin: 10px 0px;
@@ -202,11 +208,13 @@ footer{
 }
 
 .contacto {
-    margin:1%;
-    display: block;
-    width: 100%;
-    margin: 0.5% 0%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 0px 5px 8px 8px;
+}
+
+.icono {
+    margin: 3px 8px;
 }
 
 .contacto i {
@@ -215,3 +223,23 @@ footer{
 }
 
 
+@media (max-width:1024px) {
+
+    body {
+        max-width: 1024px;
+    }
+    .portada {
+        background-size: contain;
+    }
+}
+
+
+@media (max-width:650px) {
+
+    body {
+        max-width: 1024px;
+    }
+    .portada {
+        background-size: contain;
+    }
+}

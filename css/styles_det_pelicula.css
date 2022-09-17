@@ -4,6 +4,7 @@
 
 body {
     background: linear-gradient(to right, #000000, #434343);
+    background-repeat: no-repeat;
     margin:0px;
     width: 100%;
 }
@@ -73,7 +74,7 @@ input {
     height: 35px;
 }
 
-button {
+.botonheader {
     width: 40px;
     height: 35px;
 }
@@ -99,7 +100,7 @@ button {
 
 h2.titulocategorias {
     display: block;
-    color:lightsalmon;
+    color: rgb(255, 225, 170);
     width:100%;
     display: flex;
     margin:0%;
@@ -138,11 +139,13 @@ footer{
 }
 
 .contacto {
-    margin:1%;
-    display: block;
-    width: 100%;
-    margin: 0.5% 0%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 0px 5px 8px 8px;
+}
+
+.icono {
+    margin: 3px 8px;
 }
 
 .contacto i {
@@ -169,11 +172,12 @@ footer{
     display: flex;
 }
 
-Button {
+.botonfavoritos {
     width: 40%;
     margin-left: 2.5%;
     background-color: black;
     color: white;
+    border: solid  rgb(255, 225, 170) 2px;
 }
 
 a.Director{

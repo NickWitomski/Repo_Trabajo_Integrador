@@ -14,7 +14,7 @@
 
             <nav class="navegador" >
                 <ul> 
-                    <li> <a href="#"> HOME </a> </li>
+                    <li> <a href="./index.html"> HOME </a> </li>
                     <li> <a href="./detail-movie.html"> PELÍCULAS </a> </li>  
                     <li> <a href="./detail-serie.html"> SERIES </a> </li> 
                     <li> <a href="./favorite.html"> FAVORITOS </a> </li> 
@@ -27,7 +27,7 @@
             <form class= "formulario" action="search-results.html" method="GET">
                 <label> </label>
                 <input type = "text" value="" name="name" placeholder="Ingresa una película o serie">
-                <button type="submit"> <i class="fa-solid fa-magnifying-glass"></i></button> 
+                <button class="botonheader" type="submit"> <i class="fa-solid fa-magnifying-glass"></i></button> 
              </form>
         </section>
     </header>
@@ -50,7 +50,7 @@
         <section>
             <br>
             <article>
-            <Button ><i class="fa-sharp fa-solid fa-star"></i> Agregar a Favoritos</Button>
+            <button class="botonfavoritos"><i class="fa-sharp fa-solid fa-star"></i> Agregar a Favoritos</button>
         </article>
         <article>
                 <h2 class="Nombre_de_Pelicul">Rating: 4.9</h2>
@@ -61,12 +61,16 @@
 
     <footer>
         <br> 
-        <p class="texto2"> Todos los derechos reservados</p>
+        <p class="texto2">Todos los derechos reservados</p>
         <p class="texto2"> Copyright © 2003-2022 Fort Corporation</p>
         <p class="texto1"> Marcos Pinto Escalier, Bautista Porcello y  Nicole Witomski</p> 
-            
+         
         <ul class="contacto">
-            <i class="fa-brands fa-whatsapp"></i> <i class="fa-regular fa-envelope"></i> <i class="fa-brands fa-instagram"> </i> <i class="fa-solid fa-link"></i> <i class="fa-solid fa-circle-info"></i> 
+            <li class="icono"><i class="fa-brands fa-whatsapp"></i>  </li>
+            <li class="icono"><i class="fa-regular fa-envelope"></i> </li>
+            <li class="icono"> <i class="fa-brands fa-instagram"> </i> </li>
+            <li class="icono"> <i class="fa-solid fa-link"></i> </li>
+            <li class="icono"> <i class="fa-solid fa-circle-info"></i> </li>
         </ul> 
     </footer>
 </body>
