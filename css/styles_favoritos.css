@@ -242,3 +242,61 @@ footer {
         flex-wrap: wrap;
     }
 }
+    @media (max-width:650px) {
+
+        header {
+            flex-direction: column;
+            height:120px;
+        }
+    
+        .textonav {
+            font-size: 70%;
+            margin: 0px 0px;
+        }
+    
+        input {
+            height:25px;
+        }
+    
+        button {
+            height:25px;
+        }
+    
+        .logo {
+            height: 8vh;
+        }
+    
+        .portada {
+            height: 300px;
+            background-size: cover;
+        }
+    
+        .titulocategorias {
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+            margin-left: 0px;
+        }
+    
+        .titulo_portada {
+            font-size: 30px;
+        }
+    
+        .subtitulo_portada {
+            font-size: 15px;
+        }
+    
+        .botonportada {
+            width:35%;
+            height:35px;
+    
+        }
+    
+        .texto1 {
+            font-size: 15px;
+        }
+    
+        .contacto i {
+            font-size: 14px;
+        }
+}
