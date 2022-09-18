@@ -9,7 +9,6 @@ body {
     background-size: fit-content;
     background-attachment: fixed;
     margin:0px;
-    width:fit-content
 }
 
 
@@ -28,6 +27,7 @@ header {
 
 .caja2 {
     display: flex;
+    justify-content: flex-end;
 }
 
 .logo {
