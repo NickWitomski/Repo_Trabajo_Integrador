@@ -10,7 +10,6 @@ body {
     width: 100%;
 }
 
-
 header {
     display: flex;
     flex-direction: row;
@@ -80,8 +79,6 @@ div {
     flex-wrap: wrap;
     justify-content: center;
 }
-
-
 
 article {
     margin: 20px 0px;

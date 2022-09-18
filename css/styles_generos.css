@@ -43,14 +43,12 @@ ul {
     align-items: center;
 }
 
-a {
+.textonav {
     color: rgb(255, 225, 170);
     text-decoration: none;
     background-color: black;
     padding: 5px;
-    margin: 0 4px;
     border-radius: 6px;
-    font-size: 18px;
     margin: 0px 10px;
     font-family: 'Oswald', sans-serif;
 }
@@ -70,19 +68,9 @@ button {
     height: 35px;
 }
 
-.genero a{
-    padding:0px;
-    background-color: initial;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(255, 225, 170);
-    font-size: 50px;
-}
 
 .section_generos{
     display: flex;
-    flex-flow: row;
     justify-content: space-around;
     flex-wrap: wrap;
     margin: 20px 0px;
@@ -96,14 +84,6 @@ button {
     color: rgb(255, 225, 170);
 }
 
-h3{
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    color: rgb(255, 225, 170);
-    padding: 41px;
-    font-size: 50px;
-}
 .genero {
     width: 30%;
     height: 250px;
@@ -111,7 +91,23 @@ h3{
     margin: 10px 5px;
     border-radius: 63px;
     border:solid rgb(255, 225, 170) 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.link_det_generos {
+    padding:0px;
+    background-color: initial;
+    text-decoration: none;
+}
+
+h3{
+    color: rgb(255, 225, 170);
+    font-size: 50px;
+    font-family: 'Oswald', sans-serif;
+}
+
 
 footer{
     flex-direction: row;
@@ -150,4 +146,111 @@ footer{
 .contacto i {
     font-size: 18px;
     color: white;
+}
+
+/*----MEDIA QUERIES-----*/
+
+
+@media (max-width:1024px) {
+
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .caja1 {
+        display: flex;
+    }
+
+    .logo {
+        height: 8vh;
+    }
+
+    .textonav {
+        font-size: 80%;
+        margin: 0px 24px;
+    }
+
+    .caja2 {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    input {
+        width:80%;
+        height:30px;
+    }
+
+    button {
+        height:30px;
+    }
+
+    .formulario {
+        align-items: flex-end;
+    }
+
+    .titulosection {
+        font-size: 35px;
+    }
+
+    .genero {
+        width: 45%;
+    }
+
+    h3 {
+        font-size: 45px;
+    }
+
+}
+
+
+@media (max-width:650px) {
+
+    header {
+        flex-direction: column;
+        height:120px;
+    }
+
+    .textonav {
+        font-size: 70%;
+        margin: 0px 0px;
+    }
+
+    input {
+        height:25px;
+    }
+
+    button {
+        height:25px;
+    }
+
+
+    .logo {
+        height: 8vh;
+    }
+
+    .titulo_section {
+        font-size: 30px;
+    }
+
+    .genero {
+        width: 85%;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h3 {
+        font-size: 40px;
+    }
+
+    .texto1 {
+        font-size: 15px;
+    }
+
+    .contacto i {
+        font-size: 14px;
+    }
+
 }
