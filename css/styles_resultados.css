@@ -28,6 +28,7 @@ header {
 
 .caja2 {
     display: flex;
+    justify-content: flex-end;
 }
 
 
