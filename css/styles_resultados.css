@@ -1,4 +1,3 @@
-
 * {
     box-sizing:border-box
 }
@@ -6,39 +5,49 @@
 body {
     background: linear-gradient(to right, #000000, #434343);
     background-repeat: no-repeat;
+    background-size: fit-content;
+    background-attachment: fixed;
     margin:0px;
-    width: 100%;
 }
+
+
 header {
+    display: flex;
     flex-direction: row;
-    width: 100%;
-    flex-wrap: wrap;
+    justify-content: space-between;
     background-color: black;
     padding: 8px;
     height: 100px;
 }
 
-.caja_header {
+
+.caja1 {
     display:flex;
-    justify-content: space-between;
-    margin: 3px 9px;
-    height:100%;
 }
 
+.caja2 {
+    display: flex;
+    justify-content: flex-end;
+}
 
 
 .logo {
     height:95%;
 }
 
+ul {
+    display: flex;
+    padding-inline-start: 0px;
+    list-style-type: none;
+}
+
 
 .navegador {
     display: flex;
     align-items: center;
-    margin-left: -250px;
 }
 
-a {
+.textonav {
     color: rgb(255, 225, 170);
     text-decoration: none;
     background-color: black;
@@ -65,6 +74,8 @@ button {
     width: 40px;
     height: 35px;
 }
+
+
 
 .texto1 {
     color: rgb(255, 225, 170);
@@ -125,7 +136,7 @@ h5{
 section{
     display: flex;
     width: 100%;
-
+    margin-bottom: 25px;
 }
 
 footer {
@@ -149,4 +160,97 @@ footer {
 .contacto i {
     font-size: 18px;
     color: white;
+}
+
+.boton_ver_ahora {
+    color: black;
+    font-weight: bold;
+    background-color: rgb(255, 225, 170);
+    border: solid 4px rgb(255, 225, 170);
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 118px;
+    height: 42px;
+    margin-left: 60px;
+    border-radius: 6px;
+}
+
+.verahora {
+    background-color: rgb(255, 225, 170);
+    color: black;
+    text-decoration: none;
+}
+
+.textonav {
+    color: rgb(255, 225, 170);
+    text-decoration: none;
+    background-color: black;
+    padding: 5px;
+    margin: 0 4px;
+    border-radius: 6px;
+    font-size: 18px;
+    margin: 0px 10px;
+    font-family: 'Oswald', sans-serif;
+}
+
+@media (max-width:1024px) {
+
+    body {
+        width: auto;
+        margin-right: 0px;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .caja1 {
+        display: flex;
+    }
+
+    .logo {
+        height: 8vh;
+    }
+
+    .textonav {
+        font-size: 65%;
+        margin: 0px 30px;
+    }
+
+
+    .caja2 {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    input {
+        width:80%;
+        height:30px;
+    }
+
+    button {
+        height:30px;
+    }
+
+    .formulario {
+        align-items: flex-end;
+    }
+
+    .portada {
+       width:100%;
+       background-size: cover;
+       height: auto;
+    }
+
+    article {
+        width: 45%;
+    }
+}
+
+
+@media (max-width:650px) {
+
 }
