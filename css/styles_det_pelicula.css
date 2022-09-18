@@ -34,9 +34,10 @@ header {
     display:flex;
 }
 
-.caja2 {
+.caja2{
     display: flex;
 }
+
 
 .logo {
     height:95%;
@@ -207,4 +208,10 @@ footer{
     height: 30px;
     margin-left: 34px;
     border-radius: 6px;
+}
+@media (max-width:1024px){
+    .cabeza{
+        min-width: 200px;
+        max-width: 300px;
+    }
 }
