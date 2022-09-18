@@ -231,17 +231,20 @@ footer{
     body {
         width: auto;
         margin-right: 0px;
-        overflow: hidden;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        height: 150px;
     }
 
     .caja1 {
         display: flex;
-
     }
 
     .logo {
         height: 8vh;
-        min-width: 12%;
     }
 
     .textonav {
