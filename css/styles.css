@@ -145,10 +145,15 @@ button {
 }
 
 .categoria {
-    display: flex;
-    justify-content: center;
     margin: 10px 0px;
 }
+
+div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 
 .titulocategorias {
     color:rgb(255, 225, 170);
@@ -178,12 +183,12 @@ h5{
 article {
     margin: 20px 0px;
 }
+
 .imagen {
     width: 250px;
     height: 400px;
     border: solid rgb(255, 225, 170) 5px;
     margin: 0px 10px;
-    min-width: 200px;
 }
 
 
@@ -290,7 +295,7 @@ footer{
     }
 
     .categoria {
-        flex-wrap: wrap;
+        flex-wrap: wrap;   
     }
 
     .titulocategorias {
@@ -299,6 +304,11 @@ footer{
         margin-left: 0px;
     }
 
+    div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
 }
 
