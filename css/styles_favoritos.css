@@ -106,7 +106,7 @@ input {
 }
 
 article {
-    width: 20%;
+    width: 18.5%;
     height: 30%;
     margin: 0px 10px;
 }
@@ -184,13 +184,61 @@ footer {
     font-family: 'Oswald', sans-serif;
 }
 
-@media (max-width:1024px){
-    section{
-        flex-wrap: wrap;
+@media (max-width:1024px) {
+
+    body {
+        width: auto;
+        margin-right: 0px;
     }
-}
-@media(max-width:650px){
-    article{
-        width: 200px;
+
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .caja1 {
+        display: flex;
+    }
+
+    .logo {
+        height: 8vh;
+    }
+
+    .textonav {
+        font-size: 65%;
+        margin: 0px 30px;
+    }
+
+
+    .caja2 {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    input {
+        width:80%;
+        height:30px;
+    }
+
+    button {
+        height:30px;
+    }
+
+    .formulario {
+        align-items: flex-end;
+    }
+
+    .portada {
+       width:100%;
+       background-size: cover;
+       height: auto;
+    }
+    
+    .imagen{
+        min-width: 200px;
+    }
+
+    .article{
+        flex-wrap: wrap;
     }
 }
