@@ -14,6 +14,7 @@ body {
 color: aliceblue;
 display: flex;
 font-size: small;
+text-align: center;
 }
 
 .Parrafo_de_detalles{
@@ -180,7 +181,30 @@ footer{
     border: solid  rgb(255, 225, 170) 2px;
 }
 
-a.Director{
-    font-size: medium;
-    background-color: #1488cc;
+.Director{
+    font-size: small;
+    color: antiquewhite;
+    
+}
+
+.Titulo {
+    color: aliceblue;
+    font-size: larger;
+    margin: revert;
+    padding-left: 3%;
+}
+
+.boton_ver_ahora {
+    color: black;
+    font-weight: bold;
+    background-color: rgb(255, 225, 170);
+    border: solid 4px rgb(255, 225, 170);
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24%;
+    height: 30px;
+    margin-left: 34px;
+    border-radius: 6px;
 }
