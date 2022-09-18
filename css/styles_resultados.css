@@ -18,15 +18,6 @@ header {
     height: 100px;
 }
 
-.caja_header {
-    display:flex;
-    justify-content: space-between;
-    margin: 3px 9px;
-    height:100%;
-}
-
-
-
 .logo {
     height:95%;
 }
@@ -37,19 +28,6 @@ header {
     align-items: center;
     margin-left: -250px;
 }
-
-a {
-    color: rgb(255, 225, 170);
-    text-decoration: none;
-    background-color: black;
-    padding: 5px;
-    margin: 0 4px;
-    border-radius: 6px;
-    font-size: 18px;
-    margin: 0px 10px;
-    font-family: 'Oswald', sans-serif;
-}
-
 
 .formulario {
     display: flex;
@@ -149,4 +127,37 @@ footer {
 .contacto i {
     font-size: 18px;
     color: white;
+}
+
+.boton_ver_ahora {
+    color: black;
+    font-weight: bold;
+    background-color: rgb(255, 225, 170);
+    border: solid 4px rgb(255, 225, 170);
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 118px;
+    height: 42px;
+    margin-left: 34px;
+    border-radius: 6px;
+}
+
+.verahora {
+    background-color: rgb(255, 225, 170);
+    color: black;
+    text-decoration: none;
+}
+
+.textonav {
+    color: rgb(255, 225, 170);
+    text-decoration: none;
+    background-color: black;
+    padding: 5px;
+    margin: 0 4px;
+    border-radius: 6px;
+    font-size: 18px;
+    margin: 0px 10px;
+    font-family: 'Oswald', sans-serif;
 }
