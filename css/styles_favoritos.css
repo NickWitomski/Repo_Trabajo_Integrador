@@ -120,6 +120,7 @@ article {
 .titulofavoritos {
     color:rgb(255, 225, 170);
     font-family: 'Oswald', sans-serif;
+    margin-left: 10px;
 }
 
 h3 {
@@ -161,8 +162,8 @@ footer {
     align-items: center;
     width: 118px;
     height: 42px;
-    margin-left: 34px;
     border-radius: 6px;
+    margin-left: 55px;
 }
 
 .verahora {

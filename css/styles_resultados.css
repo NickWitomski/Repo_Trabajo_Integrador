@@ -173,7 +173,7 @@ footer {
     align-items: center;
     width: 118px;
     height: 42px;
-    margin-left: 34px;
+    margin-left: 60px;
     border-radius: 6px;
 }
 
@@ -193,4 +193,64 @@ footer {
     font-size: 18px;
     margin: 0px 10px;
     font-family: 'Oswald', sans-serif;
+}
+
+@media (max-width:1024px) {
+
+    body {
+        width: auto;
+        margin-right: 0px;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .caja1 {
+        display: flex;
+    }
+
+    .logo {
+        height: 8vh;
+    }
+
+    .textonav {
+        font-size: 65%;
+        margin: 0px 30px;
+    }
+
+
+    .caja2 {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    input {
+        width:80%;
+        height:30px;
+    }
+
+    button {
+        height:30px;
+    }
+
+    .formulario {
+        align-items: flex-end;
+    }
+
+    .portada {
+       width:100%;
+       background-size: cover;
+       height: auto;
+    }
+
+    article {
+        width: 45%;
+    }
+}
+
+
+@media (max-width:650px) {
+
 }
