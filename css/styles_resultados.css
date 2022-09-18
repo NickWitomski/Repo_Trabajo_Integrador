@@ -6,39 +6,47 @@
 body {
     background: linear-gradient(to right, #000000, #434343);
     background-repeat: no-repeat;
+    background-size: fit-content;
+    background-attachment: fixed;
     margin:0px;
-    width: 100%;
+    width:fit-content
 }
+
+
 header {
+    display: flex;
     flex-direction: row;
-    width: 100%;
-    flex-wrap: wrap;
+    justify-content: space-between;
     background-color: black;
     padding: 8px;
     height: 100px;
 }
 
-.caja_header {
+.caja1 {
     display:flex;
-    justify-content: space-between;
-    margin: 3px 9px;
-    height:100%;
 }
 
-
+.caja2 {
+    display: flex;
+}
 
 .logo {
     height:95%;
+}
+
+ul {
+    display: flex;
+    padding-inline-start: 0px;
+    list-style-type: none;
 }
 
 
 .navegador {
     display: flex;
     align-items: center;
-    margin-left: -250px;
 }
 
-a {
+.textonav {
     color: rgb(255, 225, 170);
     text-decoration: none;
     background-color: black;
@@ -49,7 +57,6 @@ a {
     margin: 0px 10px;
     font-family: 'Oswald', sans-serif;
 }
-
 
 .formulario {
     display: flex;
@@ -65,6 +72,8 @@ button {
     width: 40px;
     height: 35px;
 }
+
+
 
 .texto1 {
     color: rgb(255, 225, 170);
