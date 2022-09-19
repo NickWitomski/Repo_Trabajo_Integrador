@@ -10,7 +10,6 @@ body {
     width: 100%;
 }
 
-
 header {
     display: flex;
     flex-direction: row;
@@ -43,7 +42,7 @@ ul {
     align-items: center;
 }
 
-a {
+.textonav {
     color: rgb(255, 225, 170);
     text-decoration: none;
     background-color: black;
@@ -70,22 +69,20 @@ button {
     height: 35px;
 }
 
+
 .categoria {
-    padding: 10px;
-    width:100%;
-    flex-direction: row;
-    flex-wrap: wrap;
     margin: 10px 0px;
 }
 
-
-
-.subcategoria {
+div {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
-
+article {
+    margin: 20px 0px;
+}
 
 .titulocategorias {
     color: rgb(255, 225, 170);
@@ -103,12 +100,6 @@ button {
     margin: 10px 22px;
 }
 
-article {
-    width: 18.5%;
-    height: 30%;
-    margin: 0px 10px;
-}
-
 h3 {
     color: rgb(255, 225, 170);
     text-align: center;
@@ -124,10 +115,31 @@ h5{
 }
 
 .imagen {
-    width: 100%;
+    width: 250px;
     height: 400px;
     border: solid rgb(255, 225, 170) 5px;
     margin: 0px 10px;
+}
+
+.boton_ver_ahora {
+    color: black;
+    font-weight: bold;
+    background-color: rgb(255, 225, 170);
+    border: solid 4px rgb(255, 225, 170);
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 118px;
+    height: 42px;
+    margin-left: 70px;
+    border-radius: 6px;
+}
+
+.verahora {
+    background-color: rgb(255, 225, 170);
+    color: black;
+    text-decoration: none;
 }
 
 .texto1 {
@@ -169,3 +181,106 @@ footer{
     color: white;
 }
 
+/*----MEDIA QUERIES-----*/
+
+
+@media (max-width:1024px) {
+
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .caja1 {
+        display: flex;
+    }
+
+    .logo {
+        height: 8vh;
+    }
+
+    .textonav {
+        font-size: 65%;
+        margin: 0px 30px;
+    }
+
+    .caja2 {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    input {
+        width:80%;
+        height:30px;
+    }
+
+    button {
+        height:30px;
+    }
+
+    .formulario {
+        align-items: flex-end;
+    }
+
+    .imagen {
+        min-width: 200px;
+    }
+
+    .categoria {
+        flex-wrap: wrap;   
+    }
+
+    .titulosubcategorias {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        margin-left: 0px;
+    }
+
+    div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+
+
+@media (max-width:650px) {
+
+    header {
+        flex-direction: column;
+        height:120px;
+    }
+
+    .textonav {
+        font-size: 70%;
+        margin: 0px 0px;
+    }
+
+    input {
+        height:25px;
+    }
+
+    button {
+        height:25px;
+    }
+
+    .logo {
+        height: 8vh;
+    }
+
+    .titulosubcategorias {
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+    }
+
+    .texto1 {
+        font-size: 15px;
+    }
+
+    .contacto i {
+        font-size: 14px;
+    }
+}
