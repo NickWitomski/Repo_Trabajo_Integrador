@@ -13,7 +13,6 @@ body {
 
 header {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     background-color: black;
     padding: 8px;
@@ -55,7 +54,7 @@ ul {
 
 .formulario {
     display: flex;
-    align-self: center;
+    align-items: center;
 }
 
 input {
@@ -97,8 +96,6 @@ button {
 }
 
 .link_det_generos {
-    padding:0px;
-    background-color: initial;
     text-decoration: none;
 }
 
@@ -110,19 +107,14 @@ h3{
 
 
 footer{
-    flex-direction: row;
-    width: 100%;
-    flex-wrap: wrap;
     background-color:black;
     height:150px;
 }
 
 .texto1 {
     color: rgb(255, 225, 170);
-    margin:0%;
+    margin:0px 0px 0px 11px;
     font-size: 20px;
-    width:100%;
-    margin-left: 11px;
     font-family: 'Oswald', sans-serif;
 }
 
@@ -134,7 +126,6 @@ footer{
 }
 
 .contacto {
-    display: flex;
     justify-content: center;
     margin: 0px 5px 8px 8px;
 }
@@ -156,6 +147,7 @@ footer{
     header {
         display: flex;
         flex-wrap: wrap;
+        align-items: center;
     }
 
     .caja1 {
@@ -167,7 +159,7 @@ footer{
     }
 
     .textonav {
-        font-size: 80%;
+        font-size: 12.5px;
         margin: 0px 24px;
     }
 
@@ -177,16 +169,12 @@ footer{
     }
 
     input {
-        width:80%;
+        width:200px;
         height:30px;
     }
 
     button {
         height:30px;
-    }
-
-    .formulario {
-        align-items: flex-end;
     }
 
     .titulosection {
@@ -206,24 +194,19 @@ footer{
 
 @media (max-width:650px) {
 
-    header {
-        flex-wrap: wrap;
-        align-items: center;
-    }
-
     .textonav {
-        font-size: 70%;
-        margin: 0px 0px;
+        font-size: 11px;
+        margin: 0px;
     }
 
     input {
-        height:25px;
+        width: 172px;
+        height:22px;
     }
 
     button {
-        height:25px;
+        height:22px;
     }
-
 
     .logo {
         height: 8vh;
