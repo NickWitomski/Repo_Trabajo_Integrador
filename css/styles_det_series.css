@@ -9,19 +9,16 @@ body {
     width: 100%;
 }
 
-
-.Nombre_de_Pelicula{
+.Descripcion_Peli{
 color: aliceblue;
 display: flex;
 font-size: small;
 text-align: center;
 text-align: justify;
-margin-right: 10px;
+margin-right: 15px;
 }
 
-.Parrafo_de_detalles{
-color: aliceblue;
-}
+
 
 header {
     display: flex;
@@ -30,6 +27,8 @@ header {
     background-color: black;
     padding: 8px;
     height: 100px;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .caja1 {
@@ -41,7 +40,7 @@ header {
 }
 
 .logo {
-    height:95%;
+    height: 8vh;
 }
 
 ul {
@@ -55,33 +54,15 @@ ul {
     align-items: center;
 }
 
-a {
-    color: rgb(255, 225, 170);
-    text-decoration: none;
-    background-color: black;
-    padding: 5px;
-    margin: 0 4px;
-    border-radius: 6px;
-    font-size: 18px;
-    margin: 0px 10px;
-    font-family: 'Oswald', sans-serif;
-}
-
 .formulario {
     display: flex;
     align-self: center;
 }
 
 input {
-    width: 300px;
-    height: 35px;
+    width: 80%;
+    height: 25px;
 }
-
-.botonheader {
-    width: 40px;
-    height: 35px;
-}
-
 
 .categorias {
     display:flex;
@@ -99,6 +80,18 @@ input {
     display:flex; 
     display:block;
     flex-wrap: nowrap;
+}
+
+.textonav {
+    color: rgb(255, 225, 170);
+    text-decoration: none;
+    background-color: black;
+    padding: 5px;
+    margin: 0 4px;
+    border-radius: 6px;
+    font-size: 70%;
+    margin: 0px 0px;
+    font-family: 'Oswald', sans-serif;
 }
 
 h2.titulocategorias {
@@ -169,7 +162,7 @@ footer{
     width: 50%;
     height: 30% ;
     overflow: hidden;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: monospace;
     margin-right: 10px;
     
 }
@@ -184,6 +177,7 @@ footer{
     background-color: black;
     color: white;
     border: solid  rgb(255, 225, 170) 2px;
+    font-family: 'Oswald', sans-serif;
 }
 
 .Director{
@@ -207,6 +201,7 @@ footer{
     background-color: black;
     color: white;
     border: solid  rgb(255, 225, 170) 2px;
+    font-family: 'Oswald', sans-serif;
 }
 
 .ytp-cued-thumbnail-overlay-image {
@@ -238,7 +233,7 @@ footer{
     padding-left: 11%;
 }
 
-.Nombre_de_Pelicula {
+.Descripcion_Peli {
     font-size: 20px;
 
 }
@@ -261,23 +256,39 @@ font-size: 20px;
 .ytp-cued-thumbnail-overlay-image {
     height: 500px;
     margin-bottom: 100px;
-}
 
 }
+ .textonav{
+    font-size: 18px;
+    margin: 0px 10px;
+ }
+
+ input {
+    width: 300px;
+    height: 35px;
+}
+}
 
 
-@media(min-width:650px) {
+@media only screen and (min-width:650px) and (max-width: 1024px) {
 
     .ytp-cued-thumbnail-overlay-image{
         height: 500px;
     }
 
-}
-
-@media(max-width:649px) {
-
-    .ytp-cued-thumbnail-overlay-image{
-        height: 470px;
-    }
+    .textonav {
+        font-size: 65%;
+        margin: 0px 30px;
 
 }
+    input {
+        width: 80%;
+        height: 30px;
+}
+    button {
+        height: 30px;
+}
+
+}
+
+
