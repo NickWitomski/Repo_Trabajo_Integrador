@@ -188,11 +188,8 @@ footer{
 
     header {
         display: flex;
-        flex-direction: column;
-    }
-
-    .caja1 {
-        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
     }
 
     .logo {
@@ -202,11 +199,6 @@ footer{
     .textonav {
         font-size: 65%;
         margin: 0px 30px;
-    }
-
-    .caja2 {
-        display: flex;
-        justify-content: flex-start;
     }
 
     input {
@@ -249,8 +241,8 @@ footer{
 @media (max-width:650px) {
 
     header {
-        flex-direction: column;
-        height:120px;
+        flex-wrap: wrap;
+        align-items: center;
     }
 
     .textonav {
