@@ -32,7 +32,7 @@ header {
 
 
 .logo {
-    height:95%;
+    height:10vh;
 }
 
 ul {
@@ -107,13 +107,11 @@ button {
 }
 
 article {
-    width: 20%;
-    height: 30%;
-    margin: 0px 10px;
+    margin: 20px 0px;
 }
 
 .imagen {
-    width: 100%;
+    width: 250px;
     height: 400px;
     border: solid rgb(255, 225, 170) 5px;
     margin: 0px 10px;
@@ -133,9 +131,8 @@ h5{
     font-family: 'Oswald', sans-serif;
 }
 
-section{
+.section_pel{
     display: flex;
-    width: 100%;
     margin-bottom: 25px;
 }
 
@@ -204,7 +201,8 @@ footer {
 
     header {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
     }
 
     .caja1 {
@@ -239,23 +237,27 @@ footer {
         align-items: flex-end;
     }
 
-    .portada {
-       width:100%;
-       background-size: cover;
-       height: auto;
+    .busqueda {
+        display: flex;
+        justify-content: center;
     }
 
-    article {
-        width: 45%;
+    .titulobusqueda {
+        font-size: 35px;
+    }
+
+    .section_pel {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .boton_ver_ahora {
+        margin-left: 75px;
     }
 }
 
 
 @media (max-width:650px) {
-    header {
-        flex-direction: column;
-        height:120px;
-    }
 
     .textonav {
         font-size: 70%;
@@ -274,30 +276,12 @@ footer {
         height: 8vh;
     }
 
-    .portada {
-        height: 300px;
-        background-size: cover;
-    }
-
-    .titulocategorias {
-        display: flex;
-        justify-content: center;
-        font-size: 30px;
-        margin-left: 0px;
-    }
-
-    .titulo_portada {
+    .titulobusqueda {
         font-size: 30px;
     }
 
-    .subtitulo_portada {
-        font-size: 15px;
-    }
-
-    .botonportada {
-        width:35%;
-        height:35px;
-
+    h2 {
+        font-size: 30px;
     }
 
     .texto1 {
@@ -307,4 +291,5 @@ footer {
     .contacto i {
         font-size: 14px;
     }
+
 }
