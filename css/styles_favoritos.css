@@ -29,7 +29,7 @@ header {
 }
 
 .logo {
-    height:95%;
+    height:10vh;
 }
 
 ul {
@@ -141,7 +141,6 @@ h5{
 
 footer {
     flex-direction: row;
-    width: 100%;
     flex-wrap: wrap;
     background-color:black;
     height:150px;
@@ -294,5 +293,19 @@ footer {
     
         .contacto i {
             font-size: 14px;
+        }
+
+        h1.titulofavoritos{
+            font-size: 30px;
+        }
+
+        section{
+            justify-content: center;
+            display: flex;
+        }
+
+        .favoritos{
+            justify-content: center;
+            display: flex;
         }
 }
