@@ -6,29 +6,25 @@ body {
     background: linear-gradient(to right, #000000, #434343);
     background-repeat: no-repeat;
     margin:0px;
-    width: 100%;
 }
 
 .Descripcion_Peli{
-color: aliceblue;
-display: flex;
-font-size: small;
-text-align: center;
-text-align: justify;
-margin-right: 15px;
+    color: aliceblue;
+    display: flex;
+    font-size: small;
+    text-align: center;
+    text-align: justify;
+    margin-right: 15px;
 }
-
-
 
 header {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
     background-color: black;
     padding: 8px;
     height: 100px;
-    flex-wrap: wrap;
-    align-items: center;
 }
 
 .caja1 {
@@ -56,23 +52,14 @@ ul {
 
 .formulario {
     display: flex;
-    align-self: center;
+    align-items: center;
 }
 
 input {
-    width: 80%;
-    height: 25px;
+    width: 300px;
+    height: 35px;
 }
 
-.categorias {
-    display:flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding: 10px;
-    justify-content: space-between;
-    width:95%;
-    height: 600px;
-}
 
 .imagen {
     width: 50%;
@@ -94,15 +81,6 @@ input {
     font-family: 'Oswald', sans-serif;
 }
 
-h2.titulocategorias {
-    display: block;
-    color: rgb(255, 225, 170);
-    width:100%;
-    display: flex;
-    margin:0%;
-    height:5%;
-}
-
 .Img_de_peli{
     
     align-self: flex-start;
@@ -112,10 +90,8 @@ h2.titulocategorias {
 
 .texto1 {
     color: rgb(255, 225, 170);
-    margin:0%;
+    margin:0px 0px 0px 11px;
     font-size: 20px;
-    width:100%;
-    margin-left: 11px;
     font-family: 'Oswald', sans-serif;
 }
 
@@ -127,9 +103,6 @@ h2.titulocategorias {
 }
 
 footer{
-    flex-direction: row;
-    width: 100%;
-    flex-wrap: wrap;
     background-color:black;
     height:150px;
 }
@@ -261,10 +234,9 @@ font-size: 20px;
  .textonav{
     font-size: 18px;
     margin: 0px 10px;
- }
+}
 
- input {
-    width: 300px;
+.boton_form {
     height: 35px;
 }
 }
