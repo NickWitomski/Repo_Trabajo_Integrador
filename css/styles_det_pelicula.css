@@ -6,7 +6,6 @@ body {
     background: linear-gradient(to right, #000000, #434343);
     background-repeat: no-repeat;
     margin:0px;
-    width: 100%;
 }
 
 .Descripcion_Peli{
@@ -19,15 +18,13 @@ margin-right: 15px;
 
 header {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     background-color: black;
     padding: 8px;
     height: 100px;
-    flex-wrap: wrap;
-    align-items: center;
+    
 }
-
 
 .caja1 {
     display:flex;
@@ -36,7 +33,6 @@ header {
 .caja2{
     display: flex;
 }
-
 
 .logo {
     height:8vh;
@@ -53,17 +49,19 @@ ul {
     align-items: center;
 }
 
-
 .formulario {
     display: flex;
-    align-self: center;
+    align-items: center;
 }
 
 input {
-    width: 80%;
-    height: 25px;
+    width: 300px;
+    height: 30px;
 }
 
+button {
+    height:35px;
+}
 .categorias {
     display:flex;
     flex-direction: column;
@@ -94,15 +92,6 @@ input {
     font-family: 'Oswald', sans-serif;
 }
 
-h2.titulocategorias {
-    display: block;
-    color: rgb(255, 225, 170);
-    width:100%;
-    display: flex;
-    margin:0%;
-    height:5%;
-}
-
 .Img_de_peli{
     
     align-self: flex-start;
@@ -112,10 +101,8 @@ h2.titulocategorias {
 
 .texto1 {
     color: rgb(255, 225, 170);
-    margin:0%;
+    margin:0px 0px 0px 11px;
     font-size: 20px;
-    width:100%;
-    margin-left: 11px;
     font-family: 'Oswald', sans-serif;
 }
 
@@ -127,9 +114,6 @@ h2.titulocategorias {
 }
 
 footer{
-    flex-direction: row;
-    width: 100%;
-    flex-wrap: wrap;
     background-color:black;
     height:150px;
 }
@@ -226,75 +210,81 @@ footer{
 @media (min-width:1024px) {
 
     .Img_de_peli{
-     
        height: 500px;
        padding-left: 100px;
        width: 70%;
-   }
+    }
    
-   .Titulo{
+    .Titulo{
        font-size: 40px;
        display: flex;
        padding-left: 11%;
-   }
+    }
    
    .Descripcion_Peli {
        font-size: 20px;
    
-   }
-   .botonfavoritos {
+    }
+
+    .botonfavoritos {
        width: 26%;
        margin-left: 8%;
        height: 50px;
-   }
+    }
    
-   .Director {
-   font-size: 20px;
-   }
+    .Director {
+        font-size: 20px;
+    }
    
-   .Capitulos {
+    .Capitulos {
        width: 26%;
        margin-left: 8%;
        height: 50px;
-   }
+    }
    
-   .ytp-cued-thumbnail-overlay-image {
+    .ytp-cued-thumbnail-overlay-image {
        height: 500px;
        margin-bottom: 100px;
-   
-   }
+    }
+
     .textonav{
-       font-size: 18px;
-       margin: 0px 10px;
+        font-size: 14.5px;
+        margin: 0px 10px;
     }
    
     input {
        width: 300px;
        height: 35px;
-   }
-   }
+    }
+}
    
    
-   @media only screen and (min-width:650px) and (max-width: 1024px) {
+@media only screen and (min-width:650px) and (max-width: 1024px) {
+
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: normal;
+    }
+
+    .ytp-cued-thumbnail-overlay-image{
+        height: 500px;
+    }
    
-       .ytp-cued-thumbnail-overlay-image{
-           height: 500px;
-       }
+    .textonav {
+        font-size: 14.5px;
+        margin: 0px 10px;
+    }
+    
+    input {
+        width: 172px;
+        height: 30px;
+    }
+    
+    button {
+        height: 30px;
+    }
    
-       .textonav {
-           font-size: 65%;
-           margin: 0px 30px;
-   
-   }
-       input {
-           width: 80%;
-           height: 30px;
-   }
-       button {
-           height: 30px;
-   }
-   
-   }
-   
-   
+}
    
