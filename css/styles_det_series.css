@@ -60,7 +60,9 @@ input {
     height: 35px;
 }
 
-
+button {
+    height:35px;
+}
 .imagen {
     width: 50%;
     height: 30%;
