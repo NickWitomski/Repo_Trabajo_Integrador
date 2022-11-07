@@ -12,7 +12,6 @@ body {
 
 header {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     background-color: black;
     padding: 8px;
@@ -28,7 +27,7 @@ header {
 }
 
 .logo {
-    height:95%;
+   height:10vh;
 }
 
 ul {
@@ -45,18 +44,16 @@ ul {
 .textonav {
     color: rgb(255, 225, 170);
     text-decoration: none;
+    font-size: 18px;
+    font-family: 'Oswald', sans-serif;
     background-color: black;
     padding: 5px;
-    margin: 0 4px;
-    border-radius: 6px;
-    font-size: 18px;
     margin: 0px 10px;
-    font-family: 'Oswald', sans-serif;
 }
 
 .formulario {
     display: flex;
-    align-self: center;
+    align-items: center;
 }
 
 input {
@@ -86,7 +83,6 @@ article {
 
 .titulocategorias {
     color: rgb(255, 225, 170);
-    width:100%;
     font-size: 36px;
     font-family: 'Oswald', sans-serif;
     text-align: center;
@@ -124,16 +120,13 @@ h5{
 .boton_ver_ahora {
     color: black;
     font-weight: bold;
-    background-color: rgb(255, 225, 170);
-    border: solid 4px rgb(255, 225, 170);
     font-family: 'Oswald', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: rgb(255, 225, 170);
     width: 118px;
     height: 42px;
     margin-left: 70px;
     border-radius: 6px;
+    border: solid 4px rgb(255, 225, 170);
 }
 
 .verahora {
@@ -144,11 +137,9 @@ h5{
 
 .texto1 {
     color: rgb(255, 225, 170);
-    margin:0%;
     font-size: 20px;
-    width:100%;
-    margin-left: 11px;
     font-family: 'Oswald', sans-serif;
+    margin:0px 0px 0px 11px;
 }
 
 .texto2 {
@@ -159,9 +150,6 @@ h5{
 }
 
 footer{
-    flex-direction: row;
-    width: 100%;
-    flex-wrap: wrap;
     background-color:black;
     height:150px;
 }
@@ -197,8 +185,12 @@ footer{
     }
 
     .textonav {
-        font-size: 65%;
-        margin: 0px 30px;
+        font-size: 15px;
+        margin: 0px 10px;
+    }
+
+    .caja2 {
+        margin-right: 16px;
     }
 
     input {
@@ -208,10 +200,6 @@ footer{
 
     button {
         height:30px;
-    }
-
-    .formulario {
-        align-items: flex-end;
     }
 
     .imagen {
@@ -246,15 +234,17 @@ footer{
     }
 
     .textonav {
-        font-size: 70%;
-        margin: 0px 0px;
+        font-size: 10.5px;
+        margin: 0px 5px;
     }
 
     input {
+        width: 172px;
         height:25px;
     }
 
     button {
+        width: 35px;
         height:25px;
     }
 
