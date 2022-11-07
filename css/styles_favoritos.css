@@ -1,4 +1,3 @@
-
 * {
     box-sizing:border-box
 }
@@ -12,9 +11,6 @@ body {
 }
 
 header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     background-color: black;
     padding: 8px;
     height: 100px;
@@ -302,12 +298,8 @@ footer {
             justify-content: center;
             display: flex;
         }
-
-<<<<<<< HEAD
-        .boton_ver_ahora{
-=======
+        
         .boton_ver_ahora {
->>>>>>> b859fe21a4ed51f9d983a7dbeb159aa1a64dda82
             margin-left: 82px;
         }
 }
