@@ -1,34 +1,14 @@
-// let valueInput = document.getElementById("#input").value;
-// let accionFormulario = document.getElementById("#form").action;
-
-// if (valueInput === null && valueInput === undefined){
-//     alert("No ingreso una búsqueda")
-//     accionFormulario = null
-// } else if (valueInput.length < 3){
-//     alert ("La busqueda debe ser como minimo de 3 caracteres")
-//     accionFormulario = null
-// } else {
-//     accionFormulario = "search-results.html"
-// }
-
-// let form = document.getElementById("form");
-// form.onclick = function(e){
-//   e.preventDefault();
-// let name = document.getElementById("name").value;
-//   console.log(name);
-// document.getElementById('print').innerHTML=name.toUpperCase();
-// }
-
+// FALTA: La búsqueda debe obtener resultados de películas y de series usando el endpoint "Search Movies" y "Search TV Shows"
 document.addEventListener("click",function(){
-    document.getElementById("form").addEventListener("submit",validarFomrulario);
+    document.getElementById("form").addEventListener("submit",mandarFomrulario);
 });
 
 document.addEventListener("keydown",function(){
-    document.getElementById("form").addEventListener("submit",validarFomrulario);
+    document.getElementById("form").addEventListener("submit",mandarFomrulario);
     //falta agregar que cuando apretas el campo de formulario denuevo, se vaya el alert solo
 });
 
-function validarFomrulario(evento){
+function mandarFomrulario(evento){
     evento.preventDefault();
     let valor = document.getElementById("input").value;
     if (valor.length === 0){
@@ -40,3 +20,17 @@ function validarFomrulario(evento){
     }
     this.submit();
 }
+
+// let apiKey = "399cd9827f714613d04693cee425808c"
+// let endPoint = "https://api.themoviedb.org/3/movie/popular?api_key="
+
+// fetch(`${endPoint}${apiKey}`)
+// .then(function(resp){
+//     return resp.json()
+// })
+// .then(function(data){
+//     console.log(data)
+// })
+// .catch (function(error){
+//     console.log(error)
+// })
