@@ -1,3 +1,20 @@
+let apiKey = "399cd9827f714613d04693cee425808c"
+
+// fetch(`https://api.themoviedb.org/3/movie/{movie_id}?api_key=${apiKey}&language=en-US`)
+// .then(function(resp){
+//     return resp.json()
+// })
+// .then(function(data){
+//     if (valor === data.title){
+//         let resultado = mandarFomrulario(evento)
+//         console.log(resultado)
+//     }
+// })
+// .catch (function(error){
+//     console.log(error)
+// })
+
+
 // FALTA: La búsqueda debe obtener resultados de películas y de series usando el endpoint "Search Movies" y "Search TV Shows"
 document.addEventListener("click",function(){
     document.getElementById("form").addEventListener("submit",mandarFomrulario);
@@ -13,23 +30,35 @@ function mandarFomrulario(evento){
     let valor = document.getElementById("input").value;
     if (valor.length === 0){
         alerta = alert("No escribiste nada");
-        return;
+        return
     } else if(valor.length < 3){
-        alerta = alert ("Tu busqueda tiene que ser minimo de 3 caracteres")
-        return;
+        alerta = alert ("Tu busqueda tiene que ser minimo de 3 caracteres");
+        return
     }
     this.submit();
 }
 
-// let apiKey = "399cd9827f714613d04693cee425808c"
-// let endPoint = "https://api.themoviedb.org/3/movie/popular?api_key="
 
-// fetch(`${endPoint}${apiKey}`)
+// let queryString = location.search
+// let query = new URLSearchParams(queryString)
+// let movie_id = query.get("id")
+// let  = docuemnt.querySelector(".container")
+
+// fetch(`https://api.themoviedb.org/3/movie/${movie_id}?api_key=${apiKey}&language=en-US`)
 // .then(function(resp){
 //     return resp.json()
 // })
 // .then(function(data){
-//     console.log(data)
+//     for (i=0; data.results.length;i++){
+//         list.innerHTML += `
+//         <li> ${data.results[i].title} 
+//             <img class="imagen" src="${data.results[i].image}">
+//             <a href="./details.html?id=${data.results[i].id}">
+//             <h5>${data.title}</h5>
+//             </a>
+//         </li>
+//         `
+//     }
 // })
 // .catch (function(error){
 //     console.log(error)
