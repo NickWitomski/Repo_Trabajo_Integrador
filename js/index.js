@@ -1,42 +1,65 @@
-// let valueInput = document.getElementById("#input").value;
-// let accionFormulario = document.getElementById("#form").action;
+let apiKey = "399cd9827f714613d04693cee425808c"
 
-// if (valueInput === null && valueInput === undefined){
-//     alert("No ingreso una búsqueda")
-//     accionFormulario = null
-// } else if (valueInput.length < 3){
-//     alert ("La busqueda debe ser como minimo de 3 caracteres")
-//     accionFormulario = null
-// } else {
-//     accionFormulario = "search-results.html"
-// }
+// fetch(`https://api.themoviedb.org/3/movie/{movie_id}?api_key=${apiKey}&language=en-US`)
+// .then(function(resp){
+//     return resp.json()
+// })
+// .then(function(data){
+//     if (valor === data.title){
+//         let resultado = mandarFomrulario(evento)
+//         console.log(resultado)
+//     }
+// })
+// .catch (function(error){
+//     console.log(error)
+// })
 
-// let form = document.getElementById("form");
-// form.onclick = function(e){
-//   e.preventDefault();
-// let name = document.getElementById("name").value;
-//   console.log(name);
-// document.getElementById('print').innerHTML=name.toUpperCase();
-// }
 
+// FALTA: La búsqueda debe obtener resultados de películas y de series usando el endpoint "Search Movies" y "Search TV Shows"
 document.addEventListener("click",function(){
-    document.getElementById("form").addEventListener("submit",validarFomrulario);
+    document.getElementById("form").addEventListener("submit",mandarFomrulario);
 });
 
 document.addEventListener("keydown",function(){
-    document.getElementById("form").addEventListener("submit",validarFomrulario);
+    document.getElementById("form").addEventListener("submit",mandarFomrulario);
     //falta agregar que cuando apretas el campo de formulario denuevo, se vaya el alert solo
 });
 
-function validarFomrulario(evento){
+function mandarFomrulario(evento){
     evento.preventDefault();
     let valor = document.getElementById("input").value;
     if (valor.length === 0){
         alerta = alert("No escribiste nada");
-        return;
+        return
     } else if(valor.length < 3){
-        alerta = alert ("Tu busqueda tiene que ser minimo de 3 caracteres")
-        return;
+        alerta = alert ("Tu busqueda tiene que ser minimo de 3 caracteres");
+        return
     }
     this.submit();
 }
+
+
+// let queryString = location.search
+// let query = new URLSearchParams(queryString)
+// let movie_id = query.get("id")
+// let  = docuemnt.querySelector(".container")
+
+// fetch(`https://api.themoviedb.org/3/movie/${movie_id}?api_key=${apiKey}&language=en-US`)
+// .then(function(resp){
+//     return resp.json()
+// })
+// .then(function(data){
+//     for (i=0; data.results.length;i++){
+//         list.innerHTML += `
+//         <li> ${data.results[i].title} 
+//             <img class="imagen" src="${data.results[i].image}">
+//             <a href="./details.html?id=${data.results[i].id}">
+//             <h5>${data.title}</h5>
+//             </a>
+//         </li>
+//         `
+//     }
+// })
+// .catch (function(error){
+//     console.log(error)
+// })
