@@ -1,44 +1,38 @@
 let apiKey = "399cd9827f714613d04693cee425808c"
 
-// fetch(`https://api.themoviedb.org/3/movie/{movie_id}?api_key=${apiKey}&language=en-US`)
-// .then(function(resp){
-//     return resp.json()
-// })
-// .then(function(data){
-//     if (valor === data.title){
-//         let resultado = mandarFomrulario(evento)
-//         console.log(resultado)
-//     }
-// })
-// .catch (function(error){
-//     console.log(error)
-// })
+window.addEventListener("load",function(){
+    let form = document.querySelector(".formulario")
 
+    form.addEventListener("click",function(evento){
+        mandarFomrulario(evento);
+    });
+    
+    form.addEventListener("keydown",function(evento){
+        mandarFomrulario(evento);
+    });
+})
 
-// FALTA: La búsqueda debe obtener resultados de películas y de series usando el endpoint "Search Movies" y "Search TV Shows"
-document.addEventListener("click",function(){
-    document.getElementById("form").addEventListener("submit",mandarFomrulario);
-});
-
-document.addEventListener("keydown",function(){
-    document.getElementById("form").addEventListener("submit",mandarFomrulario);
-    //falta agregar que cuando apretas el campo de formulario denuevo, se vaya el alert solo
-});
+// document.addEventListener("keydown",function(){
+//     document.querySelector("#form").addEventListener("submit",function(e){
+//         mandarFomrulario(e)
+//     });
+// });
 
 function mandarFomrulario(evento){
     evento.preventDefault();
-    let valor = document.getElementById("input").value;
+    let valor = document.querySelector(".input").value;
     if (valor.length === 0){
-        alerta = alert("No escribiste nada");
+        document.querySelector(".error").innerText =  "No escribiste nada";
         return
     } else if(valor.length < 3){
-        alerta = alert ("Tu busqueda tiene que ser minimo de 3 caracteres");
+        document.querySelector(".error").innerText =  "No escribiste nada";
         return
+    } else{
+        this.submit();
     }
-    this.submit();
 }
 
-let container = document.querySelector(".categoria")
+let container1 = document.querySelector(".categoria1")
 let movies = " "
 
 fetch(`https://api.themoviedb.org/3/movie/popular?api_key=399cd9827f714613d04693cee425808c&language=en-US&page=1`)
@@ -51,9 +45,55 @@ fetch(`https://api.themoviedb.org/3/movie/popular?api_key=399cd9827f714613d04693
     <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].title}' />
     <h2 class="titulocategorias"> ${data.results[i].title} </h2>
     <p class="fecha"> ${data.results[i].release_date }</p>
+    <button class="boton_ver_ahora" type="submit"> <a class="verahora" href="./detail-movie.html"> VER AHORA </a> </button>
     </article>`
     }
-    container.innerHTML = movies
+    container1.innerHTML = movies
+})
+.catch (function(error){
+    console.log(error)
+})
+
+let container2 = document.querySelector(".categoria2")
+let series = " "
+
+fetch(`https://api.themoviedb.org/3/tv/top_rated?api_key=399cd9827f714613d04693cee425808c&language=en-US&page=1`)
+.then(function(resp){
+    return resp.json()
+})
+.then(function(data){
+    console.log(data)
+    for (i=0; i< 5;i++){
+        series += `<article class="articulo">
+    <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].title}' />
+    <h2 class="titulocategorias"> ${data.results[i].name} </h2>
+    <p class="fecha"> ${data.results[i].first_air_date}</p>
+    <button class="boton_ver_ahora" type="submit"> <a class="verahora" href="./detail-movie.html"> VER AHORA </a> </button>
+    </article>`
+    }
+    container2.innerHTML = series
+})
+.catch (function(error){
+    console.log(error)
+})
+
+let container3 = document.querySelector(".categoria3")
+let movies2 = " "
+
+fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=399cd9827f714613d04693cee425808c&language=en-US&page=1`)
+.then(function(resp){
+    return resp.json()
+})
+.then(function(data){
+    for (i=0; i< 5;i++){
+        movies2 += `<article class="articulo">
+    <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].title}' />
+    <h2 class="titulocategorias"> ${data.results[i].title} </h2>
+    <p class="fecha"> ${data.results[i].release_date}</p>
+    <button class="boton_ver_ahora" type="submit"> <a class="verahora" href="./detail-movie.html"> VER AHORA </a> </button>
+    </article>`
+    }
+    container3.innerHTML = movies2
 })
 .catch (function(error){
     console.log(error)
