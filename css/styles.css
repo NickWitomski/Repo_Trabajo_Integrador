@@ -143,25 +143,34 @@ button {
 
 .categoria {
     margin: 10px 0px;
-}
-
-div {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    justify-content: space-between;
+}
+
+.articulo{
+    flex-wrap: wrap;
+    max-width: 200px
 }
 
 
 .titulocategorias {
     color:rgb(255, 225, 170);
     width:100%;
-    font-size: 40px;
+    font-size: 25px;
     font-family: 'Oswald', sans-serif;
     margin-bottom: 17px;
     margin-left: 52px;
 }
 
-
+.fecha{
+    color:rgb(255, 225, 170);
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    display: flex;
+}
 h3 {
     color:rgb(255, 225, 170);
     text-align: center;
