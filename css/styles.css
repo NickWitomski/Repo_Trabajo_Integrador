@@ -142,42 +142,38 @@ button {
 }
 
 .categoria1 {
-    margin: 10px 0px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .categoria2 {
-    margin: 10px 0px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .categoria3 {
-    margin: 10px 0px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .articulo{
     flex-wrap: wrap;
-    max-width: 200px
+    max-width: 250px;
+    display: flex;
+    justify-content: center;
 }
 
 
 .titulocategorias {
     color:rgb(255, 225, 170);
     width:100%;
-    font-size: 25px;
+    font-size: 20px;
     font-family: 'Oswald', sans-serif;
     margin-bottom: 17px;
-    margin-left: 52px;
+    text-align: center;
 }
 
 .fecha{
@@ -314,10 +310,26 @@ footer{
         min-width: 200px;
     }
 
-    .categoria {
+    .categoria1 {
+        display: flex;
         flex-wrap: wrap;   
     }
 
+    .categoria2 {
+        display: flex;
+        flex-wrap: wrap;   
+    }
+
+    .categoria3 {
+        display: flex;
+        flex-wrap: wrap;   
+    }
+
+    .articulo{
+        flex-wrap: wrap;
+        max-width: 250px;
+        display: flex;
+    }
     .titulocategorias {
         display: flex;
         justify-content: center;
@@ -351,7 +363,6 @@ footer{
         display: flex;
         justify-content: center;
         font-size: 30px;
-        margin-left: 0px;
     }
 
     .titulo_portada {
