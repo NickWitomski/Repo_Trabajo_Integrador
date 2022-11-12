@@ -1,37 +1,37 @@
 let apiKey = "399cd9827f714613d04693cee425808c"
 
-//VALIDANDO EL FORMULARIO
+// //VALIDANDO EL FORMULARIO
+
 window.addEventListener("load",function(){
+    let input = document.querySelector(".input")
     let form = document.querySelector(".formulario")
 
     form.addEventListener("click",function(evento){
-        mandarFomrulario(evento);
+        formValidation(form,input);
+    });
+        
+    form.addEventListener("keydown",function(evento){
+        formValidation(form,input);
     });
     
-    form.addEventListener("keydown",function(evento){
-        mandarFomrulario(evento);
-    });
+    input.addEventListener("click",function(evento){
+        document.querySelector(".error").innerText =  " ";
+    })
 })
 
-// document.addEventListener("keydown",function(){
-//     document.querySelector("#form").addEventListener("submit",function(e){
-//         mandarFomrulario(e)
-//     });
-// });
-
-function mandarFomrulario(evento){
-    evento.preventDefault();
-    let valor = document.querySelector(".input").value;
-    if (valor.length === 0){
-        document.querySelector(".error").innerText =  "No escribiste nada";
-        return
-    } else if(valor.length < 3){
-        document.querySelector(".error").innerText =  "No escribiste nada";
-        return
-    } else{
-        this.submit();
-    }
+function formValidation(form,input){
+    form.addEventListener("submit",function(e){
+        e.preventDefault()
+        if (input.value.length<3 && input.value.length>0){
+            document.querySelector(".error").innerText =  "Tu busqueda debe ser minimo de 3 caracteres";
+        } else if (input.value.length === 0 || input.value.length === undefined ){
+            document.querySelector(".error").innerText =  "No escribiste nada";
+        }else{
+            this.submit 
+        }
+    })
 }
+
 
 //ARAMANDO EL HOME 
 

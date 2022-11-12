@@ -25,6 +25,7 @@ header {
 .caja2 {
     display: flex;
     justify-content: flex-end;
+    flex-direction: column;
 }
 
 .logo {
@@ -52,6 +53,11 @@ ul {
     border-radius: 6px;
     font-size: 18px;
     margin: 0px 10px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.error{
+    color:white;
     font-family: 'Oswald', sans-serif;
 }
 
