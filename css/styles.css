@@ -25,6 +25,7 @@ header {
 .caja2 {
     display: flex;
     justify-content: flex-end;
+    flex-direction: column;
 }
 
 .logo {
@@ -52,6 +53,11 @@ ul {
     border-radius: 6px;
     font-size: 18px;
     margin: 0px 10px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.error{
+    color:white;
     font-family: 'Oswald', sans-serif;
 }
 
@@ -141,13 +147,28 @@ button {
     text-decoration: none;
 }
 
-.categoria {
-    margin: 10px 0px;
-}
-
-div {
+.categoria1 {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.categoria2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.categoria3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.articulo{
+    flex-wrap: wrap;
+    max-width: 250px;
+    display: flex;
     justify-content: center;
 }
 
@@ -155,18 +176,27 @@ div {
 .titulocategorias {
     color:rgb(255, 225, 170);
     width:100%;
-    font-size: 40px;
+    font-size: 20px;
     font-family: 'Oswald', sans-serif;
     margin-bottom: 17px;
-    margin-left: 52px;
+    text-align: center;
 }
 
-
+.fecha{
+    color:rgb(255, 225, 170);
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    display: flex;
+}
 h3 {
     color:rgb(255, 225, 170);
     text-align: center;
-    font-size: 20px;
+    font-size: 30px;
     font-family: 'Oswald', sans-serif;
+    justify-content: flex-start;
+    display: flex;
+    margin-left: 20px;
 }
 
 h5{
@@ -286,10 +316,26 @@ footer{
         min-width: 200px;
     }
 
-    .categoria {
+    .categoria1 {
+        display: flex;
         flex-wrap: wrap;   
     }
 
+    .categoria2 {
+        display: flex;
+        flex-wrap: wrap;   
+    }
+
+    .categoria3 {
+        display: flex;
+        flex-wrap: wrap;   
+    }
+
+    .articulo{
+        flex-wrap: wrap;
+        max-width: 250px;
+        display: flex;
+    }
     .titulocategorias {
         display: flex;
         justify-content: center;
@@ -323,7 +369,6 @@ footer{
         display: flex;
         justify-content: center;
         font-size: 30px;
-        margin-left: 0px;
     }
 
     .titulo_portada {

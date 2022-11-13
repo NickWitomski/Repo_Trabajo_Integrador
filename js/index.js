@@ -1,49 +1,114 @@
 let apiKey = "399cd9827f714613d04693cee425808c"
 
+<<<<<<< HEAD
 document.addEventListener("click",function(){
     document.getElementById("form").addEventListener("submit",mandarFomrulario);
 });
+=======
+// //VALIDANDO EL FORMULARIO
 
-document.addEventListener("keydown",function(){
-    document.getElementById("form").addEventListener("submit",mandarFomrulario);
-    //falta agregar que cuando apretas el campo de formulario denuevo, se vaya el alert solo
-});
+window.addEventListener("load",function(){
+    let input = document.querySelector(".input")
+    let form = document.querySelector(".formulario")
 
-function mandarFomrulario(evento){
-    evento.preventDefault();
-    let valor = document.getElementById("input").value;
-    if (valor.length === 0){
-        alerta = alert("No escribiste nada");
-        return
-    } else if(valor.length < 3){
-        alerta = alert ("Tu busqueda tiene que ser minimo de 3 caracteres");
-        return
-    }
-    this.submit();
+    form.addEventListener("click",function(evento){
+        formValidation(form,input);
+    });
+        
+    form.addEventListener("keydown",function(evento){
+        formValidation(form,input);
+    });
+    
+    input.addEventListener("click",function(evento){
+        document.querySelector(".error").innerText =  " ";
+    })
+})
+>>>>>>> 3ba0cb7366eb2858280abda23dba71e4a8f10c36
+
+function formValidation(form,input){
+    form.addEventListener("submit",function(e){
+        e.preventDefault()
+        if (input.value.length<3 && input.value.length>0){
+            document.querySelector(".error").innerText =  "Tu busqueda debe ser minimo de 3 caracteres";
+        } else if (input.value.length === 0 || input.value.length === undefined ){
+            document.querySelector(".error").innerText =  "No escribiste nada";
+        }else{
+            this.submit 
+        }
+    })
 }
 
 
-// let queryString = location.search
-// let query = new URLSearchParams(queryString)
-// let movie_id = query.get("id")
-// let  = docuemnt.querySelector(".container")
+//ARAMANDO EL HOME 
 
-// fetch(`https://api.themoviedb.org/3/movie/${movie_id}?api_key=${apiKey}&language=en-US`)
-// .then(function(resp){
-//     return resp.json()
-// })
-// .then(function(data){
-//     for (i=0; data.results.length;i++){
-//         list.innerHTML += `
-//         <li> ${data.results[i].title} 
-//             <img class="imagen" src="${data.results[i].image}">
-//             <a href="./details.html?id=${data.results[i].id}">
-//             <h5>${data.title}</h5>
-//             </a>
-//         </li>
-//         `
-//     }
-// })
-// .catch (function(error){
-//     console.log(error)
-// })
+let container1 = document.querySelector(".categoria1")
+let movies = " "
+
+fetch(`https://api.themoviedb.org/3/movie/popular?api_key=399cd9827f714613d04693cee425808c&language=en-US&page=1`)
+.then(function(resp){
+    return resp.json()
+})
+.then(function(data){
+    for (i=0; i< 5;i++){
+        movies += `<article class="articulo">
+    <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].title}' />
+    <p class="titulocategorias"> ${data.results[i].title} </p>
+    <p class="fecha"> ${data.results[i].release_date }</p>
+    </article>`
+    }
+    container1.innerHTML = movies
+})
+.catch (function(error){
+    console.log(error)
+})
+
+let container2 = document.querySelector(".categoria2")
+let series = " "
+
+fetch(`https://api.themoviedb.org/3/tv/top_rated?api_key=399cd9827f714613d04693cee425808c&language=en-US&page=1`)
+.then(function(resp){
+    return resp.json()
+})
+.then(function(data){
+    console.log(data)
+    for (i=0; i< 5;i++){
+        series += `<article class="articulo">
+    <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].title}' />
+    <p class="titulocategorias"> ${data.results[i].name} </p>
+    <p class="fecha"> ${data.results[i].first_air_date}</p>
+    </article>`
+    }
+    container2.innerHTML = series
+})
+.catch (function(error){
+    console.log(error)
+})
+
+let container3 = document.querySelector(".categoria3")
+let movies2 = " "
+
+fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=399cd9827f714613d04693cee425808c&language=en-US&page=1`)
+.then(function(resp){
+    return resp.json()
+})
+.then(function(data){
+    for (i=0; i< 5;i++){
+        movies2 += `<article class="articulo"> 
+        <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].title}' />
+        <p class="titulocategorias"> ${data.results[i].title} </p>
+        <p class="fecha"> ${data.results[i].release_date}</p>
+        </article>`
+    }
+    container3.innerHTML = movies2
+})
+.catch (function(error){
+    console.log(error)
+})
+
+//AL HACER CLICK QUE MANDE A DETALLES
+
+/*<a href="./detail-movie.html?id=${data.results[i].id}> 
+   </a>
+   
+    // <button class="boton_ver_ahora" type="submit"> <a class="verahora" href="./detail-movie.html"> VER AHORA </a> </button>
+    */
