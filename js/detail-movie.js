@@ -8,6 +8,7 @@ fetch (`https://api.themoviedb.org/3/movie/${id}?api_key=399cd9827f714613d04693c
     return resp.json
 })
 .then (function(data){
+    console.log(data)
     let favoritos = getStorage();
     let estaMiBusqueda = favoritos.includes(data.id)
     let textoInicial = " "
@@ -19,9 +20,18 @@ fetch (`https://api.themoviedb.org/3/movie/${id}?api_key=399cd9827f714613d04693c
 
     container.innerHTML = `
         <h1>${data.title}</h1>
-        <img src="${data.image}"/>
+        <img  class ="imagen" src="${data.image}"/>
         <p> ${data.release_date}</p>
+        <p> ${data.vote_average}</p>
+        <p> ${data.overview}</p>
+        <p> ${listGenres}</p>
         <button class="favoritos"> ${textoInicial} </button>`
+    
+    let imagen = document.querySelector(".imagen")
+    imagen.addEventListener("click",function(evento){
+        let recommendaciones = seeRecomemendations(data.id)
+    })
+
 
     let btnFavs = document.querySelector(".favoritos") //boton
     btnFavs.addEventListener("click", function(e){
@@ -60,4 +70,52 @@ function removeFavorite(id,storage){
     storage.splice(position,1)
     let storageToString = JSON.stringify(storage)
     localStorage.setItem("favoritos", storageToString)
+}
+
+function getGenres(arrayGenres){
+    list_genres_ids = []
+    for (i=0;i<arrayGenres.length;i++)
+        id = data.results[i].genre_ids
+        listGenresIds.push(id)
+    return listGenresIds
+}
+
+fetch (`https://api.themoviedb.org/3/genre/movie/list?api_key=399cd9827f714613d04693cee425808c&language=en-US`)
+.then (function(resp){
+    return resp.json
+})
+.then (function(data){
+    genres = getGenres(data.results.genre_ids)
+    listGenres = " "
+    for (i=0;i<data.genres.length;i++){
+        if (genres[i] === data.genres[i].id){
+            genre = data.genres[i].name
+            listGenres += genre
+        }
+    }
+    return listGenres
+})
+.catch (function(error){
+    console.log(error)
+})
+
+function seeRecomemendations (id){
+    fetch (`https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=399cd9827f714613d04693cee425808c&language=en-US&page=1`)
+    .then (function(resp){
+        return resp.json
+    })
+    .then (function(data){
+        recomend = " "
+        let list = document.querySelector(".recommendations")
+        for (i=0;i<5;i++){
+            recommend += `
+            <li> ${data.results[i].title} </li>
+            `
+        }
+        list.innerHTML = recommend
+    })
+    .catch (function(error){
+        console.log(error)
+    })
+    return list
 }

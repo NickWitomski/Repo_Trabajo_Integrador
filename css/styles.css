@@ -215,6 +215,7 @@ article {
     height: 400px;
     border: solid rgb(255, 225, 170) 5px;
     margin: 0px 10px;
+    display:block;
 }
 
 
