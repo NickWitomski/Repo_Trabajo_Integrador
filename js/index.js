@@ -1,21 +1,5 @@
 let apiKey = "399cd9827f714613d04693cee425808c"
 
-// fetch(`https://api.themoviedb.org/3/movie/{movie_id}?api_key=${apiKey}&language=en-US`)
-// .then(function(resp){
-//     return resp.json()
-// })
-// .then(function(data){
-//     if (valor === data.title){
-//         let resultado = mandarFomrulario(evento)
-//         console.log(resultado)
-//     }
-// })
-// .catch (function(error){
-//     console.log(error)
-// })
-
-
-// FALTA: La búsqueda debe obtener resultados de películas y de series usando el endpoint "Search Movies" y "Search TV Shows"
 document.addEventListener("click",function(){
     document.getElementById("form").addEventListener("submit",mandarFomrulario);
 });
