@@ -22,8 +22,9 @@ header {
 
 .caja2 {
     display: flex;
-    justify-content: flex-end;
+    align-self: flex-end;
     flex-direction: column;
+    
 }
 
 .error{
