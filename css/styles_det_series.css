@@ -115,13 +115,24 @@ button {
 
 footer{
     background-color:black;
-    height:150px;
+    height:250px;
+    margin-top: 25px;
 }
 
 .contacto {
     display: flex;
     justify-content: center;
     margin: 0px 5px 8px 8px;
+}
+
+.logo_tmdb {
+    width: 200px;
+    height: 80px;
+}
+
+.art2_footer{
+    display: flex;
+    justify-content: center;
 }
 
 .icono {

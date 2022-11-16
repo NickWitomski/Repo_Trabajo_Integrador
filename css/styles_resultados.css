@@ -146,12 +146,10 @@ h5{
     margin-bottom: 25px;
 }
 
-footer {
-    flex-direction: row;
-    width: 100%;
-    flex-wrap: wrap;
+footer{
     background-color:black;
-    height:150px;
+    height:250px;
+    margin-top: 25px;
 }
 
 .contacto {
@@ -169,6 +167,15 @@ footer {
     color: white;
 }
 
+.logo_tmdb {
+    width: 200px;
+    height: 80px;
+}
+
+.art2_footer{
+    display: flex;
+    justify-content: center;
+}
 .boton_ver_ahora {
     color: black;
     font-weight: bold;

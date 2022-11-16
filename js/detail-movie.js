@@ -35,7 +35,8 @@ function formValidation(form,input){
 let query = location.search
 let objQuery = new URLSearchParams(query)
 let id = objQuery.get("id")
-let container = document.querySelector(".detalle_movies")
+let container = document.querySelector(".detalleMovies")
+console.log(id)
 
 fetch (`https://api.themoviedb.org/3/movie/${id}?api_key=399cd9827f714613d04693cee425808c&language=en-US`)
 .then (function(resp){
