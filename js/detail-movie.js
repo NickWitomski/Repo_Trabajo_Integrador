@@ -44,10 +44,10 @@ fetch (`https://api.themoviedb.org/3/movie/${id}?api_key=399cd9827f714613d04693c
 .then (function(data){
     console.log(data)
 
-    listaGeneros = " "
+    listaGeneros = ""
     for (i=0;i<data.genres.length;i++){
         genero = data.genres[i].name
-        listaGeneros += genero
+        listaGeneros += `${genero} `
     }
 
     let favoritos = getStorage();
@@ -61,14 +61,19 @@ fetch (`https://api.themoviedb.org/3/movie/${id}?api_key=399cd9827f714613d04693c
 
     container.innerHTML = `
         <h1>${data.title}</h1>
+        <article class="articulo1"> 
         <a href="./detail-movie.html?id=${data.id}"> 
             <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt='${data.title}' />
         </a>
-        <p> ${data.release_date}</p>
-        <p> ${data.vote_average}</p>
-        <p> ${data.overview}</p>
-        <p> ${data.runtime}</p>
-        <p> ${listaGeneros}</p>
+        </article>
+
+        <article class="articulo2"> 
+        <p class="texto"> Fecha de estreno: ${data.release_date}</p>
+        <p class="texto"> Rating: ${data.vote_average}</p>
+        <p class="texto"> Resumen: ${data.overview}</p>
+        <p class="texto"> Duración: ${data.runtime}</p>
+        <p class="texto"> Generos: ${listaGeneros}</p>
+        </article>
         <button class="favoritos"> ${textoInicial} </button>`
     
     let imagen = document.querySelector(".imagen")

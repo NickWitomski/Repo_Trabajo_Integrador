@@ -81,13 +81,12 @@ button {
 }
 
 .imagen {
-    width: 50%;
-    height: 30%;
-    display:flex; 
+    width: 400px;
+    height: 500px;
+    border: solid rgb(255, 225, 170) 5px;
+    margin: 0px 10px;
     display:block;
-    flex-wrap: nowrap;
 }
-
 .textonav {
     color: rgb(255, 225, 170);
     text-decoration: none;
@@ -100,27 +99,28 @@ button {
     font-family: 'Oswald', sans-serif;
 }
 
-.Img_de_peli{
-    
-    align-self: flex-start;
-    width: 84%;
-    padding-left: 5%;
-}
 
-.texto1 {
-    color: rgb(255, 225, 170);
-    margin:0px 0px 0px 11px;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
-}
-
-.texto2 {
-    font-size: 15px;
+.texto {
+    font-size: 18px;
     margin-left: 11px;
-    color:white;
+    color: white;
     font-family: 'Oswald', sans-serif;
 }
 
+h1 {
+    color: rgb(255, 225, 170);
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    margin-left: 15px;
+    width: 100%
+
+}
+
+.articulo1 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
 footer{
     background-color:black;
     height:250px;
@@ -151,25 +151,6 @@ footer{
     justify-content: center;
 }
 
-.Iamgen_de_Pleicula{
-    display: flex;
-    flex-direction: row;
-    width: 50%;
-    height: 30% ;
-    overflow: hidden;
-}
-
-.Parrafo {
-    flex-direction: row;
-    width: 50%;
-    height: 30% ;
-    overflow: hidden;
-    font-family: monospace;
-}
-
-.Detalles_peliculas{
-    display: flex;
-}
 
 .botonfavoritos {
     width: 40%;
@@ -177,21 +158,6 @@ footer{
     background-color: black;
     color: white;
     border: solid  rgb(255, 225, 170) 2px;
-}
-
-.Director{
-    font-size: small;
-    color: antiquewhite;
-    
-}
-
-.Titulo {
-    color: #000000;
-    font-size: larger;
-    margin: revert;
-    padding-left: 3%;
-    background-color: rgb(255, 225, 170);
-    font-family: 'Oswald', sans-serif;
 }
 
 .boton_ver_ahora {
@@ -210,61 +176,110 @@ footer{
 
 }
 
-.ytp-cued-thumbnail-overlay-image {
-        background-size: cover;
-        -moz-background-size: cover;
-        -webkit-background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 90%;
-        height: 100%;
-        margin-left: 5%;
-        position: absolute;
-        margin-bottom: 100px;
+
+
+@media (max-width:1024px) {
+
+    body {
+        width: auto;
+        margin-right: 0px;
     }
 
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .logo {
+        height: 8vh;
+    }
+
+    .textonav {
+        font-size: 16px;
+        margin: 0px 10px;
+    }
+
+    .caja2 {
+        margin-right: 30px;
+    }
+
+    input {
+        width: 250px;
+        height: 30px;
+    }
+
+    button {
+        height:30px;
+    }
+
+    .imagen {
+        min-width: 200px;
+    }
+
+    .detalleMovies {
+        display: flex;
+        flex-wrap: wrap;   
+    }
+
+    .trailers {
+        display: flex;
+        flex-wrap: wrap;   
+    }
+}
 
 
-@media (min-width:1024px) {
+@media (max-width:650px) {
 
-    .Img_de_peli{
-       height: 500px;
+    .textonav {
+        font-size: 10.5px;
+        margin: 0px 5px;
+    }
+
+    input {
+        width: 172px;
+        height:25px;
+    }
+
+    button {
+        width: 35px;
+        height:25px;
+    }
+
+    .texto {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 23px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contacto i {
+        font-size: 14px;
+    }
+}
+/* @media (min-width:1024px) {
+
+    .imagen{
+       height: 200px;
        padding-left: 100px;
        width: 70%;
     }
    
-    .Titulo{
+    .h1{
        font-size: 40px;
        display: flex;
        padding-left: 11%;
     }
    
-   .Descripcion_Peli {
-       font-size: 20px;
-   
-    }
-
     .botonfavoritos {
        width: 26%;
        margin-left: 8%;
        height: 50px;
     }
    
-    .Director {
-        font-size: 20px;
-    }
-   
-    .Capitulos {
-       width: 26%;
-       margin-left: 8%;
-       height: 50px;
-    }
-   
-    .ytp-cued-thumbnail-overlay-image {
-       height: 500px;
-       margin-bottom: 100px;
-    }
-
     .textonav{
         font-size: 14.5px;
         margin: 0px 10px;
@@ -283,10 +298,6 @@ footer{
         align-items: center;
         justify-content: normal;
     }
-
-    .ytp-cued-thumbnail-overlay-image{
-        height: 500px;
-    }
    
     .textonav {
         font-size: 14.5px;
@@ -303,4 +314,4 @@ footer{
     }
    
 }
-   
+    */
