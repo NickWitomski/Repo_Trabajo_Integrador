@@ -1,3 +1,37 @@
+//VALIDANDO FORMULARIO 
+
+window.addEventListener("load",function(){
+    let input = document.querySelector(".input")
+    let form = document.querySelector(".formulario")
+
+    form.addEventListener("click",function(evento){
+        formValidation(form,input);
+    });
+        
+    form.addEventListener("keydown",function(evento){
+        formValidation(form,input);
+    });
+    
+    input.addEventListener("click",function(evento){
+        document.querySelector(".error").innerText =  " ";
+    })
+
+})
+
+function formValidation(form,input){
+    form.addEventListener("submit",function(e){
+        e.preventDefault()
+        if (input.value.length<3 && input.value.length>0){
+            document.querySelector(".error").innerText =  "Tu busqueda debe ser minimo de 3 caracteres";
+        } else if (input.value.length === 0 || input.value.length === undefined ){
+            document.querySelector(".error").innerText =  "No escribiste nada";
+        }else{
+            this.submit 
+        }
+    })
+}
+//
+
 let query = location.search
 let objQuery = new URLSearchParams(query)
 let id = objQuery.get("id")
@@ -20,7 +54,9 @@ fetch (`https://api.themoviedb.org/3/movie/${id}?api_key=399cd9827f714613d04693c
 
     container.innerHTML = `
         <h1>${data.title}</h1>
-        <img  class ="imagen" src="${data.image}"/>
+        <a href="./detail-movie.html?id=${data.results[i].id}"> 
+            <img  class ="imagen" src="${data.image}"/>
+        </a>
         <p> ${data.release_date}</p>
         <p> ${data.vote_average}</p>
         <p> ${data.overview}</p>
@@ -119,3 +155,25 @@ function seeRecomemendations (id){
     })
     return list
 }
+
+//para poner trailers (punto extra)
+
+let container_trailers = document.querySelector(".trailers")
+trailers = ""
+
+fetch (`https://api.themoviedb.org/3/movie/${id}/videos?api_key=399cd9827f714613d04693cee425808c&language=en-US`)
+.then (function(resp){
+    return resp.json
+})
+.then (function(data){
+    for (i=0; i< data.results.length;i++){
+        trailers += `
+        <article> 
+            <iframe width="300px" height="100px" src="https://www.youtube.com/watch?v=${data.results[i].key}"> </iframe>
+        </article>`
+    }
+    container_trailers.innerHTML = trailers
+})
+.catch (function(error){
+    console.log(error)
+})

@@ -28,6 +28,12 @@ header {
 .caja2 {
     display: flex;
     justify-content: flex-end;
+    flex-direction: column;
+}
+
+.error{
+    color:white;
+    font-family: 'Oswald', sans-serif;
 }
 
 

@@ -30,9 +30,17 @@ header {
     display:flex;
 }
 
-.caja2{
+.caja2 {
     display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
 }
+
+.error{
+    color:white;
+    font-family: 'Oswald', sans-serif;
+}
+
 
 .logo {
     height:8vh;
