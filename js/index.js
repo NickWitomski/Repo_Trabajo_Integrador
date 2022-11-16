@@ -69,6 +69,7 @@ fetch(`https://api.themoviedb.org/3/tv/top_rated?api_key=399cd9827f714613d04693c
 })
 .then(function(data){
     console.log(data)
+    console.log(data.results[1].id)
     for (i=0; i< 5;i++){
         series += `<article class="articulo">
         <a href="./detail-movie.html?id=${data.results[i].id}"> 

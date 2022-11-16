@@ -36,15 +36,20 @@ let query = location.search
 let objQuery = new URLSearchParams(query)
 let id = objQuery.get("id")
 let container = document.querySelector(".detalleMovies")
-console.log(id)
 
 fetch (`https://api.themoviedb.org/3/movie/${id}?api_key=399cd9827f714613d04693cee425808c&language=en-US`)
 .then (function(resp){
-    return resp.json
+    return resp.json()
 })
 .then (function(data){
     console.log(data)
-    console.log(id)
+
+    listaGeneros = " "
+    for (i=0;i<data.genres.length;i++){
+        genero = data.genres[i].name
+        listaGeneros += genero
+    }
+
     let favoritos = getStorage();
     let estaMiBusqueda = favoritos.includes(data.id)
     let textoInicial = " "
@@ -56,13 +61,14 @@ fetch (`https://api.themoviedb.org/3/movie/${id}?api_key=399cd9827f714613d04693c
 
     container.innerHTML = `
         <h1>${data.title}</h1>
-        <a href="./detail-movie.html?id=${data.results[i].id}"> 
-            <img  class ="imagen" src="${data.image}"/>
+        <a href="./detail-movie.html?id=${data.id}"> 
+            <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt='${data.title}' />
         </a>
         <p> ${data.release_date}</p>
         <p> ${data.vote_average}</p>
         <p> ${data.overview}</p>
-        <p> ${listGenres}</p>
+        <p> ${data.runtime}</p>
+        <p> ${listaGeneros}</p>
         <button class="favoritos"> ${textoInicial} </button>`
     
     let imagen = document.querySelector(".imagen")
@@ -110,32 +116,19 @@ function removeFavorite(id,storage){
     localStorage.setItem("favoritos", storageToString)
 }
 
-function getGenres(arrayGenres){
-    list_genres_ids = []
-    for (i=0;i<arrayGenres.length;i++)
-        id = data.results[i].genre_ids
-        listGenresIds.push(id)
-    return list_genres_ids
+//get proveedres
+function getProveedores(){
+    fetch (`https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=399cd9827f714613d04693cee425808c`)
+    .then (function(resp){
+        return resp.json
+    })
+    .then(function(data){
+        console.log(data)
+    })
+    .catch(function(error){
+        console.log(error)
+    })
 }
-
-fetch (`https://api.themoviedb.org/3/genre/movie/list?api_key=399cd9827f714613d04693cee425808c&language=en-US`)
-.then (function(resp){
-    return resp.json
-})
-.then (function(data){
-    genres = getGenres(data.results.genre_ids)
-    listGenres = " "
-    for (i=0;i<data.genres.length;i++){
-        if (genres[i] === data.genres[i].id){
-            genre = data.genres[i].name
-            listGenres += genre
-        }
-    }
-    return listGenres
-})
-.catch (function(error){
-    console.log(error)
-})
 
 function seeRecomemendations (id){
     fetch (`https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=399cd9827f714613d04693cee425808c&language=en-US&page=1`)
@@ -160,22 +153,23 @@ function seeRecomemendations (id){
 
 //para poner trailers (punto extra)
 
-let container_trailers = document.querySelector(".trailers")
-trailers = ""
+// let container_trailers = document.querySelector(".trailers")
+// trailers = ""
 
-fetch (`https://api.themoviedb.org/3/movie/${id}/videos?api_key=399cd9827f714613d04693cee425808c&language=en-US`)
-.then (function(resp){
-    return resp.json
-})
-.then (function(data){
-    for (i=0; i< data.results.length;i++){
-        trailers += `
-        <article> 
-            <iframe width="300px" height="100px" src="https://www.youtube.com/watch?v=${data.results[i].key}"> </iframe>
-        </article>`
-    }
-    container_trailers.innerHTML = trailers
-})
-.catch (function(error){
-    console.log(error)
-})
+// fetch (`https://api.themoviedb.org/3/movie/${id}/videos?api_key=399cd9827f714613d04693cee425808c&language=en-US`)
+// .then (function(resp){
+//     return resp.json()
+// })
+// .then (function(data){
+//     console.log(data)
+//     for (i=0; i< data.results.length;i++){
+//         trailers += `
+//         <article> 
+//         <iframe width="560" height="315" src="https://www.youtube.com/embed/${data.results[i].key}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+//         </article>`
+//     }
+//     container_trailers.innerHTML = trailers
+// })
+// .catch (function(error){
+//     console.log(error)
+// })
