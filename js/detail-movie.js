@@ -26,7 +26,7 @@ function formValidation(form,input){
         } else if (input.value.length === 0 || input.value.length === undefined ){
             document.querySelector(".error").innerText =  "No escribiste nada";
         }else{
-            this.submit 
+            this.submit() 
         }
     })
 }
@@ -43,6 +43,7 @@ fetch (`https://api.themoviedb.org/3/movie/${id}?api_key=399cd9827f714613d04693c
 })
 .then (function(data){
     console.log(data)
+    console.log(id)
     let favoritos = getStorage();
     let estaMiBusqueda = favoritos.includes(data.id)
     let textoInicial = " "
@@ -113,7 +114,7 @@ function getGenres(arrayGenres){
     for (i=0;i<arrayGenres.length;i++)
         id = data.results[i].genre_ids
         listGenresIds.push(id)
-    return listGenresIds
+    return list_genres_ids
 }
 
 fetch (`https://api.themoviedb.org/3/genre/movie/list?api_key=399cd9827f714613d04693cee425808c&language=en-US`)

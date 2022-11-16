@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-//VALIDANDO FORMULARIO 
+
+// //VALIDANDO FORMULARIO 
 
 window.addEventListener("load",function(){
     let input = document.querySelector(".input")
@@ -27,13 +27,12 @@ function formValidation(form,input){
         } else if (input.value.length === 0 || input.value.length === undefined ){
             document.querySelector(".error").innerText =  "No escribiste nada";
         }else{
-            this.submit 
+            this.submit()
         }
     })
 }
-//
-=======
-let apiKey = "399cd9827f714613d04693cee425808c"
+// //
+
 
 window.addEventListener('load',function(){
 
@@ -65,4 +64,4 @@ fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keywo
     console.log(error)
 })
 })
->>>>>>> bd2f2f49ed3f492a3358c933209e0b267fcc3265
+

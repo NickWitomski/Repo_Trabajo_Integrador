@@ -28,13 +28,13 @@ function formValidation(form,input){
         } else if (input.value.length === 0 || input.value.length === undefined ){
             document.querySelector(".error").innerText =  "No escribiste nada";
         }else{
-            this.submit 
+            this.submit()
         }
     })
 }
-//
 
-window.addEventListener('load',function(){
+
+// window.addEventListener('load',function(){
 
 let container = document.querySelector(".section_pel")
 let movie =location.search
@@ -46,16 +46,13 @@ let series = ' '
 let container2 = document.querySelector(".section_ser")
 
 
-
 fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keyword}`)
 .then(function(resp){
     return resp.json()
 })
-
 .then(function(data){
     for (i=0; i< 5;i++){
         if (data.results[i].media_type === 'movie'){
-<<<<<<< HEAD
         movies += 
         `<article class="articulo">
             <a href="./detail-movie.html?id=${data.results[i].id}"> 
@@ -72,30 +69,18 @@ fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keywo
     </article>`
     console.log(data)
 }}
-    
     container.innerHTML = movies
     container2.innerHTML = series
-=======
-        movies += `<article class="articulo">
-        <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].title}' />
-        <h2 class="titulocategorias"> ${data.results[i].title} </h2>
-        <p class="fecha"> ${data.results[i].release_date }</p>
-        </article>`
-        console.log(data)
-} 
-    container.innerHTML = movie
-.then(function(error){
+}
+.catch(function(error){
     console.log(error)
-
->>>>>>> bd2f2f49ed3f492a3358c933209e0b267fcc3265
-})
+}))
 
 
 fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keyword}`)
-.then(function(resp){
+.then (function(resp){
     return resp.json()
 })
-
 .then(function(data){
     for (i=0; i< 5;i++){
         if (data.results[i].media_type === 'tv'){
@@ -108,8 +93,7 @@ fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keywo
         
     }}
     container2.innerHTML = series
-
-.then(function(error){
-    console.log(error)
 })
+.catch(function(error){
+    console.log(error)
 })

@@ -26,8 +26,8 @@ function formValidation(form,input){
         } else if (input.value.length === 0 || input.value.length === undefined ){
             document.querySelector(".error").innerText =  "No escribiste nada";
         }else{
-            this.submit 
+            this.submit()
         }
     })
 }
-//
+// //

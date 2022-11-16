@@ -1,10 +1,5 @@
 let apiKey = "399cd9827f714613d04693cee425808c"
 
-<<<<<<< HEAD
-document.addEventListener("click",function(){
-    document.getElementById("form").addEventListener("submit",mandarFomrulario);
-});
-=======
 // //VALIDANDO EL FORMULARIO
 
 window.addEventListener("load",function(){
@@ -24,7 +19,6 @@ window.addEventListener("load",function(){
     })
 
 })
->>>>>>> 3ba0cb7366eb2858280abda23dba71e4a8f10c36
 
 function formValidation(form,input){
     form.addEventListener("submit",function(e){
@@ -34,7 +28,7 @@ function formValidation(form,input){
         } else if (input.value.length === 0 || input.value.length === undefined ){
             document.querySelector(".error").innerText =  "No escribiste nada";
         }else{
-            this.submit 
+            this.submit()
         }
     })
 }

@@ -1,4 +1,4 @@
-//VALIDANDO FORMULARIO 
+// //VALIDANDO FORMULARIO 
 
 window.addEventListener("load",function(){
     let input = document.querySelector(".input")
@@ -26,11 +26,12 @@ function formValidation(form,input){
         } else if (input.value.length === 0 || input.value.length === undefined ){
             document.querySelector(".error").innerText =  "No escribiste nada";
         }else{
-            this.submit 
+            this.submit()
         }
     })
 }
 //
+
 let container = document.querySelector(".section")
 
 window.addEventListener("load",function(){
