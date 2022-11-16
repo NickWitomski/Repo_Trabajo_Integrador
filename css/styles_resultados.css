@@ -2,6 +2,10 @@
     box-sizing:border-box
 }
 
+p {
+    color: rgb(255, 225, 170);
+}
+
 body {
     background: linear-gradient(to right, #000000, #434343);
     background-repeat: no-repeat;
@@ -288,6 +292,7 @@ footer {
 
     h2 {
         font-size: 30px;
+        color: rgb(255, 225, 170);
     }
 
     .texto1 {
