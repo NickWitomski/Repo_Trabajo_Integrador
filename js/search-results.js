@@ -33,8 +33,7 @@ function formValidation(form,input){
     })
 }
 
-
-// window.addEventListener('load',function(){
+//window.addEventListener('load',function(){
 
 let container = document.querySelector(".section_pel")
 let movie =location.search
