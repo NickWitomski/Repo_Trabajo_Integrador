@@ -44,7 +44,7 @@ fetch (`https://api.themoviedb.org/3/movie/${id}?api_key=399cd9827f714613d04693c
 .then (function(data){
     console.log(data)
 
-    listaGeneros = ""
+    let listaGeneros = ""
     for (i=0;i<data.genres.length;i++){
         genero = data.genres[i].name
         listaGeneros += `${genero} `
@@ -58,7 +58,7 @@ fetch (`https://api.themoviedb.org/3/movie/${id}?api_key=399cd9827f714613d04693c
     } else {
         textoInicial = "Agregar a favoritos"
     }
-
+    
     container.innerHTML = `
         <h1>${data.title}</h1>
         <article class="articulo1"> 
@@ -71,7 +71,7 @@ fetch (`https://api.themoviedb.org/3/movie/${id}?api_key=399cd9827f714613d04693c
         <p class="texto"> Fecha de estreno: ${data.release_date}</p>
         <p class="texto"> Rating: ${data.vote_average}</p>
         <p class="texto"> Resumen: ${data.overview}</p>
-        <p class="texto"> Duración: ${data.runtime}</p>
+        <p class="texto"> Duración: ${data.runtime} mins</p>
         <p class="texto"> Generos: ${listaGeneros}</p>
         </article>
         <button class="favoritos"> ${textoInicial} </button>`
@@ -93,7 +93,7 @@ fetch (`https://api.themoviedb.org/3/movie/${id}?api_key=399cd9827f714613d04693c
             addFavorite(data.id,favoritos)
             e.target.innerText = "Sacar de favoritos"
         }
-    })
+    }) 
 })
 .catch (function(error){
     console.log(error)
@@ -122,26 +122,33 @@ function removeFavorite(id,storage){
 }
 
 //get proveedres
-function getProveedores(){
+function getProveedores(movie_id){
     fetch (`https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=399cd9827f714613d04693cee425808c`)
     .then (function(resp){
-        return resp.json
+        return resp.json()
     })
     .then(function(data){
         console.log(data)
+        let proveedores = ""
+        for (i=0; i<data.results.length;i++){
+            proveedores += `${data.results.MX.buy[i].provider_name} `
+        }
     })
     .catch(function(error){
         console.log(error)
     })
+    return proveedores
 }
 
+
+//recomendaciones
 function seeRecomemendations (id){
     fetch (`https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=399cd9827f714613d04693cee425808c&language=en-US&page=1`)
     .then (function(resp){
-        return resp.json
+        return resp.json()
     })
     .then (function(data){
-        recomend = " "
+        let recomend = " "
         let list = document.querySelector(".recommendations")
         for (i=0;i<5;i++){
             recommend += `
@@ -153,7 +160,7 @@ function seeRecomemendations (id){
     .catch (function(error){
         console.log(error)
     })
-    return list
+    return recommend
 }
 
 //para poner trailers (punto extra)
@@ -167,7 +174,7 @@ function seeRecomemendations (id){
 // })
 // .then (function(data){
 //     console.log(data)
-//     for (i=0; i< data.results.length;i++){
+//     for (i=0; i< 6;i++){
 //         trailers += `
 //         <article> 
 //         <iframe width="560" height="315" src="https://www.youtube.com/embed/${data.results[i].key}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
