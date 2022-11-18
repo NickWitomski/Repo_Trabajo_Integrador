@@ -32,10 +32,10 @@ function formValidation(form,input){
 }
 //
 
-let container = document.querySelector(".section")
+let container = document.querySelector(".container")
 
 window.addEventListener("load",function(){
-    let favs = getFavsStorage
+    let favs = getFavsStorage()
     if (favs.length === 0){
         container.innerHTML = 
         `
@@ -57,24 +57,30 @@ function getFavsStorage(){
     }
 }
 
-function getAllFavsAndPrint(arrayFavs){
-    for (i=0;i<arrayFavs.length;i++){
-        fetch(`https://api.themoviedb.org/3/movie/${arrFavs[i]}`) //chequear si este endPoint esta bien, le falta --> //?api_key=399cd9827f714613d04693cee425808c&language=en-US
+
+function getAllFavsAndPrint(favs){
+    let favo = " "
+    for (i=0;i<favs.length;i++){
+        fetch(`https://api.themoviedb.org/3/movie/${favs[i]}?api_key=399cd9827f714613d04693cee425808c&language=en-US`)
         .then (function(resp){
-            return JSON.resp
+            return resp.json()
         })
         .then(function(data){
-            container.innerHTML += `
-                <article> 
-                    <img class ="imagen" src="${data.image}"/>
-                    <a href="./detail-movie.html?id=${data.id}">
-                        <p> ${data.title}</p>
+            console.log(data)
+            favo += `
+                <article class="articulo"> 
+                    <h2> ${data.title}</h2>
+                    <a class="a_img" href="./detail-movie.html?id=${data.id}">
+                        <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt='${data.title}' />
                     </a>
                 </article>
                 `
+        container.innerHTML = favo
         })
+        
         .catch(function(error){
             console.log(error)
         })
     }
+    return favo
 }

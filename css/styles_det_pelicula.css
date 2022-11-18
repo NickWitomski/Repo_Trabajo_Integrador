@@ -8,19 +8,10 @@ body {
     margin:0px;
 }
 
-.Descripcion_Peli{
-color: aliceblue;
-display: flex;
-font-size: small;
-text-align: justify;
-margin-right: 15px;
-}
-
 header {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     background-color: black;
     padding: 8px;
     height: 100px;
@@ -36,14 +27,8 @@ header {
     flex-direction: column;
 }
 
-.error{
-    color:white;
-    font-family: 'Oswald', sans-serif;
-}
-
-
 .logo {
-    height:8vh;
+    height:95%;
 }
 
 ul {
@@ -52,14 +37,32 @@ ul {
     list-style-type: none;
 }
 
+
 .navegador {
     display: flex;
     align-items: center;
 }
 
+.textonav {
+    color: rgb(255, 225, 170);
+    text-decoration: none;
+    background-color: black;
+    padding: 5px;
+    margin: 0 4px;
+    border-radius: 6px;
+    font-size: 18px;
+    margin: 0px 10px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.error{
+    color:white;
+    font-family: 'Oswald', sans-serif;
+}
+
 .formulario {
     display: flex;
-    align-items: center;
+    align-self: center;
 }
 
 input {
@@ -67,9 +70,11 @@ input {
     height: 35px;
 }
 
-button {
-    height:35px;
+.boton_form {
+    width: 40px;
+    height: 35px;
 }
+
 .categorias {
     display:flex;
     flex-direction: column;
@@ -81,13 +86,12 @@ button {
 }
 
 .imagen {
-    width: 50%;
-    height: 30%;
-    display:flex; 
+    width: 400px;
+    height: 500px;
+    border: solid rgb(255, 225, 170) 5px;
+    margin: 0px 10px;
     display:block;
-    flex-wrap: nowrap;
 }
-
 .textonav {
     color: rgb(255, 225, 170);
     text-decoration: none;
@@ -100,17 +104,50 @@ button {
     font-family: 'Oswald', sans-serif;
 }
 
-.Img_de_peli{
-    
-    align-self: flex-start;
-    width: 84%;
-    padding-left: 5%;
+
+.texto {
+    font-size: 18px;
+    margin-left: 11px;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+    color: rgb(255, 225, 170);
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    margin-left: 15px;
+    width: 100%
+
+}
+
+.articulo1 {
+    display: flex;
+    width: 50%;
+}
+
+.articulo2 {
+    display: flex;
+    width: 50%; 
+    flex-direction: column;
+}
+
+.favoritos {
+    width: 200px;
+    height: 50px;
+    margin-left: 10px;
+    color:  black;
+    font-family: 'Oswald', sans-serif;
+    border: solid 4px rgb(255, 225, 170);
+    border-radius: 5px;
 }
 
 .texto1 {
     color: rgb(255, 225, 170);
-    margin:0px 0px 0px 11px;
+    margin:0%;
     font-size: 20px;
+    width:100%;
+    margin-left: 11px;
     font-family: 'Oswald', sans-serif;
 }
 
@@ -141,6 +178,7 @@ footer{
     font-size: 18px;
     color: white;
 }
+
 .logo_tmdb {
     width: 200px;
     height: 80px;
@@ -151,156 +189,88 @@ footer{
     justify-content: center;
 }
 
-.Iamgen_de_Pleicula{
-    display: flex;
-    flex-direction: row;
-    width: 50%;
-    height: 30% ;
-    overflow: hidden;
-}
 
-.Parrafo {
-    flex-direction: row;
-    width: 50%;
-    height: 30% ;
-    overflow: hidden;
-    font-family: monospace;
-}
 
-.Detalles_peliculas{
-    display: flex;
-}
+@media (max-width:1024px) {
 
-.botonfavoritos {
-    width: 40%;
-    margin-left: 2.5%;
-    background-color: black;
-    color: white;
-    border: solid  rgb(255, 225, 170) 2px;
-}
-
-.Director{
-    font-size: small;
-    color: antiquewhite;
-    
-}
-
-.Titulo {
-    color: #000000;
-    font-size: larger;
-    margin: revert;
-    padding-left: 3%;
-    background-color: rgb(255, 225, 170);
-    font-family: 'Oswald', sans-serif;
-}
-
-.boton_ver_ahora {
-    color: black;
-    font-weight: bold;
-    background-color: rgb(255, 225, 170);
-    border: solid 4px rgb(255, 225, 170);
-    font-family: 'Oswald', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 24%;
-    height: 30px;
-    margin-left: 34px;
-    border-radius: 6px;
-
-}
-
-.ytp-cued-thumbnail-overlay-image {
-        background-size: cover;
-        -moz-background-size: cover;
-        -webkit-background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 90%;
-        height: 100%;
-        margin-left: 5%;
-        position: absolute;
-        margin-bottom: 100px;
+    body {
+        width: auto;
+        margin-right: 0px;
     }
-
-
-
-@media (min-width:1024px) {
-
-    .Img_de_peli{
-       height: 500px;
-       padding-left: 100px;
-       width: 70%;
-    }
-   
-    .Titulo{
-       font-size: 40px;
-       display: flex;
-       padding-left: 11%;
-    }
-   
-   .Descripcion_Peli {
-       font-size: 20px;
-   
-    }
-
-    .botonfavoritos {
-       width: 26%;
-       margin-left: 8%;
-       height: 50px;
-    }
-   
-    .Director {
-        font-size: 20px;
-    }
-   
-    .Capitulos {
-       width: 26%;
-       margin-left: 8%;
-       height: 50px;
-    }
-   
-    .ytp-cued-thumbnail-overlay-image {
-       height: 500px;
-       margin-bottom: 100px;
-    }
-
-    .textonav{
-        font-size: 14.5px;
-        margin: 0px 10px;
-    }
-    .boton_form {
-        height: 35px;
-    }
-}
-   
-   
-@media only screen and (min-width:650px) and (max-width: 1024px) {
 
     header {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: normal;
     }
 
-    .ytp-cued-thumbnail-overlay-image{
-        height: 500px;
+    .logo {
+        height: 8vh;
     }
-   
+
     .textonav {
-        font-size: 14.5px;
+        font-size: 16px;
         margin: 0px 10px;
     }
-    
+
+    .caja2 {
+        margin-right: 30px;
+    }
+
+    input {
+        width: 250px;
+        height: 30px;
+    }
+
+    button {
+        height:30px;
+    }
+
+    .imagen {
+        max-width: 300px;
+    }
+
+
+    .trailers {
+        display: flex;
+        flex-wrap: wrap;   
+    }
+}
+
+
+@media (max-width:650px) {
+
+    .textonav {
+        font-size: 10.5px;
+        margin: 0px 5px;
+    }
+
     input {
         width: 172px;
-        height: 30px;
+        height:25px;
     }
-    
+
     button {
-        height: 30px;
+        width: 35px;
+        height:25px;
     }
-   
+
+    .texto {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 23px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .articulo1 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .contacto i {
+        font-size: 14px;
+    }
 }
-   
