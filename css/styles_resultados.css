@@ -14,6 +14,13 @@ body {
     margin:0px;
 }
 
+.fecha{
+    color:rgb(255, 225, 170);
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    display: flex;
+}
 
 header {
     display: flex;
@@ -85,8 +92,6 @@ button {
     height: 35px;
 }
 
-
-
 .texto1 {
     color: rgb(255, 225, 170);
     margin:0%;
@@ -120,6 +125,15 @@ article {
     margin: 20px 0px;
 }
 
+.articulo{
+    flex-wrap: wrap;
+    max-width: 250px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
 .imagen {
     width: 250px;
     height: 400px;
@@ -127,11 +141,14 @@ article {
     margin: 0px 10px;
 }
 
-h3 {
-    color:rgb(255, 225, 170);
+h1 {
+    color: rgb(255, 225, 170);
     text-align: center;
-    font-size: 20px;
+    font-size: 30px;
     font-family: 'Oswald', sans-serif;
+    justify-content: flex-start;
+    display: flex;
+    margin-left: 20px;
 }
 
 h5{
@@ -209,7 +226,26 @@ footer{
     font-family: 'Oswald', sans-serif;
 }
 
+.categoria1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
 @media (max-width:1024px) {
+
+    .articulo{
+        flex-wrap: wrap;
+        max-width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .categoria1 {
+        display: flex;
+        flex-wrap: wrap;   
+    }
 
     body {
         width: auto;
