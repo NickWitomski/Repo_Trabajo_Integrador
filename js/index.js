@@ -44,7 +44,7 @@ fetch(`https://api.themoviedb.org/3/movie/popular?api_key=399cd9827f714613d04693
     return resp.json()
 })
 .then(function(data){
-    for (i=0; i< 5;i++){
+    for (i=0; i < 5;i++){
         movies += `<article class="articulo">
     <a href="./detail-movie.html?id=${data.results[i].id}"> 
         <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].title}' />

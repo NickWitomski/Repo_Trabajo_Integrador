@@ -43,6 +43,7 @@ let objMovie = new URLSearchParams(movie)
 let keyword = objMovie.get('name')
 let series = ' '
 let container2 = document.querySelector(".section_ser")
+console.log("BSUQUEDA", keyword)
 
 
 fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keyword}`)
@@ -50,10 +51,12 @@ fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keywo
     return resp.json()
 })
 .then(function(data){
+    console.log("DATA SEARCh", data);
     for (i=0; i< 5;i++){
         if (data.results[i].media_type === 'movie'){
         movies += 
-        `<article class="articulo">
+        `<article class="busqueda">
+        <h1 class="titulobusqueda">La busqueda que hiciste es:${keyword}</h1>
             <a href="./detail-movie.html?id=${data.results[i].id}"> 
             <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].title}' />
             </a>
@@ -70,29 +73,29 @@ fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keywo
 }}
     container.innerHTML = movies
     container2.innerHTML = series
-}
-.catch(function(error){
-    console.log(error)
-}))
-
-
-fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keyword}`)
-.then (function(resp){
-    return resp.json()
 })
-.then(function(data){
-    for (i=0; i< 5;i++){
-        if (data.results[i].media_type === 'tv'){
-            series += `<article class="articulo">
-        <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].original_name}' />
-        <h2 class="titulocategorias"> ${data.results[i].original_name} </h2>
-        <p class="fecha"> ${data.results[i].first_air_date }</p>
-        </article>`
-        console.log(data)
+.catch(function (err) {
+    console.log(err)
+})
+
+
+// fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keyword}`)
+// .then (function(resp){
+//     return resp.json()
+// })
+// .then(function(data){
+//     for (i=0; i< 5;i++){
+//         if (data.results[i].media_type === 'tv'){
+//             series += `<article class="articulo">
+//         <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].original_name}' />
+//         <h2 class="titulocategorias"> ${data.results[i].original_name} </h2>
+//         <p class="fecha"> ${data.results[i].first_air_date }</p>
+//         </article>`
+//         console.log(data)
         
-    }}
-    container2.innerHTML = series
-})
-.catch(function(error){
-    console.log(error)
-})
+//     }}
+//     container2.innerHTML = series
+// })
+// .catch(function(error){
+//     console.log(error)
+// })
