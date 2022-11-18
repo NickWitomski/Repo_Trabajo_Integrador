@@ -43,8 +43,30 @@ function formValidation(form,input){
 // let series = ' '
 
 // fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keyword}`)
-// .then(function(resp){
-//     return resp.json()
+
+// https://api.themoviedb.org/3/discover/movie?api_key=399cd9827f714613d04693cee425808c&with_geners=${keyword}}
+fetch(`https://api.themoviedb.org/3/discover/movie?api_key=399cd9827f714613d04693cee425808c&with_geners=${keyword}`)
+.then(function(resp){
+    return resp.json()
+})
+.then(function(data){
+    console.log(data)
+    for (i=0; i< 5;i++){
+            series += `<article class="articulo">
+        <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].original_title}' />
+        <h2 class="titulocategorias"> ${data.results[i].title} </h2>
+        <p class="fecha"> ${data.results[i].first_air_date }</p>
+        </article>`
+        console.log(data)
+        
+    }
+    container.innerHTML = series
+})
+
+.catch(function(error){
+    console.log(error)
+})
+>>>>>>> 5b5de599449317940c9558e7098cfa6c3c373e46
 // })
 // .then(function(data){
 //     for (i=0; i< 5;i++){
