@@ -42,7 +42,7 @@ let objMovie = new URLSearchParams(movie)
 let keyword = objMovie.get('name')
 let series = ' '
 
-// fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keyword}`)
+
 fetch(`https://api.themoviedb.org/3/search/multi?api_key=399cd9827f714613d04693cee425808c&language=en-US&page=1&include_adult=false&query=${keyword}`)
 .then(function(resp){
     return resp.json()

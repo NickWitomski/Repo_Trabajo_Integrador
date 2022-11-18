@@ -100,7 +100,7 @@ fetch (`https://api.themoviedb.org/3/movie/${id}?api_key=399cd9827f714613d04693c
 })
 
 function getStorage(){
-    let storage = localStorage.getItem("favoritos")
+    let storage = localStorage.getItem("favoritosPelis")
     if (storage !== null && storage!== undefined){
         return JSON.parse(storage)
     } else {
@@ -111,14 +111,14 @@ function getStorage(){
 function addFavorite(id, storage){
     storage.push(id)
     let storageToString = JSON.stringify(storage)
-    localStorage.setItem("favoritos",storageToString)
+    localStorage.setItem("favoritosPelis",storageToString)
 }
 
 function removeFavorite(id,storage){
     let position = storage.indexOf(id)
     storage.splice(position,1)
     let storageToString = JSON.stringify(storage)
-    localStorage.setItem("favoritos", storageToString)
+    localStorage.setItem("favoritosPelis", storageToString)
 }
 
 //get proveedres
@@ -148,7 +148,7 @@ function seeRecomemendations (id){
         return resp.json()
     })
     .then (function(data){
-        let recomend = " "
+        let recommend = " "
         let list = document.querySelector(".recommendations")
         for (i=0;i<5;i++){
             recommend += `

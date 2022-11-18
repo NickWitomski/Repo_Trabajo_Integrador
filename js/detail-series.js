@@ -60,10 +60,10 @@ fetch (`https://api.themoviedb.org/3/tv/${id}?api_key=399cd9827f714613d04693cee4
     }
     
     container.innerHTML = `
-        <h1>${data.title}</h1>
+        <h1>${data.original_name}</h1>
         <article class="articulo1"> 
         <a href="./detail-movie.html?id=${data.id}"> 
-            <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt='${data.title}' />
+            <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt='${data.original_name}' />
         </a>
         </article>
 
@@ -99,7 +99,7 @@ fetch (`https://api.themoviedb.org/3/tv/${id}?api_key=399cd9827f714613d04693cee4
 })
 
 function getStorage(){
-    let storage = localStorage.getItem("favoritos")
+    let storage = localStorage.getItem("favoritosSeries")
     if (storage !== null && storage!== undefined){
         return JSON.parse(storage)
     } else {
@@ -110,12 +110,12 @@ function getStorage(){
 function addFavorite(id, storage){
     storage.push(id)
     let storageToString = JSON.stringify(storage)
-    localStorage.setItem("favoritos",storageToString)
+    localStorage.setItem("favoritosSeries",storageToString)
 }
 
 function removeFavorite(id,storage){
     let position = storage.indexOf(id)
     storage.splice(position,1)
     let storageToString = JSON.stringify(storage)
-    localStorage.setItem("favoritos", storageToString)
+    localStorage.setItem("favoritosSeries", storageToString)
 }
