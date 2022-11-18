@@ -47,7 +47,7 @@ fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}&language=
     for (i=0;i<18;i++){
         genres +=`
             <article class="genero"> 
-            <a class ='titulo_section' href='./detail-genre.html?id=${data.genres[i].id}">
+            <a class ='titulo_section' href='./detail-genres.html?id=${data.genres[i].id}">
             <h2 class='link_det_generos'> ${data.genres[i].name} </h2>
             </a>
             </article>

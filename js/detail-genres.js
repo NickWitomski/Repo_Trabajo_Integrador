@@ -1,6 +1,12 @@
 
 // //VALIDANDO FORMULARIO 
 
+let keyword = location.search
+let objetoKeyword = new URLSearchParams(keyword)
+let id = objetoKeyword.get("id")
+let series = " "
+let container = document.querySelector(".categoria")
+
 window.addEventListener("load",function(){
     let input = document.querySelector(".input")
     let form = document.querySelector(".formulario")
@@ -43,7 +49,7 @@ function formValidation(form,input){
 // let series = ' '
 
 
-fetch(`https://api.themoviedb.org/3/discover/movie?api_key=399cd9827f714613d04693cee425808c&with_geners=${keyword}`)
+fetch(`https://api.themoviedb.org/3/discover/movie?api_key=399cd9827f714613d04693cee425808c&with_geners=${id}`)
 .then(function(resp){
     return resp.json()
 })
