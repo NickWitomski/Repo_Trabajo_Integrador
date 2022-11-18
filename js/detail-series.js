@@ -60,11 +60,12 @@ fetch (`https://api.themoviedb.org/3/tv/${id}?api_key=399cd9827f714613d04693cee4
     }
     
     container.innerHTML = `
-        <h1>${data.title}</h1>
+        <h1>${data.original_name}</h1>
         <article class="articulo1"> 
-        <a href="./detail-movie.html?id=${data.id}"> 
-            <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt='${data.title}' />
-        </a>
+            <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt='${data.original_name}' />
+        </article>
+
+        <article class="recomendaciones">
         </article>
 
         <article class="articulo2"> 
@@ -77,7 +78,7 @@ fetch (`https://api.themoviedb.org/3/tv/${id}?api_key=399cd9827f714613d04693cee4
     
     let imagen = document.querySelector(".imagen")
     imagen.addEventListener("click",function(evento){
-        let recommendaciones = seeRecomemendations(data.id)
+        let recommendaciones = getRecomendaciones()
     })
 
 
@@ -99,7 +100,7 @@ fetch (`https://api.themoviedb.org/3/tv/${id}?api_key=399cd9827f714613d04693cee4
 })
 
 function getStorage(){
-    let storage = localStorage.getItem("favoritos")
+    let storage = localStorage.getItem("favoritosSeries")
     if (storage !== null && storage!== undefined){
         return JSON.parse(storage)
     } else {
@@ -110,12 +111,55 @@ function getStorage(){
 function addFavorite(id, storage){
     storage.push(id)
     let storageToString = JSON.stringify(storage)
-    localStorage.setItem("favoritos",storageToString)
+    localStorage.setItem("favoritosSeries",storageToString)
 }
 
 function removeFavorite(id,storage){
     let position = storage.indexOf(id)
     storage.splice(position,1)
     let storageToString = JSON.stringify(storage)
-    localStorage.setItem("favoritos", storageToString)
+    localStorage.setItem("favoritosSeries", storageToString)
+}
+
+//get proveedores
+fetch (`https://api.themoviedb.org/3/tv/${id}/watch/providers?api_key=399cd9827f714613d04693cee425808c`)
+.then (function(resp){
+    return resp.json()
+})
+.then(function(data){
+    console.log(data)
+    let container = document.querySelector(".proveedores")
+    let proveedores = ""
+    for (i=0; i<data.results.US.flatrate.length;i++){
+        proveedores += `
+        <li class="elemento_prov">
+        <img class="logo_prov" src="https://image.tmdb.org/t/p/w500/${data.results.US.flatrate[i].logo_path}" alt='${data.results.US.flatrate[i].provider_name}' />
+        </li>`
+    }
+    container.innerHTML = proveedores
+})
+.catch(function(error){
+    console.log(error)
+})
+
+//recomendaciones
+function getRecomendaciones(){
+    fetch (`https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=399cd9827f714613d04693cee425808c&language=en-US&page=1`)
+    .then (function(resp){
+        return resp.json()
+    })
+    .then (function(data){
+        console.log(data)
+        let recommend = `<ul> </ul>`
+        let list = document.querySelector(".recomendaciones")
+        for (i=0;i<5;i++){
+            recommend += `
+            <li class"elemento_lista"> ${data.results[i].title} </li>
+            `
+        }
+        list.innerHTML = recommend
+    })
+    .catch (function(error){
+        console.log(error)
+    })
 }

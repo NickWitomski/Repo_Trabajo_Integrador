@@ -104,7 +104,6 @@ input {
     font-family: 'Oswald', sans-serif;
 }
 
-
 .texto {
     font-size: 18px;
     margin-left: 11px;
@@ -140,6 +139,30 @@ h1 {
     font-family: 'Oswald', sans-serif;
     border: solid 4px rgb(255, 225, 170);
     border-radius: 5px;
+}
+
+.logo_prov{
+    max-width: 70px;
+    max-height: 70px;
+    border: solid 2px rgb(255, 225, 170);
+    border-radius: 6px;
+}
+
+.elemento_prov{
+    margin: 20px
+}
+
+li{
+    color:white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+}
+
+.imagen_recomendaciones{
+    max-width: 250px;
+    max-height: 250px;
+    border: solid 2px rgb(255, 225, 170);
+    border-radius: 6px;
 }
 
 .texto1 {

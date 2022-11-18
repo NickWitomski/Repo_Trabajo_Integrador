@@ -35,19 +35,41 @@ function formValidation(form,input){
 let container = document.querySelector(".container")
 
 window.addEventListener("load",function(){
-    let favs = getFavsStorage()
-    if (favs.length === 0){
+    let favsPelis = getFavsStoragePelis()
+    if (favsPelis.length === 0){
         container.innerHTML = 
         `
         <h4> No tienes favoritos </h4>
         `
     } else {
-        getAllFavsAndPrint(favs)
+        let mostrarFavsPelis = getFavsPelis(favsPelis)
+        console.log(mostrarFavsPelis)
+    }
+
+    let favsSeries = getFavsStorageSeries()
+    if (favsSeries.length === 0){
+        container.innerHTML = 
+        `
+        <h4> No tienes favoritos </h4>
+        `
+    } else {
+        let mostrarFavsSeries = getFavsSeries(favsSeries)
+        console.log(mostrarFavsSeries)
     }
 })
 
 
-function getFavsStorage(){
+function getFavsStorageSeries(){
+    let storage = localStorage.getItem("favoritosSeries")
+
+    if (storage !== null && storage!== undefined){
+        return JSON.parse(storage)
+    }else {
+        return []
+    }
+}
+
+function getFavsStoragePelis(){
     let storage = localStorage.getItem("favoritos")
 
     if (storage !== null && storage!== undefined){
@@ -57,17 +79,16 @@ function getFavsStorage(){
     }
 }
 
-
-function getAllFavsAndPrint(favs){
-    let favo = " "
-    for (i=0;i<favs.length;i++){
-        fetch(`https://api.themoviedb.org/3/movie/${favs[i]}?api_key=399cd9827f714613d04693cee425808c&language=en-US`)
+function getFavsPelis(favsPelis){
+    let favoPelis = " "
+    for (i=0;i<favsPelis.length;i++){
+        fetch(`https://api.themoviedb.org/3/movie/${favsPelis[i]}?api_key=399cd9827f714613d04693cee425808c&language=en-US`)
         .then (function(resp){
             return resp.json()
         })
         .then(function(data){
             console.log(data)
-            favo += `
+            favoPelis += `
                 <article class="articulo"> 
                     <h2> ${data.title}</h2>
                     <a class="a_img" href="./detail-movie.html?id=${data.id}">
@@ -75,12 +96,39 @@ function getAllFavsAndPrint(favs){
                     </a>
                 </article>
                 `
-        container.innerHTML = favo
+        container.innerHTML = favoPelis
         })
         
         .catch(function(error){
             console.log(error)
         })
     }
-    return favo
+    return favoPelis
+}
+
+function getFavsSeries(favsSeries){
+    let favoSeries = " "
+    for (i=0;i<favsSeries.length;i++){
+        fetch(`https://api.themoviedb.org/3/tv/${favsSeries[i]}?api_key=399cd9827f714613d04693cee425808c&language=en-US`)
+        .then (function(resp){
+            return resp.json()
+        })
+        .then(function(data){
+            console.log(data)
+            favoSeries += `
+                <article class="articulo"> 
+                    <h2> ${data.original_name}</h2>
+                    <a class="a_img" href="./detail-movie.html?id=${data.id}">
+                        <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt='${data.original_name}' />
+                    </a>
+                </article>
+                `
+        container.innerHTML = favoSeries
+        })
+        
+        .catch(function(error){
+            console.log(error)
+        })
+    }
+    return favoSeries
 }
