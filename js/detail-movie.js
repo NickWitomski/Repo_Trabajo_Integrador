@@ -62,10 +62,12 @@ fetch (`https://api.themoviedb.org/3/movie/${id}?api_key=399cd9827f714613d04693c
     container.innerHTML = `
         <h1>${data.title}</h1>
         <article class="articulo1"> 
-        <a href="./detail-movie.html?id=${data.id}"> 
             <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt='${data.title}' />
-        </a>
         </article>
+        <button class="boton_recomendaciones"> Ver Recomendaciones </button>
+
+        <ul class="recomendaciones">
+        </ul>
 
         <article class="articulo2"> 
         <p class="texto"> Fecha de estreno: ${data.release_date}</p>
@@ -76,9 +78,9 @@ fetch (`https://api.themoviedb.org/3/movie/${id}?api_key=399cd9827f714613d04693c
         </article>
         <button class="favoritos"> ${textoInicial} </button>`
     
-    let imagen = document.querySelector(".imagen")
-    imagen.addEventListener("click",function(evento){
-        let recommendaciones = seeRecomemendations(data.id)
+    let boton= document.querySelector(".boton_recomendaciones")
+    boton.addEventListener("click",function(evento){
+        getRecomendaciones()
     })
 
 
@@ -121,38 +123,44 @@ function removeFavorite(id,storage){
     localStorage.setItem("favoritosPelis", storageToString)
 }
 
-//get proveedres
-function getProveedores(movie_id){
+//get proveedores
     fetch (`https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=399cd9827f714613d04693cee425808c`)
     .then (function(resp){
         return resp.json()
     })
     .then(function(data){
         console.log(data)
+        let container = document.querySelector(".proveedores")
         let proveedores = ""
-        for (i=0; i<data.results.length;i++){
-            proveedores += `${data.results.MX.buy[i].provider_name} `
+        for (i=0; i<data.results.US.flatrate.length;i++){
+            proveedores += `
+            <li class="elemento_prov">
+            <img class="logo_prov" src="https://image.tmdb.org/t/p/w500/${data.results.US.flatrate[i].logo_path}" alt='${data.results.US.flatrate[i].provider_name}' />
+            </li>`
         }
+        container.innerHTML = proveedores
+
     })
     .catch(function(error){
         console.log(error)
     })
-    return proveedores
-}
 
 
 //recomendaciones
-function seeRecomemendations (id){
+function getRecomendaciones(){
     fetch (`https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=399cd9827f714613d04693cee425808c&language=en-US&page=1`)
     .then (function(resp){
         return resp.json()
     })
     .then (function(data){
-        let recommend = " "
-        let list = document.querySelector(".recommendations")
+        console.log(data)
+        let recommend = ``
+        let list = document.querySelector(".recomendaciones")
         for (i=0;i<5;i++){
             recommend += `
-            <li> ${data.results[i].title} </li>
+            <li class"elemento_lista"> 
+                <img class="imagen_recomendaciones" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].original_title}' />
+            </li>
             `
         }
         list.innerHTML = recommend
@@ -160,8 +168,9 @@ function seeRecomemendations (id){
     .catch (function(error){
         console.log(error)
     })
-    return recommend
 }
+
+
 
 //para poner trailers (punto extra)
 

@@ -43,11 +43,7 @@ function formValidation(form,input){
 // let series = ' '
 
 
-<<<<<<< HEAD
-fetch(`https://api.themoviedb.org/3/search/multi?api_key=399cd9827f714613d04693cee425808c&language=en-US&page=1&include_adult=false&query=${keyword}`)
-=======
 fetch(`https://api.themoviedb.org/3/discover/movie?api_key=399cd9827f714613d04693cee425808c&with_geners=${keyword}`)
->>>>>>> a89d68af68756fc2f5e4e3fbe779d9cae271bb18
 .then(function(resp){
     return resp.json()
 })
