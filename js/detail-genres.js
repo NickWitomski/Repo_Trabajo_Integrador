@@ -65,24 +65,3 @@ function formValidation(form,input){
 // })
 
 
-let apiKey = "399cd9827f714613d04693cee425808c"
-fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${"399cd9827f714613d04693cee425808c"}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate`)
-.then(function(resp){
-    return resp.json()
-})
-.then(function(data){
-    console.log(data)
-
-})
-
-.catch(function(error){
-    console.log(error)
-})
-
-
-
-window.addEventListener('click',function(){
-
-
-
-})
