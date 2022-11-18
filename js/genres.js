@@ -1,4 +1,6 @@
 //VALIDANDO FORMULARIO 
+let apiKey = "399cd9827f714613d04693cee425808c"
+
 
 window.addEventListener("load",function(){
     let input = document.querySelector(".input")
@@ -30,3 +32,29 @@ function formValidation(form,input){
         }
     })
 }
+
+
+let container1 = document.querySelector(".section_generos")
+let genres = ' '
+
+
+fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}&language=en-US`)
+.then(function(resp){
+    return resp.json()
+})
+.then(function(data){
+    console.log(data)
+    for (i=0;i<18;i++){
+        genres +=`
+            <article class="genero"> 
+            <a class ='titulo_section' href='./detail-genre.html?id=${data.genres[i].id}">
+            <h2 class='link_det_generos'> ${data.genres[i].name} </h2>
+            </a>
+            </article>
+        `
+    }
+    container1.innerHTML = genres
+})
+.catch(function(error){
+    console.log(error)
+})

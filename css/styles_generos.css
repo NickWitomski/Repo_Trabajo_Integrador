@@ -88,6 +88,8 @@ button {
     font-size: 40px;
     font-family: 'Oswald', sans-serif;
     color: rgb(255, 225, 170);
+    text-decoration: none;
+
 }
 
 .genero {
@@ -102,9 +104,6 @@ button {
     align-items: center;
 }
 
-.link_det_generos {
-    text-decoration: none;
-}
 
 h3{
     color: rgb(255, 225, 170);
