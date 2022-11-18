@@ -158,7 +158,7 @@ function getRecomendaciones(){
         let list = document.querySelector(".recomendaciones")
         for (i=0;i<5;i++){
             recommend += `
-            <li class"elemento_lista"> 
+            <li class="elemento_lista"> 
                 <img class="imagen_recomendaciones" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].original_title}' />
             </li>
             `

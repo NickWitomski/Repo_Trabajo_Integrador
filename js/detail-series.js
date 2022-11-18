@@ -64,9 +64,10 @@ fetch (`https://api.themoviedb.org/3/tv/${id}?api_key=399cd9827f714613d04693cee4
         <article class="articulo1"> 
             <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt='${data.original_name}' />
         </article>
+        <button class="boton_recomendaciones"> Ver Recomendaciones </button>
 
-        <article class="recomendaciones">
-        </article>
+        <ul class="recomendaciones">
+        </ul>
 
         <article class="articulo2"> 
         <p class="texto"> Fecha de estreno: ${data.first_air_date}</p>
@@ -76,9 +77,9 @@ fetch (`https://api.themoviedb.org/3/tv/${id}?api_key=399cd9827f714613d04693cee4
         </article>
         <button class="favoritos"> ${textoInicial} </button>`
     
-    let imagen = document.querySelector(".imagen")
-    imagen.addEventListener("click",function(evento){
-        let recommendaciones = getRecomendaciones()
+    let boton= document.querySelector(".boton_recomendaciones")
+    boton.addEventListener("click",function(evento){
+        getRecomendaciones()
     })
 
 
@@ -150,11 +151,13 @@ function getRecomendaciones(){
     })
     .then (function(data){
         console.log(data)
-        let recommend = `<ul> </ul>`
+        let recommend = ``
         let list = document.querySelector(".recomendaciones")
         for (i=0;i<5;i++){
             recommend += `
-            <li class"elemento_lista"> ${data.results[i].title} </li>
+            <li class="elemento_lista"> 
+                <img class="imagen_recomendaciones" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].original_title}' />
+            </li>
             `
         }
         list.innerHTML = recommend

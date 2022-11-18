@@ -140,6 +140,7 @@ h1 {
     font-family: 'Oswald', sans-serif;
     border: solid 4px rgb(255, 225, 170);
     border-radius: 5px;
+    background-color: rgb(255, 225, 170);
 }
 
 .logo_prov{
@@ -153,10 +154,18 @@ h1 {
     margin: 20px
 }
 
-li{
+.elemento_lista{
     color:white;
     font-family: 'Oswald', sans-serif;
     font-size: 15px;
+    margin:20px
+}
+
+.imagen_recomendaciones{
+    max-width: 250px;
+    max-height: 250px;
+    border: solid 2px rgb(255, 225, 170);
+    border-radius: 6px;
 }
 .texto1 {
     color: rgb(255, 225, 170);
