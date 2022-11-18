@@ -31,7 +31,7 @@ function formValidation(form,input){
         }
     })
 }
-// //
+// 
 
 
 // window.addEventListener('load',function(){
@@ -42,9 +42,7 @@ function formValidation(form,input){
 // let keyword = objMovie.get('name')
 // let series = ' '
 
-// fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keyword}`)
 
-// https://api.themoviedb.org/3/discover/movie?api_key=399cd9827f714613d04693cee425808c&with_geners=${keyword}}
 fetch(`https://api.themoviedb.org/3/discover/movie?api_key=399cd9827f714613d04693cee425808c&with_geners=${keyword}`)
 .then(function(resp){
     return resp.json()
@@ -66,23 +64,3 @@ fetch(`https://api.themoviedb.org/3/discover/movie?api_key=399cd9827f714613d0469
 .catch(function(error){
     console.log(error)
 })
->>>>>>> 5b5de599449317940c9558e7098cfa6c3c373e46
-// })
-// .then(function(data){
-//     for (i=0; i< 5;i++){
-//             series += `<article class="articulo">
-//         <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].original_name}' />
-//         <h2 class="titulocategorias"> ${data.results[i].title} </h2>
-//         <p class="fecha"> ${data.results[i].first_air_date }</p>
-//         </article>`
-//         console.log(data)
-        
-//     }
-//     container.innerHTML = series
-// })
-
-// .catch(function(error){
-//     console.log(error)
-// })
-// })
-

@@ -73,10 +73,10 @@ fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keywo
 }}
     container.innerHTML = movies
     container2.innerHTML = series
-}
-.catch(function(error){
-    console.log(error)
-}))
+})
+.catch(function (err) {
+    console.log(err)
+})
 
 
 // fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keyword}`)
