@@ -43,17 +43,7 @@ ul {
     align-items: center;
 }
 
-.textonav {
-    color: rgb(255, 225, 170);
-    text-decoration: none;
-    background-color: black;
-    padding: 5px;
-    margin: 0 4px;
-    border-radius: 6px;
-    font-size: 18px;
-    margin: 0px 10px;
-    font-family: 'Oswald', sans-serif;
-}
+
 
 .error{
     color:white;
@@ -91,16 +81,17 @@ input {
     border: solid rgb(255, 225, 170) 5px;
     margin: 0px 10px;
     display:block;
+    border-radius: 15px;
 }
+
 .textonav {
     color: rgb(255, 225, 170);
     text-decoration: none;
     background-color: black;
     padding: 5px;
-    margin: 0 4px;
     border-radius: 6px;
-    font-size: 70%;
-    margin: 0px 0px;
+    font-size: 18px;
+    margin: 0px 10px;
     font-family: 'Oswald', sans-serif;
 }
 
@@ -123,12 +114,10 @@ h1 {
 
 .articulo1 {
     display: flex;
-    width: 50%;
 }
 
 .articulo2 {
     display: flex;
-    width: 50%; 
     flex-direction: column;
 }
 
@@ -265,6 +254,7 @@ footer{
         display: flex;
         flex-wrap: wrap;
         align-items: center;
+        height: 130px;
     }
 
     .logo {
@@ -293,6 +283,23 @@ footer{
         max-width: 300px;
     }
 
+    .articulo1{
+        justify-content: center;
+    }
+    
+    .proveedores{
+        flex-wrap: wrap;
+    }
+
+    h1{
+        justify-content: center;
+        display: flex;
+    }
+    
+    .articulo_boton {
+        display: flex;
+        justify-content: center;
+    }
 
     .trailers {
         display: flex;
@@ -327,12 +334,30 @@ footer{
         display: flex;
         justify-content: center;
     }
-
+    
+    h2{
+        font-size: 30px;
+    }
     .articulo1 {
         display: flex;
         justify-content: center;
     }
 
+    .proveedores{
+        flex-wrap: wrap;
+    }
+
+    .trailers{
+        justify-content: center;
+    }
+
+    .video_trailer{
+        max-width: 400px;
+    }
+
+    .logo_prov{
+        max-width: 60px;
+    }
     .contacto i {
         font-size: 14px;
     }

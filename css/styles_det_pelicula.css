@@ -91,6 +91,7 @@ button {
     border: solid rgb(255, 225, 170) 5px;
     margin: 0px 10px;
     display:block;
+    border-radius: 15px;
 }
 
 
@@ -291,7 +292,7 @@ footer{
         justify-content: center;
         display: flex;
     }
-    
+
     .articulo_boton {
         display: flex;
         justify-content: center;
@@ -299,6 +300,9 @@ footer{
 
     .caja2 {
         margin-right: 30px;
+    }
+    .proveedores{
+        flex-wrap: wrap;
     }
 
     .imagen {
@@ -343,6 +347,14 @@ footer{
     .articulo1 {
         display: flex;
         justify-content: center;
+    }
+
+    .proveedores{
+        flex-wrap: wrap;
+    }
+
+    .logo_prov{
+        max-width: 60px;
     }
 
     .contacto i {

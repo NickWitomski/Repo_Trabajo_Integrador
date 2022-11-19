@@ -64,8 +64,11 @@ fetch (`https://api.themoviedb.org/3/tv/${id}?api_key=399cd9827f714613d04693cee4
         <article class="articulo1"> 
             <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt='${data.original_name}' />
         </article>
-        <button class="boton_recomendaciones"> Ver Recomendaciones </button>
 
+        <article class="articulo_boton">
+        <button class="boton_recomendaciones"> Ver Recomendaciones </button>
+        </article>
+        
         <ul class="recomendaciones">
         </ul>
 
@@ -75,7 +78,10 @@ fetch (`https://api.themoviedb.org/3/tv/${id}?api_key=399cd9827f714613d04693cee4
         <p class="texto"> Resumen: ${data.overview}</p>
         <p class="texto"> Generos: ${listaGeneros}</p>
         </article>
-        <button class="favoritos"> ${textoInicial} </button>`
+        
+        <article class="articulo_boton">
+        <button class="favoritos"> ${textoInicial} </button>
+        </article>`
     
     let boton= document.querySelector(".boton_recomendaciones")
     boton.addEventListener("click",function(evento){
@@ -181,7 +187,7 @@ fetch (`https://api.themoviedb.org/3/tv/${id}/videos?api_key=399cd9827f714613d04
     for (i=0; i< 1;i++){
         trailers += `
         <article class="articulo"> 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/${data.results[i].key}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="video_trailer" width="560" height="315" src="https://www.youtube.com/embed/${data.results[i].key}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </article>`
     }
     container_trailers.innerHTML = trailers
