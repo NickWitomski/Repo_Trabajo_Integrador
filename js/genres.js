@@ -35,7 +35,7 @@ function formValidation(form,input){
 
 
 let container1 = document.querySelector(".section_generos")
-let genres = ' '
+let genresPelis = ' '
 
 
 fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}&language=en-US`)
@@ -44,8 +44,8 @@ fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}&language=
 })
 .then(function(data){
     console.log(data)
-    for (i=0;i<18;i++){
-        genres +=`
+    for (i=0;i<19;i++){
+        genresPelis +=`
             <article class="genero"> 
             <a class ='titulo_section' href='./detail-genres.html?id=${data.genres[i].id}">
             <h2 class='link_det_generos'> ${data.genres[i].name} </h2>
@@ -53,7 +53,31 @@ fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}&language=
             </article>
         `
     }
-    container1.innerHTML = genres
+    container1.innerHTML = genresPelis
+})
+.catch(function(error){
+    console.log(error)
+})
+
+let container2 = document.querySelector(".section_generos2")
+let genresSeries = ' '
+
+fetch(`https://api.themoviedb.org/3/genre/tv/list?api_key=${apiKey}&language=en-US`)
+.then(function(resp){
+    return resp.json()
+})
+.then(function(data){
+    console.log(data)
+    for (i=0;i<16;i++){
+        genresSeries = genresSeries + `
+            <article class="genero"> 
+            <a class ='titulo_section' href='./detail-genres.html?id=${data.genres[i].id}">
+            <h2 class='link_det_generos'> ${data.genres[i].name} </h2>
+            </a>
+            </article>
+        `
+    }
+    container2.innerHTML = genresSeries
 })
 .catch(function(error){
     console.log(error)

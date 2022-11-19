@@ -82,6 +82,13 @@ button {
     margin: 20px 0px;
 }
 
+.section_generos2{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0px;
+}
+
 .titulo_section{
     width:100%;
     text-align: center;
@@ -166,6 +173,7 @@ footer{
         display: flex;
         flex-wrap: wrap;
         align-items: center;
+        height: 130px;
     }
 
     .caja1 {

@@ -70,3 +70,4 @@ fetch(`https://api.themoviedb.org/3/discover/movie?api_key=399cd9827f714613d0469
 .catch(function(error){
     console.log(error)
 })
+

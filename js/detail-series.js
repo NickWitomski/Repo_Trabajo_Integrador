@@ -54,9 +54,9 @@ fetch (`https://api.themoviedb.org/3/tv/${id}?api_key=399cd9827f714613d04693cee4
     let estaMiBusqueda = favoritos.includes(data.id)
     let textoInicial = " "
     if (estaMiBusqueda){
-        textoInicial = "Sacar de favoritos" // esta funcion solo esta para cuando se renderiza la pagina
+        textoInicial = "SACAR DE FAVORITOS" // esta funcion solo esta para cuando se renderiza la pagina
     } else {
-        textoInicial = "Agregar a favoritos"
+        textoInicial = "AGREGAR A FAVORITOS"
     }
     
     container.innerHTML = `
@@ -66,7 +66,7 @@ fetch (`https://api.themoviedb.org/3/tv/${id}?api_key=399cd9827f714613d04693cee4
         </article>
 
         <article class="articulo_boton">
-        <button class="boton_recomendaciones"> Ver Recomendaciones </button>
+        <button class="boton_recomendaciones"> VER RECOMENDACIONES </button>
         </article>
         
         <ul class="recomendaciones">
@@ -95,10 +95,10 @@ fetch (`https://api.themoviedb.org/3/tv/${id}?api_key=399cd9827f714613d04693cee4
         let estaMiBusqueda = favoritos.includes(data.id)
         if (estaMiBusqueda){
             removeFavorite(data.id,favoritos)
-            e.target.innerText = "Agregar a favoritos"
+            e.target.innerText = "AGREGAR A FAVORITOS"
         }else {
             addFavorite(data.id,favoritos)
-            e.target.innerText = "Sacar de favoritos"
+            e.target.innerText = "SACAR DE FAVORITOS"
         }
     }) 
 })
