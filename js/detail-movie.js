@@ -64,8 +64,9 @@ fetch (`https://api.themoviedb.org/3/movie/${id}?api_key=399cd9827f714613d04693c
         <article class="articulo1"> 
             <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt='${data.title}' />
         </article>
+        <article class="articulo_boton">
         <button class="boton_recomendaciones"> Ver Recomendaciones </button>
-
+        </article>
         <ul class="recomendaciones">
         </ul>
 
@@ -76,8 +77,10 @@ fetch (`https://api.themoviedb.org/3/movie/${id}?api_key=399cd9827f714613d04693c
         <p class="texto"> Duración: ${data.runtime} mins</p>
         <p class="texto"> Generos: ${listaGeneros}</p>
         </article>
-        <button class="favoritos"> ${textoInicial} </button>`
-    
+        <article class="articulo_boton">
+        <button class="favoritos"> ${textoInicial} </button>
+        </article>`
+
     let boton= document.querySelector(".boton_recomendaciones")
     boton.addEventListener("click",function(evento){
         getRecomendaciones()
@@ -174,23 +177,23 @@ function getRecomendaciones(){
 
 //para poner trailers (punto extra)
 
-// let container_trailers = document.querySelector(".trailers")
-// trailers = ""
+let container_trailers = document.querySelector(".trailers")
+let trailers = ""
 
-// fetch (`https://api.themoviedb.org/3/movie/${id}/videos?api_key=399cd9827f714613d04693cee425808c&language=en-US`)
-// .then (function(resp){
-//     return resp.json()
-// })
-// .then (function(data){
-//     console.log(data)
-//     for (i=0; i< 6;i++){
-//         trailers += `
-//         <article> 
-//         <iframe width="560" height="315" src="https://www.youtube.com/embed/${data.results[i].key}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-//         </article>`
-//     }
-//     container_trailers.innerHTML = trailers
-// })
-// .catch (function(error){
-//     console.log(error)
-// })
+fetch (`https://api.themoviedb.org/3/movie/${id}/videos?api_key=399cd9827f714613d04693cee425808c&language=en-US`)
+.then (function(resp){
+    return resp.json()
+})
+.then (function(data){
+    console.log(data)
+    for (i=0; i< 6;i++){
+        trailers += `
+        <article class="articulo"> 
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/${data.results[i].key}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </article>`
+    }
+    container_trailers.innerHTML = trailers
+})
+.catch (function(error){
+    console.log(error)
+})

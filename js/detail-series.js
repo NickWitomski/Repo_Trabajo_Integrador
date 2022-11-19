@@ -166,3 +166,26 @@ function getRecomendaciones(){
         console.log(error)
     })
 }
+
+//para poner trailers (punto extra)
+
+let container_trailers = document.querySelector(".trailers")
+let trailers = ""
+
+fetch (`https://api.themoviedb.org/3/tv/${id}/videos?api_key=399cd9827f714613d04693cee425808c&language=en-USS`)
+.then (function(resp){
+    return resp.json()
+})
+.then (function(data){
+    console.log(data)
+    for (i=0; i< 1;i++){
+        trailers += `
+        <article class="articulo"> 
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/${data.results[i].key}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </article>`
+    }
+    container_trailers.innerHTML = trailers
+})
+.catch (function(error){
+    console.log(error)
+})

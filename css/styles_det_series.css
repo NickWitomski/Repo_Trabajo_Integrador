@@ -143,6 +143,18 @@ h1 {
     background-color: rgb(255, 225, 170);
 }
 
+.boton_recomendaciones {
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+    margin-left: 10px;
+    color:  black;
+    font-family: 'Oswald', sans-serif;
+    border: solid 4px rgb(255, 225, 170);
+    border-radius: 5px;
+    background-color: rgb(255, 225, 170);
+}
+
 .logo_prov{
     max-width: 70px;
     max-height: 70px;
@@ -166,6 +178,32 @@ h1 {
     max-height: 250px;
     border: solid 2px rgb(255, 225, 170);
     border-radius: 6px;
+}
+
+.detalleSeries {
+    margin-left:30px;
+}
+
+.proveedores {
+    margin-left: 20px
+}
+.articulo {
+    max-width: 500px;
+    margin: 20px;
+}
+
+.trailers{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+h2{
+    color:rgb(255, 225, 170);
+    width:100%;
+    font-size: 40px;
+    font-family: 'Oswald', sans-serif;
+    margin-left: 40px;
 }
 .texto1 {
     color: rgb(255, 225, 170);

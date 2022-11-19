@@ -48,7 +48,6 @@ ul {
     text-decoration: none;
     background-color: black;
     padding: 5px;
-    margin: 0 4px;
     border-radius: 6px;
     font-size: 18px;
     margin: 0px 10px;
@@ -70,10 +69,11 @@ input {
     height: 35px;
 }
 
-.boton_form {
+button {
     width: 40px;
     height: 35px;
 }
+
 
 .categorias {
     display:flex;
@@ -92,17 +92,7 @@ input {
     margin: 0px 10px;
     display:block;
 }
-.textonav {
-    color: rgb(255, 225, 170);
-    text-decoration: none;
-    background-color: black;
-    padding: 5px;
-    margin: 0 4px;
-    border-radius: 6px;
-    font-size: 70%;
-    margin: 0px 0px;
-    font-family: 'Oswald', sans-serif;
-}
+
 
 .texto {
     font-size: 18px;
@@ -120,14 +110,20 @@ h1 {
 
 }
 
+.detalleMovies{
+    margin-left: 20px
+}
+
+.proveedores {
+    margin-left: 10px
+}
 .articulo1 {
     display: flex;
-    width: 50%;
 }
+
 
 .articulo2 {
     display: flex;
-    width: 50%; 
     flex-direction: column;
 }
 
@@ -140,6 +136,40 @@ h1 {
     border: solid 4px rgb(255, 225, 170);
     border-radius: 5px;
     background-color: rgb(255, 225, 170);
+}
+
+.boton_recomendaciones {
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+    margin-left: 10px;
+    color:  black;
+    font-family: 'Oswald', sans-serif;
+    border: solid 4px rgb(255, 225, 170);
+    border-radius: 5px;
+    background-color: rgb(255, 225, 170);
+}
+
+.articulo {
+    flex-wrap: wrap;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.trailers{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+h2{
+    color:rgb(255, 225, 170);
+    width:100%;
+    font-size: 40px;
+    font-family: 'Oswald', sans-serif;
+    margin-left: 30px;
 }
 
 .logo_prov{
@@ -227,6 +257,7 @@ footer{
         display: flex;
         flex-wrap: wrap;
         align-items: center;
+        height: 130px;
     }
 
     .logo {
@@ -249,6 +280,25 @@ footer{
 
     button {
         height:30px;
+    }
+
+
+    .articulo1{
+        justify-content: center;
+    }
+
+    h1{
+        justify-content: center;
+        display: flex;
+    }
+    
+    .articulo_boton {
+        display: flex;
+        justify-content: center;
+    }
+
+    .caja2 {
+        margin-right: 30px;
     }
 
     .imagen {
