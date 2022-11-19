@@ -33,30 +33,20 @@ function formValidation(form,input){
 //
 
 let container = document.querySelector(".container")
+let container2 = document.querySelector(".container2")
 
 window.addEventListener("load",function(){
     let favsPelis = getFavsStoragePelis()
-    if (favsPelis.length === 0){
-        container.innerHTML = 
-        `
-        <h4> No tienes favoritos </h4>
-        `
-    } else {
-        let mostrarFavsPelis = getFavsPelis(favsPelis)
-        console.log(mostrarFavsPelis)
-    }
-
     let favsSeries = getFavsStorageSeries()
-    if (favsSeries.length === 0){
+    if (favsPelis.length && 0 || favsSeries.length === 0){
         container.innerHTML = 
         `
-        <h4> No tienes favoritos </h4>
+        <h2> NO TENES FAVORITOS </h2>
         `
     } else {
-        let mostrarFavsSeries = getFavsSeries(favsSeries)
-        console.log(mostrarFavsSeries)
+        getFavsPelis(favsPelis)
+        getFavsSeries(favsSeries)
     }
-})
 
 
 function getFavsStorageSeries(){
@@ -70,7 +60,7 @@ function getFavsStorageSeries(){
 }
 
 function getFavsStoragePelis(){
-    let storage = localStorage.getItem("favoritos")
+    let storage = localStorage.getItem("favoritosPelis")
 
     if (storage !== null && storage!== undefined){
         return JSON.parse(storage)
@@ -123,7 +113,7 @@ function getFavsSeries(favsSeries){
                     </a>
                 </article>
                 `
-        container.innerHTML = favoSeries
+        container2.innerHTML = favoSeries
         })
         
         .catch(function(error){
@@ -131,4 +121,4 @@ function getFavsSeries(favsSeries){
         })
     }
     return favoSeries
-}
+}})
