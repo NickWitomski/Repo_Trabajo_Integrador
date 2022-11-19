@@ -197,6 +197,7 @@ footer{
         display: flex;
         flex-wrap: wrap;
         align-items: center;
+        height: 130px;
     }
 
     .logo {
@@ -263,6 +264,10 @@ footer{
         height:25px;
     }
 
+    h3{
+        display: flex;
+        justify-content: center;
+    }
 
     .texto1 {
         font-size: 15px;
