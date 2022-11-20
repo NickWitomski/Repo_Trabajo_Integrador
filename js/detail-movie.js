@@ -42,7 +42,7 @@ fetch (`https://api.themoviedb.org/3/movie/${id}?api_key=399cd9827f714613d04693c
     return resp.json()
 })
 .then (function(data){
-    console.log(data)
+    console.log(data) 
 
     let listaGeneros = ""
     for (i=0;i<data.genres.length;i++){

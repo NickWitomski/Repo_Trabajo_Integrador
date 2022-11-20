@@ -232,6 +232,12 @@ footer{
     justify-content: space-evenly;
 }
 
+.categoria2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
 @media (max-width:1024px) {
 
     .articulo{
@@ -243,6 +249,11 @@ footer{
     }
 
     .categoria1 {
+        display: flex;
+        flex-wrap: wrap;   
+    }
+
+    .categoria2 {
         display: flex;
         flex-wrap: wrap;   
     }

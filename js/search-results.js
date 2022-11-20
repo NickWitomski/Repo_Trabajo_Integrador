@@ -42,8 +42,8 @@ let movies = " "
 console.log(location)
 let objMovie = new URLSearchParams(movie)
 let keyword = objMovie.get('name')
-let series = ' '
-let container2 = document.querySelector(".section_ser")
+let series = " "
+let container2 = document.querySelector(".categoria2")
 
 tituloBusqueda.innerText=`Resultado de busqueda para: ${keyword}`
 
@@ -67,14 +67,15 @@ fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keywo
         container.innerHTML = movies
 }   else {
     console.log("ENTRO SERIE")
-    series += `<article class="articulo">
+    series += 
+    `<article class="articulo">
     <a href="./detail-movie.html?id=${data.results[i].id}"> 
     <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].name}' />
     </a>
     <p class="titulocategorias"> ${data.results[i].name} </p>
     <p class="fecha"> ${data.results[i].first_air_date }</p>
     </article>`
-    container.innerHTML = series
+    container2.innerHTML = series
 
 }}
 })

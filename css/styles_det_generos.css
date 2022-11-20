@@ -2,6 +2,9 @@
 * {
     box-sizing:border-box
 }
+p{
+    color: rgb(255, 225, 170);
+}
 
 body {
     background: linear-gradient(to right, #000000, #434343);
@@ -59,6 +62,26 @@ ul {
     margin: 0px 10px;
 }
 
+.categoria2 {
+    margin: 10px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.titulobusqueda {
+    font-size: 35px;
+    color: rgb(255, 225, 170);
+}
+
+
+.fecha{
+    color:rgb(255, 225, 170);
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    display: flex;
+}
+
 .formulario {
     display: flex;
     align-items: center;
@@ -77,6 +100,9 @@ button {
 
 .categoria {
     margin: 10px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 div {
@@ -86,7 +112,11 @@ div {
 }
 
 article {
-    margin: 20px 0px;
+    flex-wrap: wrap;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .titulocategorias {
@@ -225,7 +255,9 @@ footer{
     }
 
     .categoria {
-        flex-wrap: wrap;   
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;   
     }
 
     .titulosubcategorias {
