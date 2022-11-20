@@ -86,7 +86,7 @@ button {
 }
 
 .imagen {
-    width: 400px;
+    width: 350px;
     height: 500px;
     border: solid rgb(255, 225, 170) 5px;
     margin: 0px 10px;
@@ -98,8 +98,10 @@ button {
 .texto {
     font-size: 18px;
     margin-left: 11px;
-    color: white;
+    color: rgb(255, 225, 170);
     font-family: 'Oswald', sans-serif;
+    text-align:justify ;
+    margin: 15px 10px
 }
 
 h1 {
@@ -112,7 +114,18 @@ h1 {
 }
 
 .detalleMovies{
-    margin-left: 20px
+    margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap
+}
+
+
+.section_peli2{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 95px;
+    margin-left: 30px;
 }
 
 .proveedores {
@@ -126,6 +139,13 @@ h1 {
 .articulo2 {
     display: flex;
     flex-direction: column;
+    background-color:black;
+    border-radius: 15px;
+    border: solid 4px rgb(255, 225, 170)
+}
+
+.articulo_boton{
+    margin-top: 50px;
 }
 
 .favoritos {
@@ -137,6 +157,12 @@ h1 {
     border: solid 4px rgb(255, 225, 170);
     border-radius: 5px;
     background-color: rgb(255, 225, 170);
+}
+
+.section_recomendaciones {
+    width: 50%;
+    justify-content: flex-start;
+    display: flex
 }
 
 .boton_recomendaciones {

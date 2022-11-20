@@ -58,33 +58,43 @@ fetch (`https://api.themoviedb.org/3/movie/${id}?api_key=399cd9827f714613d04693c
     } else {
         textoInicial = "AGREGAR A FAVORITOS"
     }
-    
+   
     container.innerHTML = `
-        <h1>${data.title}</h1>
-        <article class="articulo1"> 
-            <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt='${data.title}' />
-        </article>
-        <article class="articulo_boton">
-        <button class="boton_recomendaciones"> VER RECOMENDACIONES </button>
-        </article>
-        <ul class="recomendaciones">
-        </ul>
+        <section>
+            <h1>${data.title}</h1>
+            <article class="articulo1"> 
+                <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt='${data.title}' />
+            </article>
+        </section>
 
-        <article class="articulo2"> 
-        <p class="texto"> Fecha de estreno: ${data.release_date}</p>
-        <p class="texto"> Rating: ${data.vote_average}</p>
-        <p class="texto"> Resumen: ${data.overview}</p>
-        <p class="texto"> Duración: ${data.runtime} mins</p>
-        <p class="texto"> Generos: ${listaGeneros}</p>
-        </article>
-        <article class="articulo_boton">
-        <button class="favoritos"> ${textoInicial} </button>
-        </article>`
+        <section class="section_peli2">
+            <article class="articulo2"> 
+                <p class="texto"> Fecha de estreno: ${data.release_date}</p>
+                <p class="texto"> Rating: ${data.vote_average}</p>
+                <p class="texto"> Resumen: ${data.overview}</p>
+                <p class="texto"> Duración: ${data.runtime} mins</p>
+                <p class="texto"> Generos: ${listaGeneros}</p>
+            </article>
+
+            <article class="articulo_boton">
+                <button class="favoritos"> ${textoInicial} </button>
+            </article>
+        </section>
+
+        <section class ="section_recomendaciones">
+            <button class="boton_recomendaciones"> VER RECOMENDACIONES </button>
+            <ul class="recomendaciones">
+            </ul>
+        </section>
+        `
 
     let boton= document.querySelector(".boton_recomendaciones")
     boton.addEventListener("click",function(evento){
         getRecomendaciones()
     })
+
+    
+    
 
 
     let btnFavs = document.querySelector(".favoritos") //boton

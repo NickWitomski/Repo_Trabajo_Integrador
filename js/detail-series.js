@@ -60,28 +60,32 @@ fetch (`https://api.themoviedb.org/3/tv/${id}?api_key=399cd9827f714613d04693cee4
     }
     
     container.innerHTML = `
-        <h1>${data.original_name}</h1>
-        <article class="articulo1"> 
-            <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt='${data.original_name}' />
-        </article>
+        <section>
+            <h1>${data.original_name}</h1>
+            <article class="articulo1"> 
+                <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt='${data.original_name}' />
+            </article>
+        </section>
 
-        <article class="articulo_boton">
-        <button class="boton_recomendaciones"> VER RECOMENDACIONES </button>
-        </article>
-        
-        <ul class="recomendaciones">
-        </ul>
+        <section class="section_series2">
+            <article class="articulo2"> 
+                <p class="texto"> Fecha de estreno: ${data.first_air_date}</p>
+                <p class="texto"> Rating: ${data.vote_average}</p>
+                <p class="texto"> Resumen: ${data.overview}</p>
+                <p class="texto"> Generos: ${listaGeneros}</p>
+            </article>
 
-        <article class="articulo2"> 
-        <p class="texto"> Fecha de estreno: ${data.first_air_date}</p>
-        <p class="texto"> Rating: ${data.vote_average}</p>
-        <p class="texto"> Resumen: ${data.overview}</p>
-        <p class="texto"> Generos: ${listaGeneros}</p>
-        </article>
-        
-        <article class="articulo_boton">
-        <button class="favoritos"> ${textoInicial} </button>
-        </article>`
+            <article class="articulo_boton">
+                <button class="favoritos"> ${textoInicial} </button>
+            </article>
+        </section>
+
+        <section class ="section_recomendaciones"> 
+            <button class="boton_recomendaciones"> VER RECOMENDACIONES </button>
+            <ul class="recomendaciones">
+            </ul>
+        </section>        
+        `
     
     let boton= document.querySelector(".boton_recomendaciones")
     boton.addEventListener("click",function(evento){
