@@ -64,7 +64,6 @@ fetch (`https://api.themoviedb.org/3/tv/${id}?api_key=399cd9827f714613d04693cee4
             <h1>${data.original_name}</h1>
             <article class="articulo1"> 
                 <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt='${data.original_name}' />
-            </article>
         </section>
 
         <section class="section_series2">

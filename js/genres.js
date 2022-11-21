@@ -47,7 +47,7 @@ fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}&language=
     for (i=0;i<16;i++){
         genresPelis +=`
             <article class="genero"> 
-            <a class ='titulo_section' href='./detail-genres.html?id=${data.genres[i].id}">
+            <a class ='titulo_section' href='./detail-genres.html?id=${data.genres[i].id}&name=${data.genres[i].name}&type=movie'>
             <h2 class='link_det_generos'> ${data.genres[i].name} </h2>
             </a>
             </article>
@@ -71,7 +71,7 @@ fetch(`https://api.themoviedb.org/3/genre/tv/list?api_key=${apiKey}&language=en-
     for (i=0;i<16;i++){
         genresSeries = genresSeries + `
             <article class="genero"> 
-            <a class ='titulo_section' href='./detail-genres.html?id=${data.genres[i].id}">
+            <a class ='titulo_section' href='./detail-genres.html?id=${data.genres[i].id}&name=${data.genres[i].name}&type=serie'>
             <h2 class='link_det_generos'> ${data.genres[i].name} </h2>
             </a>
             </article>

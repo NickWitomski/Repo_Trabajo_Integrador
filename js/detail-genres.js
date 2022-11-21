@@ -40,61 +40,83 @@ function formValidation(form,input){
 // let keyword = objMovie.get('name')
 // let series = ' '
 
-let discover = `https://api.themoviedb.org/3/discover/movie?api_key=399cd9827f714613d04693cee425808c`
+let discoverMovie = `https://api.themoviedb.org/3/discover/movie?api_key=399cd9827f714613d04693cee425808c`
+let queryPelis = location.search
+let objetoquery = new URLSearchParams(queryPelis)
+let id = objetoquery.get("id")
+let nombre = objetoquery.get("name")
+let type = objetoquery.get("type")
+
 let discoverSeries = `https://api.themoviedb.org/3/discover/tv?api_key=399cd9827f714613d04693cee425808c`
-let keyword = location.search
-let objetoKeyword = new URLSearchParams(keyword)
-let tituloBusqueda=document.querySelector(".titulobusqueda")
-let id = objetoKeyword.get("id")
-let type = objetoKeyword.get("type")
-let generos = " "
-let generos2 = " "
+let querySeries = location.search
+let objetoquery2 = new URLSearchParams(querySeries)
+let id2 = objetoquery2.get("id")
+let nombre2 = objetoquery2.get("name")
+let type2 = objetoquery2.get("type")
+
+
 let container = document.querySelector(".categoria")
 let container2 = document.querySelector(".categoria2")
-tituloBusqueda.innerText=`Resultado de busqueda para: ${keyword}`
+let tituloBusqueda=document.querySelector(".titulobusqueda")
 console.log(type)
 console.log(id)
+console.log(id2)
+console.log(type2)
+console.log(nombre)
+console.log(nombre2)
+
 
 if (type == "movie"){
-fetch(`${discover}&with_geners=${id}`)
-.then(function(resp){
-    return resp.json()
-})
-.then(function(data){
-    for (i=0; i< 5;i++){
-         console.log(data)
-            generos += `<article class="articulo">
-        <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].original_title}' />
-        <p> ${data.results[i].title} </p>
-        <p class="fecha"> ${data.results[i].release_date }</p>
-        </article>`
-        console.log(data)
-        container.innerHTML = generos
-}
-})
-
-.catch(function(error){
-    console.log(error)
-})
-}else{
-fetch(`${discoverSeries}&with_geners=${id}`)
+fetch(`${discoverMovie}&with_geners=${id}&type=${type}&name=${nombre}`)
 .then(function(resp){
     return resp.json()
 })
 .then(function(data){
     console.log(data)
-    for (i=0; i< 5;i++){
-            console.log(data.results[i].genre_ids)
-            generos2 += `<article class="articulo">
+    for (i=0;i<19;i++){
+        tituloBusqueda.innerText=`Resultado de busqueda para: ${nombre}`
+        // let listaGeneros = []
+        // for (j=0; j<data.results.genre_ids;j++){
+        //     let idGenero = data.results[i].genre_ids[j]
+        //     listaGeneros.push(idGenero)
+        // }
+        // console.log(listaGeneros)
+        // if (listaGeneros.includes(id)){
+        let generos = " "
+        generos += `<article class="articulo">
         <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].original_title}' />
-        <p> ${data.results[i].name} </p>
-        <p class="fecha"> ${data.results[i].vote_average }</p>
+        <p> ${data.results[i].title} </p>
+        <p class="fecha"> ${data.results[i].release_date }</p>
         </article>`
-        console.log(data)
-        container2.innerHTML = generos2
-}
-})
+        container.innerHTML = generos
+        }
+    })
 
 .catch(function(error){
     console.log(error)
-})}
+})
+}
+
+
+if(type=="serie"){
+    fetch(`${discoverSeries}&with_geners=${id2}&type=${type2}&name=${nombre2}`)
+    .then(function(resp){
+        return resp.json()
+    })
+    .then(function(data){
+        console.log(data)
+        for (i=0; i< 5;i++){
+                // console.log(data.results[i].genre_ids)
+            let generos2 = " "
+            generos2 += `<article class="articulo">
+            <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].original_title}' />
+            <p> ${data.results[i].name} </p>
+            <p class="fecha"> ${data.results[i].release_date}</p>
+            </article>`
+            container2.innerHTML = generos2
+    }
+    })
+    .catch(function(error){
+        console.log(error)
+    })
+}
