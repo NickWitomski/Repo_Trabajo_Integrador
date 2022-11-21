@@ -44,7 +44,7 @@ fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}&language=
 })
 .then(function(data){
     console.log(data)
-    for (i=0;i<19;i++){
+    for (i=0;i<16;i++){
         genresPelis +=`
             <article class="genero"> 
             <a class ='titulo_section' href='./detail-genres.html?id=${data.genres[i].id}">
