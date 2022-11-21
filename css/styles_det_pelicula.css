@@ -224,6 +224,44 @@ h2{
     border-radius: 6px;
 }
 
+.reviews{
+    display: flex;
+    flex-direction: column;
+    background-color:rgb(255, 225, 170);
+    border-radius: 15px;
+    border: solid 6px white;
+    margin: 10px;
+    display: none;
+}
+
+.articulo_r{
+    margin: 20px;
+}
+.texto_r{
+    color:black;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+}
+
+h4 {
+    color: black;
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+}
+
+.boton_reviews{
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+    margin-left: 10px;
+    color:  black;
+    font-family: 'Oswald', sans-serif;
+    border: solid 4px rgb(255, 225, 170);
+    border-radius: 5px;
+    background-color: rgb(255, 225, 170);
+}
+
+
 .texto1 {
     color: rgb(255, 225, 170);
     margin:0%;
@@ -335,6 +373,18 @@ footer{
         max-width: 300px;
     }
 
+    .section_peli1{
+        width: 100%;
+    }
+    .section_peli2{
+        width: 98%;
+        margin-left: 0px;
+    }
+
+    .section_recomendaciones{
+        width: 98%;
+        justify-content: center;
+    }
 
     .trailers {
         display: flex;
@@ -381,6 +431,14 @@ footer{
 
     .logo_prov{
         max-width: 60px;
+    }
+
+    h4{
+        font-size: 20px;
+    }
+
+    .texto_r{
+        font-size: 15px;
     }
 
     .contacto i {
