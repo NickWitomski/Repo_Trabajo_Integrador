@@ -60,7 +60,7 @@ fetch (`https://api.themoviedb.org/3/tv/${id}?api_key=399cd9827f714613d04693cee4
     }
     
     container.innerHTML = `
-        <section>
+        <section class="section_series1">
             <h1>${data.original_name}</h1>
             <article class="articulo1"> 
                 <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt='${data.original_name}' />
@@ -104,6 +104,12 @@ fetch (`https://api.themoviedb.org/3/tv/${id}?api_key=399cd9827f714613d04693cee4
             e.target.innerText = "SACAR DE FAVORITOS"
         }
     }) 
+
+    let boton_rev = document.querySelector(".boton_reviews")
+    boton_rev.addEventListener("click",function(e){
+        container_review.style.display = "block"
+        getReviews()
+    })
 })
 .catch (function(error){
     console.log(error)
@@ -198,3 +204,28 @@ fetch (`https://api.themoviedb.org/3/tv/${id}/videos?api_key=399cd9827f714613d04
 .catch (function(error){
     console.log(error)
 })
+
+//recomendaciones (punto extra)
+let container_review = document.querySelector(".reviews")
+let reviews = ' '
+let apiKey = "399cd9827f714613d04693cee425808c"
+
+function getReviews(){
+    fetch(`https://api.themoviedb.org/3/tv/${id}/reviews?api_key=${apiKey}&language=en-US&page=1`)
+    .then(function(resp){
+        return resp.json()
+    })
+    .then(function(data){
+        console.log(data)
+        for (let i=0;i<data.results.length;i++){
+            reviews += `<article class="articulo_r">
+            <h4> ${data.results[i].author}</h4>
+            <p class="texto_r"> ${data.results[i].content}</p>
+            </article>`
+        }
+        container_review.innerHTML = reviews
+    })
+    .catch(function(error){
+        console.log(error)
+    })
+}
