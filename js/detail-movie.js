@@ -212,5 +212,27 @@ fetch (`https://api.themoviedb.org/3/movie/${id}/videos?api_key=399cd9827f714613
     console.log(error)
 })
 
+//recomendaciones (punto extra)
+let container_review = document.querySelector(".reviews")
+let reviews = ' '
+let apiKey = "399cd9827f714613d04693cee425808c"
 
-x
+function getReviews(){
+    fetch(`https://api.themoviedb.org/3/movie/${id}/reviews?api_key=${apiKey}&language=en-US&page=1`)
+    .then(function(resp){
+        return resp.json()
+    })
+    .then(function(data){
+        console.log(data)
+        for (let i=0;i<data.results.length;i++){
+            reviews += `<article class="articulo_r">
+            <h4> ${data.results[i].author}</h4>
+            <p class="texto_r"> ${data.results[i].content}</p>
+            </article>`
+        }
+        container_review.innerHTML = reviews
+    })
+    .catch(function(error){
+        console.log(error)
+    })
+}
