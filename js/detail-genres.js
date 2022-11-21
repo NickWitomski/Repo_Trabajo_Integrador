@@ -54,7 +54,8 @@ let id2 = objetoquery2.get("id")
 let nombre2 = objetoquery2.get("name")
 let type2 = objetoquery2.get("type")
 
-
+let generos2 = " "
+let generos = " "
 let container = document.querySelector(".categoria")
 let container2 = document.querySelector(".categoria2")
 let tituloBusqueda=document.querySelector(".titulobusqueda")
@@ -73,7 +74,7 @@ fetch(`${discoverMovie}&with_geners=${id}&type=${type}&name=${nombre}`)
 })
 .then(function(data){
     console.log(data)
-    for (i=0;i<19;i++){
+    for (i=0;i<5;i++){
         tituloBusqueda.innerText=`Resultado de busqueda para: ${nombre}`
         // let listaGeneros = []
         // for (j=0; j<data.results.genre_ids;j++){
@@ -82,7 +83,7 @@ fetch(`${discoverMovie}&with_geners=${id}&type=${type}&name=${nombre}`)
         // }
         // console.log(listaGeneros)
         // if (listaGeneros.includes(id)){
-        let generos = " "
+            console.log(data)
         generos += `<article class="articulo">
         <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].original_title}' />
         <p> ${data.results[i].title} </p>
@@ -107,7 +108,6 @@ if(type=="serie"){
         console.log(data)
         for (i=0; i< 5;i++){
                 // console.log(data.results[i].genre_ids)
-            let generos2 = " "
             generos2 += `<article class="articulo">
             <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].original_title}' />
             <p> ${data.results[i].name} </p>
