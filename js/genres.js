@@ -1,6 +1,4 @@
 //VALIDANDO FORMULARIO 
-let apiKey = "399cd9827f714613d04693cee425808c"
-
 
 window.addEventListener("load",function(){
     let input = document.querySelector(".input")
@@ -36,14 +34,14 @@ function formValidation(form,input){
 
 let container1 = document.querySelector(".section_generos")
 let genresPelis = ' '
-
+let apiKey = "399cd9827f714613d04693cee425808c"
 
 fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}&language=en-US`)
 .then(function(resp){
     return resp.json()
 })
 .then(function(data){
-    console.log(data)
+    console.log(data);
     for (i=0;i<16;i++){
         genresPelis +=`
             <article class="genero"> 
@@ -54,9 +52,11 @@ fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}&language=
         `
     }
     container1.innerHTML = genresPelis
+    return data
 })
 .catch(function(error){
     console.log(error)
+    return error
 })
 
 let container2 = document.querySelector(".section_generos2")
@@ -69,7 +69,7 @@ fetch(`https://api.themoviedb.org/3/genre/tv/list?api_key=${apiKey}&language=en-
 .then(function(data){
     console.log(data)
     for (i=0;i<16;i++){
-        genresSeries = genresSeries + `
+        genresSeries +=`
             <article class="genero"> 
             <a class ='titulo_section' href='./detail-genres.html?id=${data.genres[i].id}&name=${data.genres[i].name}&type=serie'>
             <h2 class='link_det_generos'> ${data.genres[i].name} </h2>

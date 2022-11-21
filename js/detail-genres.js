@@ -42,10 +42,10 @@ function formValidation(form,input){
 
 let discoverMovie = `https://api.themoviedb.org/3/discover/movie?api_key=399cd9827f714613d04693cee425808c`
 let queryPelis = location.search
-let objetoquery = new URLSearchParams(queryPelis)
-let id = objetoquery.get("id")
-let nombre = objetoquery.get("name")
-let type = objetoquery.get("type")
+let objetoQuery = new URLSearchParams(queryPelis)
+let id = objetoQuery.get('id')
+let nombre = objetoQuery.get("name")
+let type = objetoQuery.get("type")
 
 let discoverSeries = `https://api.themoviedb.org/3/discover/tv?api_key=399cd9827f714613d04693cee425808c`
 let querySeries = location.search
@@ -68,7 +68,7 @@ console.log(nombre2)
 
 
 if (type == "movie"){
-fetch(`${discoverMovie}&with_geners=${id}&type=${type}&name=${nombre}`)
+fetch(`${discoverMovie}&with_geners=${id}`)
 .then(function(resp){
     return resp.json()
 })
@@ -109,8 +109,9 @@ if(type=="serie"){
         for (i=0; i< 5;i++){
                 // console.log(data.results[i].genre_ids)
             generos2 += `<article class="articulo">
-            <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].original_title}' />
-            <p> ${data.results[i].name} </p>
+            <a href="./detail-movie.html?id=${data.results[i].id}"> 
+            <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].title}' />
+            </a>
             <p class="fecha"> ${data.results[i].release_date}</p>
             </article>`
             container2.innerHTML = generos2
