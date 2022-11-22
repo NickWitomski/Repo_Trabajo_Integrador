@@ -34,6 +34,8 @@ function formValidation(form,input){
 
 let container = document.querySelector(".container")
 let container2 = document.querySelector(".container2")
+let titulo1 = document.querySelector(".titulo1")
+let titulo2 = document.querySelector(".titulo2")
 
 window.addEventListener("load",function(){
     let favsPelis = getFavsStoragePelis()
@@ -41,8 +43,10 @@ window.addEventListener("load",function(){
     if (favsPelis.length && 0 || favsSeries.length === 0){
         container.innerHTML = 
         `
-        <h2> NO TENES FAVORITOS </h2>
+        <h2> NO TIENES FAVORITOS </h2>
         `
+        titulo1.style.display = "none"
+        titulo2.style.display = "none"
     } else {
         getFavsPelis(favsPelis)
         getFavsSeries(favsSeries)
