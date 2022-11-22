@@ -80,7 +80,7 @@ if (type == "movie"){
                         <a href="./detail-movie.html?id=${data.results[i].id}"> 
                         <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].original_title}' />
                         </a>
-                        <p> ${data.results[i].original_title} </p>
+                        <p class="titulocategorias"> ${data.results[i].original_title} </p>
                         <p class="fecha"> ${data.results[i].release_date}</p>
                         </article>`
                     }
@@ -117,7 +117,7 @@ if(type===null){
                     <a href="./detail-serie.html?id=${data.results[i].id}"> 
                     <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].original_name}' />
                     </a>
-                    <p> ${data.results[i].original_name} </p>
+                    <p class="titulocategorias"> ${data.results[i].original_name} </p>
                     <p class="fecha"> ${data.results[i].first_air_date}</p>
                     </article>`
                 }

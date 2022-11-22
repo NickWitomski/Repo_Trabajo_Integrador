@@ -110,6 +110,8 @@ button {
     max-width: 250px;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .imagen {
@@ -232,6 +234,14 @@ footer{
         flex-wrap: wrap;
         align-items: center;
         height: 130px;
+    }
+
+    .articulo{
+        flex-wrap: wrap;
+        max-width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .logo {
