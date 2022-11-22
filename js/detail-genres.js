@@ -32,13 +32,6 @@ function formValidation(form,input){
     })
 }
 
-// window.addEventListener('load',function(){
-// let container = document.querySelector(".categoria")
-// let movie =location.search
-// console.log(location)
-// let objMovie = new URLSearchParams(movie)
-// let keyword = objMovie.get('name')
-// let series = ' '
 
 let discoverMovie = `https://api.themoviedb.org/3/discover/movie?api_key=399cd9827f714613d04693cee425808c`
 let queryPelis = location.search
@@ -48,11 +41,11 @@ let nombre = objetoquery.get("name")
 let type = objetoquery.get("type")
 
 let discoverSeries = `https://api.themoviedb.org/3/discover/tv?api_key=399cd9827f714613d04693cee425808c`
-let querySeries = location.search
-let objetoquery2 = new URLSearchParams(querySeries)
-let id2 = objetoquery2.get("id")
-let nombre2 = objetoquery2.get("name")
-let type2 = objetoquery2.get("type")
+// let querySeries = location.search
+// let objetoquery2 = new URLSearchParams(querySeries)
+// let id2 = objetoquery2.get("id")
+// let nombre2 = objetoquery2.get("name")
+// let type2 = objetoquery2.get("type")
 
 
 let container = document.querySelector(".categoria")
@@ -60,10 +53,8 @@ let container2 = document.querySelector(".categoria2")
 let tituloBusqueda=document.querySelector(".titulobusqueda")
 console.log(type)
 console.log(id)
-console.log(id2)
-console.log(type2)
 console.log(nombre)
-console.log(nombre2)
+
 
 
 if (type == "movie"){
