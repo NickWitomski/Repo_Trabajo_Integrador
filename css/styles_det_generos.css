@@ -105,47 +105,11 @@ button {
     justify-content: space-evenly;
 }
 
-div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-article {
+.articulo{
     flex-wrap: wrap;
     max-width: 250px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.titulocategorias {
-    color: rgb(255, 225, 170);
-    font-size: 36px;
-    font-family: 'Oswald', sans-serif;
-    text-align: center;
-}
-
-.titulosubcategorias {
-    color:rgb(255, 225, 170);
-    width:100%;
-    font-size: 30px;
-    font-family: 'Oswald', sans-serif;
-    margin: 10px 22px;
-}
-
-h3 {
-    color: rgb(255, 225, 170);
-    text-align: center;
-    font-size: 25px;
-    font-family: 'Oswald', sans-serif;
-}
-
-h5{
-    color: rgb(255, 225, 170);
-    text-align: center;
-    font-size: 15px;
-    font-family: 'Oswald', sans-serif;
+    justify-content: center;
 }
 
 .imagen {
@@ -155,29 +119,13 @@ h5{
     margin: 0px 10px;
 }
 
-.boton_ver_ahora {
-    color: black;
-    font-weight: bold;
-    font-family: 'Oswald', sans-serif;
-    background-color: rgb(255, 225, 170);
-    width: 118px;
-    height: 42px;
-    margin-left: 70px;
-    border-radius: 6px;
-    border: solid 4px rgb(255, 225, 170);
-}
-
-.verahora {
-    background-color: rgb(255, 225, 170);
-    color: black;
-    text-decoration: none;
-}
-
 .texto1 {
     color: rgb(255, 225, 170);
+    margin:0%;
     font-size: 20px;
+    width:100%;
+    margin-left: 11px;
     font-family: 'Oswald', sans-serif;
-    margin:0px 0px 0px 11px;
 }
 
 .texto2 {
@@ -213,6 +161,10 @@ footer{
     height: 80px;
 }
 
+.art1_footer{
+    display: flex;
+    flex-direction: column;
+}
 .art2_footer{
     display: flex;
     justify-content: center;
@@ -279,6 +231,7 @@ footer{
         display: flex;
         flex-wrap: wrap;
         align-items: center;
+        height: 130px;
     }
 
     .logo {
@@ -313,19 +266,6 @@ footer{
         justify-content: space-evenly;   
     }
 
-    .titulosubcategorias {
-        margin-top: 20px;
-        display: flex;
-        justify-content: center;
-        margin-left: 0px;
-    }
-
-    div {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
 }
 
 
@@ -355,10 +295,8 @@ footer{
         height: 8vh;
     }
 
-    .titulosubcategorias {
-        display: flex;
-        justify-content: center;
-        font-size: 30px;
+    .titulobusqueda{
+        font-size: 20px;
     }
 
     .texto1 {
