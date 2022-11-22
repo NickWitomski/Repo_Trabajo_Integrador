@@ -1,3 +1,8 @@
+window.addEventListener("load",function(){
+    document.getElementById("loader").classList.toggle("loader2")
+})
+
+
 let apiKey = "399cd9827f714613d04693cee425808c"
 
 // //VALIDANDO EL FORMULARIO

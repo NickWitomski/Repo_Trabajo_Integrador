@@ -1,3 +1,8 @@
+window.addEventListener("load",function(){
+    document.getElementById("loader").classList.toggle("loader2")
+})
+
+
 //VALIDANDO FORMULARIO 
 
 window.addEventListener("load",function(){
