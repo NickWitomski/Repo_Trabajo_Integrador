@@ -69,7 +69,7 @@ fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keywo
     console.log("ENTRO SERIE")
     series += 
     `<article class="articulo">
-    <a href="./detail-movie.html?id=${data.results[i].id}"> 
+    <a href="./detail-serie.html?id=${data.results[i].id}"> 
     <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].name}' />
     </a>
     <p class="titulocategorias"> ${data.results[i].name} </p>
