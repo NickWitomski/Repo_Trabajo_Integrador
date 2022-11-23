@@ -180,7 +180,9 @@ function getRecomendaciones(){
         for (i=0;i<5;i++){
             recommend += `
             <li class="elemento_lista"> 
+            <a href="./detail-movie.html?id=${data.results[i].id}"> 
                 <img class="imagen_recomendaciones" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].original_title}' />
+            </a>
             </li>
             `
         }
@@ -204,7 +206,7 @@ fetch (`https://api.themoviedb.org/3/movie/${id}/videos?api_key=399cd9827f714613
 })
 .then (function(data){
     console.log(data)
-    for (i=0; i< 6;i++){
+    for (i=0; i< data.results.length;i++){
         trailers += `
         <article class="articulo"> 
         <iframe width="560" height="315" src="https://www.youtube.com/embed/${data.results[i].key}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

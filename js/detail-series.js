@@ -68,6 +68,7 @@ fetch (`https://api.themoviedb.org/3/tv/${id}?api_key=399cd9827f714613d04693cee4
             <h1>${data.original_name}</h1>
             <article class="articulo1"> 
                 <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt='${data.original_name}' />
+            </article>
         </section>
 
         <section class="section_series2">
@@ -174,8 +175,10 @@ function getRecomendaciones(){
         let list = document.querySelector(".recomendaciones")
         for (i=0;i<5;i++){
             recommend += `
-            <li class="elemento_lista"> 
+            <li class="elemento_lista">
+            <a href="./detail-serie.html?id=${data.results[i].id}"> 
                 <img class="imagen_recomendaciones" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].original_title}' />
+            </a>
             </li>
             `
         }
@@ -197,7 +200,7 @@ fetch (`https://api.themoviedb.org/3/tv/${id}/videos?api_key=399cd9827f714613d04
 })
 .then (function(data){
     console.log(data)
-    for (i=0; i< 1;i++){
+    for (i=0; i< data.results.length;i++){
         trailers += `
         <article class="articulo"> 
         <iframe class="video_trailer" width="560" height="315" src="https://www.youtube.com/embed/${data.results[i].key}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

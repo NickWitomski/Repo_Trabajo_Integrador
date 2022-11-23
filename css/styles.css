@@ -76,76 +76,6 @@ button {
     height: 35px;
 }
 
-.botonportada {
-    margin-left: 30px;
-    color: black;
-    font-weight: bold;
-    background-color: rgb(255, 225, 170);
-    border: solid 4px rgb(255, 225, 170);
-    font-family: 'Oswald', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 118px;
-    height: 42px;
-    border-radius: 6px;
-}
-
-.portada {
-    height:600px;
-    background-image: url("../img/whiplash3.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: solid rgb(255, 225, 170) 3px;
-    margin: 30px 0px;
-    display: flex;
-    align-items: center;
-}
-
-.caja_portada {
-    width:50%;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-
-.titulo_portada {
-    font-size: 60px;
-    color:white;
-    margin-left: 29px;
-    margin-top: 0px;
-    font-family: 'Oswald', sans-serif;
-}
-
-.subtitulo_portada {
-    font-size: 30px;
-    color:white;
-    padding:0px;
-    margin-left: 29px;
-    margin-bottom: 10px;
-    font-family: 'Oswald', sans-serif;
-}
-
-.boton_ver_ahora {
-    color: black;
-    font-weight: bold;
-    background-color: rgb(255, 225, 170);
-    border: solid 4px rgb(255, 225, 170);
-    font-family: 'Oswald', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 118px;
-    height: 42px;
-    margin-left: 70px;
-    border-radius: 6px;
-}
-
-.verahora {
-    background-color: rgb(255, 225, 170);
-    color: black;
-    text-decoration: none;
-}
 
 .categoria1 {
     display: flex;
@@ -356,18 +286,6 @@ footer{
         height:30px;
     }
 
-    .portada {
-       height: 350px;
-    }
-
-    .titulo_portada {
-        font-size: 40px;
-    }
-
-    .subtitulo_portada {
-        font-size: 25px;
-    }
-
     .imagen {
         min-width: 200px;
     }
@@ -417,28 +335,10 @@ footer{
         height:25px;
     }
 
-    .portada {
-        height: 300px;
-    }
-
     .titulocategorias {
         display: flex;
         justify-content: center;
         font-size: 30px;
-    }
-
-    .titulo_portada {
-        font-size: 30px;
-    }
-
-    .subtitulo_portada {
-        font-size: 15px;
-    }
-
-    .botonportada {
-        width:35%;
-        height:35px;
-
     }
 
     h3 {
