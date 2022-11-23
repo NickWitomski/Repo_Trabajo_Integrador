@@ -49,7 +49,7 @@ fetch (`https://api.themoviedb.org/3/movie/${id}?api_key=399cd9827f714613d04693c
     console.log(data) 
 
     let listaGeneros = ""
-    for (i=0;i<data.genres.length;i++){
+    for (let i=0;i<data.genres.length;i++){
         genero = data.genres[i].name
         listaGeneros += `${genero} `
     }
@@ -153,7 +153,7 @@ function removeFavorite(id,storage){
         console.log(data)
         let container = document.querySelector(".proveedores")
         let proveedores = ""
-        for (i=0; i<data.results.US.flatrate.length;i++){
+        for (let i=0; i<data.results.US.flatrate.length;i++){
             proveedores += `
             <li class="elemento_prov">
             <img class="logo_prov" src="https://image.tmdb.org/t/p/w500/${data.results.US.flatrate[i].logo_path}" alt='${data.results.US.flatrate[i].provider_name}' />
@@ -177,7 +177,7 @@ function getRecomendaciones(){
         console.log(data)
         let recommend = ``
         let list = document.querySelector(".recomendaciones")
-        for (i=0;i<5;i++){
+        for (let i=0;i<5;i++){
             recommend += `
             <li class="elemento_lista"> 
             <a href="./detail-movie.html?id=${data.results[i].id}"> 
@@ -206,7 +206,7 @@ fetch (`https://api.themoviedb.org/3/movie/${id}/videos?api_key=399cd9827f714613
 })
 .then (function(data){
     console.log(data)
-    for (i=0; i< data.results.length;i++){
+    for (let i=0; i< data.results.length;i++){
         trailers += `
         <article class="articulo"> 
         <iframe width="560" height="315" src="https://www.youtube.com/embed/${data.results[i].key}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -218,7 +218,7 @@ fetch (`https://api.themoviedb.org/3/movie/${id}/videos?api_key=399cd9827f714613
     console.log(error)
 })
 
-//recomendaciones (punto extra)
+//reviews (punto extra)
 let container_review = document.querySelector(".reviews")
 let reviews = ' '
 let apiKey = "399cd9827f714613d04693cee425808c"

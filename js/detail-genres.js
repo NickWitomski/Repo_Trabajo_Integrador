@@ -70,11 +70,11 @@ if (type == "movie"){
     .then(function(data){
         console.log(data)
         let generos = ""
-        for (i=0;i<data.results.length;i++){
+        for (let i=0;i<data.results.length;i++){
             tituloBusqueda.innerText=`Resultado de busqueda para: ${nombre}`
             let listaGenerosPelis = data.results[i].genre_ids
                 console.log(listaGenerosPelis)
-                for (j=0;j<listaGenerosPelis.length;j++){
+                for (let j=0;j<listaGenerosPelis.length;j++){
                     if (listaGenerosPelis[j] == id){
                         generos += `<article class="articulo">
                         <a href="./detail-movie.html?id=${data.results[i].id}"> 
@@ -106,11 +106,11 @@ if(type===null){
     .then(function(data){
         console.log(data)
         let generos2 = ""
-        for (i=0; i< data.results.length;i++){
+        for (let i=0; i< data.results.length;i++){
             tituloBusqueda.innerText=`Resultado de busqueda para: ${nombre}`
             let listaGenerosSeries = data.results[i].genre_ids
             console.log(listaGenerosSeries)
-            for (j=0;j<listaGenerosSeries.length;j++){
+            for (let j=0;j<listaGenerosSeries.length;j++){
                 if (listaGenerosSeries[j] == id){
                     console.log(id)
                     generos2 += `<article class="articulo">

@@ -79,7 +79,7 @@ function getFavsStoragePelis(){
 
 function getFavsPelis(favsPelis){
     let favoPelis = " "
-    for (i=0;i<favsPelis.length;i++){
+    for (let i=0;i<favsPelis.length;i++){
         fetch(`https://api.themoviedb.org/3/movie/${favsPelis[i]}?api_key=399cd9827f714613d04693cee425808c&language=en-US`)
         .then (function(resp){
             return resp.json()
@@ -106,7 +106,7 @@ function getFavsPelis(favsPelis){
 
 function getFavsSeries(favsSeries){
     let favoSeries = " "
-    for (i=0;i<favsSeries.length;i++){
+    for (let i=0;i<favsSeries.length;i++){
         fetch(`https://api.themoviedb.org/3/tv/${favsSeries[i]}?api_key=399cd9827f714613d04693cee425808c&language=en-US`)
         .then (function(resp){
             return resp.json()

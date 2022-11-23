@@ -57,7 +57,7 @@ fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keywo
     return resp.json()
 })
 .then(function(data){
-    for (i=0; i< 5;i++){
+    for (let i=0; i< 5;i++){
         if (data.results[i].media_type == 'movie'){
         console.log(data)
         console.log("ENTRO",data.results[i].media_type, data.results[i].media_type=="movie")

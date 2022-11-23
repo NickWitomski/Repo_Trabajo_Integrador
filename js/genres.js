@@ -47,7 +47,7 @@ fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}&language=
 })
 .then(function(data){
     console.log(data);
-    for (i=0;i<16;i++){
+    for (let i=0;i<16;i++){
         genresPelis +=`
             <article class="genero"> 
             <a class ='titulo_section' href='./detail-genres.html?id=${data.genres[i].id}&name=${data.genres[i].name}&type=movie'>
@@ -73,7 +73,7 @@ fetch(`https://api.themoviedb.org/3/genre/tv/list?api_key=${apiKey}&language=en-
 })
 .then(function(data){
     console.log(data)
-    for (i=0;i<16;i++){
+    for (let i=0;i<16;i++){
         genresSeries +=`
             <article class="genero"> 
             <a class ='titulo_section' href='./detail-genres.html?id=${data.genres[i].id}&name=${data.genres[i].name}&type2=null'>
